@@ -16,7 +16,11 @@ ul { list-style: none;}
 
 #header { padding-top: 53px; /*height: 51px;*/ background: url(../img/bg-header.png) repeat; /*overflow: hidden;*/}
 
+<<<<<<< HEAD
 #logo { width: 250px; height: 30px; padding-top: 10px; font: italic bold 20px Microsoft YaHei; color: #fff; overflow: hidden; }
+=======
+#logo { width: 245px; height: 30px; padding-top: 10px; font: italic bold 20px Microsoft YaHei; color: #fff; overflow: hidden; }
+>>>>>>> 353eb7993646f3f951bd95330a628c8562e9e743
 #logo img { margin-right: 15px;}
 
 #nav { margin: 0;}
