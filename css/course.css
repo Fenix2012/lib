@@ -60,9 +60,6 @@ span.cnav-stu-r { display: inline-block; background: #676767 url(../img/bg-commo
 .course-sidebar .lib-hd-bar { margin: 0 20px; /*border-top: 1px solid #adb2bd;*/ }
 /*进度条*/
 .course-progress { margin: 0 20px;}
-.course-progress .wrap-progress { margin-bottom: 10px; padding: 4px; height: 16px; background-color: #fdfdfd; border: 1px solid #d2d2d2; border-radius: 10px; box-shadow: inset 1px 2px 1px #dddede,1px 1px 2px #ccc;}
-.course-progress .progress { position: relative; height: 16px; background-color: #b1b1b1; background-image:-webkit-linear-gradient(top, #919191, #b1b1b1, #919191);  border-radius: 10px; overflow: visible;}
-.course-progress .progress .bar { position: absolute; top: -1px; left:0; height: 17px; line-height: 17px; background-image:-webkit-linear-gradient(top, #8eaed3, #7d98b7, #8eaed3); border-radius: 10px; box-shadow: 1px 1px 1px #999;}
 .course-progress .btn-large { font-size: 12px; color: #747474; padding: 11px 10px;}
 .course-progress .btn-large .is-icon { padding: 5px 0 5px 20px; background: url(../img/icon.png) -52px -209px; color: #747474;}
 .course-progress .btn-info { margin-left: 20px; background-color: #5aa294; background-image:-webkit-linear-gradient(top, #74d1bf, #60bbaa, #5aa294); font-family: Microsoft YaHei; color: #fff; }
@@ -71,10 +68,7 @@ span.cnav-stu-r { display: inline-block; background: #676767 url(../img/bg-commo
 /*课程评分*/
 .course-rating { margin: 25px 0; background-color: #343434; box-shadow: inset 1px 1px 1px #252525; }
 .course-rating ul.right { background: none; margin: 10px 0 0; height: 20px; }
-.course-rating li { display: inline-block; margin: 0 2px; width: 18px; height: 18px; background: url(../img/icon.png) -460px 0 no-repeat; text-align: center;}
-.course-rating a { display: block; width: 18px; height: 18px;  }
-.course-rating .rating-one { background: url(../img/icon.png) -460px -18px no-repeat;}
-.course-rating .rating-half { background: url(../img/icon.png) -460px -36px no-repeat;}
+.course-rating ul { background: none; margin: 10px 0 0; height: 20px; }
 /*最近来访*/
 .course-visited { padding-top: 25px; }
 .course-visited li { float: left; /*margin: 0 24px;*/ margin: 0 7%; width: 60px; text-align: center; overflow: hidden; }
