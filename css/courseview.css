@@ -1,0 +1,79 @@
+﻿.course-view { background-color: #242424; height: 800px; }
+.course-view .main { position: relative; background: url(../images/bg-course-view.jpg); height: 100%; }
+
+.cview-back { position: absolute; top: 15px; left: 15px;}
+.cview-list { margin: 0;}
+.cview-list li { padding: 50px 15px 20px;}
+
+
+.cview-top { }
+.cview-top-l { -webkit-box-flex: 2; }
+.cview-top .ch{ float:left; background:#939393; color:#181818; font-weight:bold; border-radius:8px; padding:0 40px 0 12px; text-shadow:0 1px rgba(255, 255, 255, 0.15); position:relative; margin-top:11px; text-align:center;}
+.cview-top .le{float:left;background:#181818;border-radius:8px;padding:0px 30px 0 12px;margin:11px 0 0 -20px;position:relative;font-size:12px;font-weight:bold;color:#999;}
+.cview-top .no{float:left; background: #216100 -webkit-linear-gradient(top, #438802, #317400, #216100); width:32px;height:32px;line-height:30px;text-align:center;border-radius:99em;box-shadow:0 1px rgba(255, 255, 255, 0.45) inset,0 0 0px 3px #000000,4px 0 rgba(255, 255, 255, 0.1);font-size:16px;font-weight:bold;color:#000;text-shadow:0 1px rgba(255, 255, 255, 0.4);margin:4px 0 0 -9px;position:relative;}
+.cview-top h6 { height: 36px; line-height: 36px;  color:#fff; margin:2px 0 0 9px; text-shadow:0 1px 1px rgba(0, 0, 0, 0.5); float: left;}
+
+.cview-con { height: 400px;}
+
+.course-view .sidebar { /*min-width: 250px;*/ padding: 10px;}
+
+.cview-sidebar-nav { margin: 0; /*height: 76px;*/ background-color: #f7f7f7; border-top-left-radius: 2px; border-top-right-radius: 2px; box-shadow: inset 0 -1px 3px #ccc;}
+.cview-sidebar-nav li { float: left; border-left: 1px solid #d3d3d3; border-bottom: 1px solid #d3d3d3; }
+.cview-sidebar-nav li:first-child { border-left: none; border-top-left-radius: 2px;}
+.cview-sidebar-nav li.active { border-bottom: 1px solid #fff; background-color: #fff; }
+.cview-sidebar-nav li a { display: block; padding-top: 45px; width: 76px; height: 30px; text-align: center; color: #373737; text-decoration: none; background: url(../images/icon.png) 26px -292px no-repeat;}
+.cview-sidebar-nav li.task a { background-position: -138px 5px;}
+.cview-sidebar-nav li.question a { background-position: -68px 5px;}
+.cview-sidebar-nav li.note a { background-position: -278px 5px;}
+.cview-sidebar-con { position: relative; padding: 0 10px; background-color: #fff; overflow: auto; border-bottom-left-radius: 2px; border-bottom-right-radius: 2px;}
+.cview-sidebar-con .tab-pane { padding: 10px 0;}
+.cview-res-wrap { /*overflow: auto; */}
+.cview-res-wrap .cview-res { margin-top: 10px; }
+.cview-res-wrap .cview-res:first-child { margin-top: 0; }
+.cview-sidebar-hd { position: relative; /*margin-top: 10px;*/ padding: 0 10px; height: 32px; line-height: 32px; border-top-left-radius: 2px; border-top-right-radius: 2px; background: url(../images/bg-course-view.jpg);}
+.cview-sidebar-hd span { color: #fff;}
+.cview-sidebar-hd i { display: inline-block; position: relative; top: 2px; margin-right: 5px; width: 0; height: 0; border: 4px solid transparent; border-top: 4px solid #fff;}
+.cview-sidebar-hd a { float: right; display: block; width: 65px; height: 22px; line-height: 22px;  color: #373737; text-decoration: none; text-align: center; border-radius: 2px; background: -webkit-linear-gradient(top, #dfdeac, #ebe8ba, #dfdeac); }
+.cview-sidebar-hd .btn { position: absolute; right: 10px; top: 5px; padding: 0 8px; border-radius: 2px; font-size: 12px; }
+.cview-res-bd { margin: 0; padding: 0 0 10px; background-color: #f7f7f7; border: 1px solid #c1c1c1; border-top: none; border-bottom-left-radius: 2px; border-bottom-right-radius: 2px;}
+.cview-res-bd.all { border-radius: 0;}
+.cview-res-bd li { float: left; margin: 10px 10px 0; padding-left: 52px; min-width: 60px;  height: 42px; background: url(../images/icon.png) no-repeat; cursor: pointer;}
+.cview-res-bd p { margin: 0;}
+li.cview-res-video { background-position: -454px -106px; }
+li.cview-res-video:hover { background-position: -454px -159px; }
+li.cview-res-text{ background-position: -454px -213px; }
+li.cview-res-text:hover { background-position: -454px -266px; }
+li.cview-res-ppt{ background-position: -454px -319px; }
+li.cview-res-ppt:hover { background-position: -454px -372px; }
+li.cview-res-pdf{ background-position: -454px -426px; }
+li.cview-res-pdf:hover { background-position: -454px -479px; }
+
+.btn-add-res { display: block; /*position: absolute; bottom: 0; width: 80%;*/ margin: 10px 0; padding: 8px 19px; border-radius: 2px; font-size: 12px; color: #fff; /*background: -webkit-linear-gradient(top, #75819d, #5e6c88, #475574); */background:-webkit-linear-gradient(top, #438802, #317400, #216100);}
+.icon-add-res { display: inline-block; margin-right: 4px; width: 17px; height: 17px; background: url(../images/icon.png) -423px -106px no-repeat;}
+
+.cview-pagination { /*position: absolute; bottom: 10px; width: 90%;*/  margin: 0 auto; height: 40px; line-height: 40px; border-bottom-left-radius: 2px; border-bottom-right-radius: 2px; border:1px solid #C1C1C1; border-top: none; background:-webkit-linear-gradient(top, #fff, #f5f5f5, #ececec);text-align: center; }
+.cview-pagination li { display: inline-block; margin: 0 3px; width: 11px; height: 11px; background: url(../images/icon.png) -425px -184px no-repeat; cursor: pointer; }
+.cview-pagination li.cur { background-position: -425px -142px;}
+
+/*查看资料*/
+.cres-page {}
+.cres-con { width: 80px; margin: 0 auto; padding-top: 20px; text-align: center;}
+.cres-con p { margin: 0;}
+.cres-pic { height: 71px; background: url(../images/icon-feeds.png);}
+.cres-video .cres-pic { background-position: 10px 0;}
+.cres-text .cres-pic { background-position: 10px -71px;}
+.cres-ppt .cres-pic { background-position: 10px -142px;}
+.cres-pdf .cres-pic { background-position: 10px -213px;}
+.cres-opt { margin: 5px 0 12px; text-align: center;}
+.cres-opt .btn { padding: 9px 13%; font-size: 12px;}
+.cres-opt .btn-preview { border-top-right-radius: 0; border-bottom-right-radius: 0; border-right: none;}
+.cres-opt .btn-play { border-top-left-radius: 0; border-bottom-left-radius: 0;}
+.cres-opt i { width: 15px; height: 15px;}
+.cres-opt .icon-preview { margin-right: 28px; background: url(../images/icon.png) -425px -230px;}
+.cres-opt .icon-play { margin-left: 28px; background: url(../images/icon.png) -425px -270px;}
+
+.cres-liked-hd { margin: 15px 0; padding-left: 25px; background: url(../images/icon.png) 0 -260px no-repeat;}
+.cres-liked-hd p { background-color: #fff; display: inline;}
+.cres-liked-bd { margin: 0;}
+.cres-liked-bd li { float: left; margin: 0 6%; width: 60px; text-align: center;}
+.cres-liked-bd a { color: #000; text-decoration: none;}
