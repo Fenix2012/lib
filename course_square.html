@@ -8,6 +8,21 @@
 <link rel="stylesheet" href="css/common.css" type="text/css" media="all" />
 <link rel="stylesheet" href="css/coursesquare.css" type="text/css" media="all" />
 <script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="js/jquery.select-1.3.6.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function(){
+//美化select
+$("#select-course").sSelect();
+$("#select-grade").sSelect();
+//增加序号和FREE图标
+$('.row-fluid .span3').each(function(i){
+  if(i < 3){
+ 	$(this).find('ul li:eq(0)').append('<span class="csquare-rank"></span>');
+  }
+});
+$('li.free').append('<span class="csquare-free"></span>');
+});
+</script>
 </head>
 <body>
 <header id="header">
@@ -48,55 +63,458 @@
 	</div>
 </header>
 <section class="lib-main">
+<div class="recommend">
+	<ul class="pic_list">
+	  <li><a href="video.html"><img src="images/temp/01.jpg" alt=""/></a></li
+	  ><li><a href="video.html"><img src="images/temp/02.jpg" alt="" /></a></li
+	  ><li><a href="video.html"><img src="images/temp/03.jpg" alt="" /></a></li
+	  ><li><a href="video.html"><img src="images/temp/04.jpg" alt="" /></a></li
+	  ><li><a href="video.html"><img src="images/temp/05.jpg" alt="" /></a></li>
+	</ul>
+	<ul class="thumb">
+	  <li><span class="cur"></span></li
+	  ><li><span></span></li
+	  ><li><span></span></li
+	  ><li><span></span></li
+	  ><li><span></span></li>
+	</ul>
+  </div>
 <div class="container">
+  
   <div class="csquare-nav">
-	<div class="csquare-nav-t">
-		<ul>
-		  <li><a href="#">人气课程</a></li>
-		  <li><a href="#">最新课程</a></li>
-		  <li><a href="#">全部课程</a></li>
-		</ul>
-		<form class="csquare-search">
-		  <input type="text" class="search-query" placeholder="SEARCH">
-		  <button type="submit" class="btn"></button>
-		</form>
-	</div> 
-	<div class="csquare-nav-b">
+	<div class="csquare-nav-t navbar">
+	  <div class="navbar-inner">
+		<div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </a>
+
+		  <div class="nav-collapse collapse">
+		  
+		  <ul class="nav">
+			<li class="active">
+			<a href="#">人气课程</a>
+			</li>
+			<li><a href="#">最新课程</a></li>
+			<li><a href="#">全部课程</a></li>
+		  </ul>
+		  <form class="navbar-form csquare-search pull-left">
+			<input type="text" class="search-query" placeholder="Search">
+			<button type="submit" class="btn"></button>
+		  </form>
+
+		  </div>
+		</div>
+	  </div>
+	</div>
+
+	<div class="csquare-nav-b clearfix">
 	  <div class="btn-group" data-toggle="buttons-radio">
-		<button class="btn-inner btn btn-primary">本校课程</button>
+		<button class="btn-inner btn btn-primary active">本校课程</button>
 		<button class="btn-outer btn btn-primary">外校课程</button>
 	  </div>
 	  <form class="form-horizontal" action="#">
 		<div class="control-group">
-		  <label class="control-label" for="select01">年级</label>
+		  <label class="control-label" for="select-course">科目：</label>
 		  <div class="controls">
-			<select id="select01">
-			  <option>全部</option>
-			  <option>2</option>
-			  <option>3</option>
-			  <option>4</option>
-			  <option>5</option>
+			<select id="select-course">
+			  <option value="0">全部</option>
+			  <option value="1">语文</option>
+			  <option value="2">数学</option>
+			  <option value="3">英语</option>
+			  <option value="4">物理</option>
+			  <option value="5">化学</option>
+			  <option value="6">生物</option>
+			  <option value="7">历史</option>
+			  <option value="8">地理</option>
+			  <option value="9">政治</option>
 			</select>
 		  </div>
 		</div>
 		<div class="control-group">
-		  <label class="control-label" for="select01">班级</label>
+		  <label class="control-label" for="select-grade">年级：</label>
 		  <div class="controls">
-			<select id="select01">
-			  <option>全部</option>
-			  <option>2</option>
-			  <option>3</option>
-			  <option>4</option>
-			  <option>5</option>
+			<select id="select-grade">
+			  <option value="0">全部</option>
+			  <option value="6">高三</option>
+			  <option value="5">高二</option>
+			  <option value="4">高一</option>
+			  <option value="3">初三</option>
+			  <option value="2">初二</option>
+			  <option value="1">初一</option>
 			</select>
 		  </div>
 		</div>
 	  </form>	
 	</div> 
   </div>
+  <div class="row-fluid">
+	<div class="span3">
+	  <ul>
+		<li>
+		<a class="csquare-pic" href="#" target="_blank"><img src="images/temp/course4.jpg" alt="" /></a>
+		<div class="csquare-info">
+		  <h4><a href="#" target="_blank">高一思想政治</a><span>售价：<em>免费</em></span></h4>
+		  <span>教师：<a href="#" target="_blank">userName</a></span>
+		</div>
+		<div class="csquare-footer clearfix">
+		  <div class="course-rating">
+			<span class="fL">评分：</span>
+			<ul class="right">
+			  <li><a class="rating-one" href="javascript:;"></a></li><li><a class="rating-half" href="javascript:;"></a></li><li><a href="javascript:;"></a></li><li><a href="javascript:;"></a></li><li><a href="javascript:;"></a></li>
+			</ul>
+		  </div>
+		  <span class="csquare-addnum"><em>986</em>人添加此课程</span>	
+		</div>
+		</li>
+		<li>
+		<a class="csquare-pic" href="#" target="_blank"><img src="images/temp/course4.jpg" alt="" /></a>
+		<div class="csquare-info">
+		  <h4><a href="#" target="_blank">高一思想政治</a><span>售价：<em>免费</em></span></h4>
+		  <span>教师：<a href="#" target="_blank">userName</a></span>
+		</div>
+		<div class="csquare-footer clearfix">
+		  <div class="course-rating">
+			<span class="fL">评分：</span>
+			<ul class="right">
+			  <li><a class="rating-one" href="javascript:;"></a></li><li><a class="rating-half" href="javascript:;"></a></li><li><a href="javascript:;"></a></li><li><a href="javascript:;"></a></li><li><a href="javascript:;"></a></li>
+			</ul>
+		  </div>
+		  <span class="csquare-addnum"><em>986</em>人添加此课程</span>	
+		</div>
+		</li>
+		<li>
+		<a class="csquare-pic" href="#" target="_blank"><img src="images/temp/course4.jpg" alt="" /></a>
+		<div class="csquare-info">
+		  <h4><a href="#" target="_blank">高一思想政治</a><span>售价：<em>免费</em></span></h4>
+		  <span>教师：<a href="#" target="_blank">userName</a></span>
+		</div>
+		<div class="csquare-footer clearfix">
+		  <div class="course-rating">
+			<span class="fL">评分：</span>
+			<ul class="right">
+			  <li><a class="rating-one" href="javascript:;"></a></li><li><a class="rating-half" href="javascript:;"></a></li><li><a href="javascript:;"></a></li><li><a href="javascript:;"></a></li><li><a href="javascript:;"></a></li>
+			</ul>
+		  </div>
+		  <span class="csquare-addnum"><em>986</em>人添加此课程</span>	
+		</div>
+		</li>
+		<li>
+		<a class="csquare-pic" href="#" target="_blank"><img src="images/temp/course4.jpg" alt="" /></a>
+		<div class="csquare-info">
+		  <h4><a href="#" target="_blank">高一思想政治</a><span>售价：<em>免费</em></span></h4>
+		  <span>教师：<a href="#" target="_blank">userName</a></span>
+		</div>
+		<div class="csquare-footer clearfix">
+		  <div class="course-rating">
+			<span class="fL">评分：</span>
+			<ul class="right">
+			  <li><a class="rating-one" href="javascript:;"></a></li><li><a class="rating-half" href="javascript:;"></a></li><li><a href="javascript:;"></a></li><li><a href="javascript:;"></a></li><li><a href="javascript:;"></a></li>
+			</ul>
+		  </div>
+		  <span class="csquare-addnum"><em>986</em>人添加此课程</span>	
+		</div>
+		</li>
+	  </ul>
+	</div>
+
+	<div class="span3">
+	  <ul>
+		<li>
+		<a class="csquare-pic" href="#" target="_blank"><img src="images/temp/course4.jpg" alt="" /></a>
+		<div class="csquare-info">
+		  <h4><a href="#" target="_blank">高一思想政治</a><span>售价：<em>免费</em></span></h4>
+		  <span>教师：<a href="#" target="_blank">userName</a></span>
+		</div>
+		<div class="csquare-footer clearfix">
+		  <div class="course-rating">
+			<span class="fL">评分：</span>
+			<ul class="right">
+			  <li><a class="rating-one" href="javascript:;"></a></li><li><a class="rating-half" href="javascript:;"></a></li><li><a href="javascript:;"></a></li><li><a href="javascript:;"></a></li><li><a href="javascript:;"></a></li>
+			</ul>
+		  </div>
+		  <span class="csquare-addnum"><em>986</em>人添加此课程</span>	
+		</div>
+
+		</li>
+		<li>
+		<a class="csquare-pic" href="#" target="_blank"><img src="images/temp/course4.jpg" alt="" /></a>
+		<div class="csquare-info">
+		  <h4><a href="#" target="_blank">高一思想政治</a><span>售价：<em>免费</em></span></h4>
+		  <span>教师：<a href="#" target="_blank">userName</a></span>
+		</div>
+		<div class="csquare-footer clearfix">
+		  <div class="course-rating">
+			<span class="fL">评分：</span>
+			<ul class="right">
+			  <li><a class="rating-one" href="javascript:;"></a></li><li><a class="rating-half" href="javascript:;"></a></li><li><a href="javascript:;"></a></li><li><a href="javascript:;"></a></li><li><a href="javascript:;"></a></li>
+			</ul>
+		  </div>
+		  <span class="csquare-addnum"><em>986</em>人添加此课程</span>	
+		</div>
+		</li>
+		<li>
+		<a class="csquare-pic" href="#" target="_blank"><img src="images/temp/course4.jpg" alt="" /></a>
+		<div class="csquare-info">
+		  <h4><a href="#" target="_blank">高一思想政治</a><span>售价：<em>免费</em></span></h4>
+		  <span>教师：<a href="#" target="_blank">userName</a></span>
+		</div>
+		<div class="csquare-footer clearfix">
+		  <div class="course-rating">
+			<span class="fL">评分：</span>
+			<ul class="right">
+			  <li><a class="rating-one" href="javascript:;"></a></li><li><a class="rating-half" href="javascript:;"></a></li><li><a href="javascript:;"></a></li><li><a href="javascript:;"></a></li><li><a href="javascript:;"></a></li>
+			</ul>
+		  </div>
+		  <span class="csquare-addnum"><em>986</em>人添加此课程</span>	
+		</div>
+		</li>
+		<li>
+		<a class="csquare-pic" href="#" target="_blank"><img src="images/temp/course4.jpg" alt="" /></a>
+		<div class="csquare-info">
+		  <h4><a href="#" target="_blank">高一思想政治</a><span>售价：<em>免费</em></span></h4>
+		  <span>教师：<a href="#" target="_blank">userName</a></span>
+		</div>
+		<div class="csquare-footer clearfix">
+		  <div class="course-rating">
+			<span class="fL">评分：</span>
+			<ul class="right">
+			  <li><a class="rating-one" href="javascript:;"></a></li><li><a class="rating-half" href="javascript:;"></a></li><li><a href="javascript:;"></a></li><li><a href="javascript:;"></a></li><li><a href="javascript:;"></a></li>
+			</ul>
+		  </div>
+		  <span class="csquare-addnum"><em>986</em>人添加此课程</span>	
+		</div>
+		</li>
+	  </ul>
+	</div>
+	<div class="span3">
+	  <ul>
+		<li>
+		<a class="csquare-pic" href="#" target="_blank"><img src="images/temp/course4.jpg" alt="" /></a>
+		<div class="csquare-info">
+		  <h4><a href="#" target="_blank">高一思想政治</a><span>售价：<em>免费</em></span></h4>
+		  <span>教师：<a href="#" target="_blank">userName</a></span>
+		</div>
+		<div class="csquare-footer clearfix">
+		  <div class="course-rating">
+			<span class="fL">评分：</span>
+			<ul class="right">
+			  <li><a class="rating-one" href="javascript:;"></a></li><li><a class="rating-half" href="javascript:;"></a></li><li><a href="javascript:;"></a></li><li><a href="javascript:;"></a></li><li><a href="javascript:;"></a></li>
+			</ul>
+		  </div>
+		  <span class="csquare-addnum"><em>986</em>人添加此课程</span>	
+		</div>
+
+		</li>
+		<li>
+		<a class="csquare-pic" href="#" target="_blank"><img src="images/temp/course4.jpg" alt="" /></a>
+		<div class="csquare-info">
+		  <h4><a href="#" target="_blank">高一思想政治</a><span>售价：<em>免费</em></span></h4>
+		  <span>教师：<a href="#" target="_blank">userName</a></span>
+		</div>
+		<div class="csquare-footer clearfix">
+		  <div class="course-rating">
+			<span class="fL">评分：</span>
+			<ul class="right">
+			  <li><a class="rating-one" href="javascript:;"></a></li><li><a class="rating-half" href="javascript:;"></a></li><li><a href="javascript:;"></a></li><li><a href="javascript:;"></a></li><li><a href="javascript:;"></a></li>
+			</ul>
+		  </div>
+		  <span class="csquare-addnum"><em>986</em>人添加此课程</span>	
+		</div>
+		</li>
+		<li>
+		<a class="csquare-pic" href="#" target="_blank"><img src="images/temp/course4.jpg" alt="" /></a>
+		<div class="csquare-info">
+		  <h4><a href="#" target="_blank">高一思想政治</a><span>售价：<em>免费</em></span></h4>
+		  <span>教师：<a href="#" target="_blank">userName</a></span>
+		</div>
+		<div class="csquare-footer clearfix">
+		  <div class="course-rating">
+			<span class="fL">评分：</span>
+			<ul class="right">
+			  <li><a class="rating-one" href="javascript:;"></a></li><li><a class="rating-half" href="javascript:;"></a></li><li><a href="javascript:;"></a></li><li><a href="javascript:;"></a></li><li><a href="javascript:;"></a></li>
+			</ul>
+		  </div>
+		  <span class="csquare-addnum"><em>986</em>人添加此课程</span>	
+		</div>
+		</li>
+		<li>
+		<a class="csquare-pic" href="#" target="_blank"><img src="images/temp/course4.jpg" alt="" /></a>
+		<div class="csquare-info">
+		  <h4><a href="#" target="_blank">高一思想政治</a><span>售价：<em>免费</em></span></h4>
+		  <span>教师：<a href="#" target="_blank">userName</a></span>
+		</div>
+		<div class="csquare-footer clearfix">
+		  <div class="course-rating">
+			<span class="fL">评分：</span>
+			<ul class="right">
+			  <li><a class="rating-one" href="javascript:;"></a></li><li><a class="rating-half" href="javascript:;"></a></li><li><a href="javascript:;"></a></li><li><a href="javascript:;"></a></li><li><a href="javascript:;"></a></li>
+			</ul>
+		  </div>
+		  <span class="csquare-addnum"><em>986</em>人添加此课程</span>	
+		</div>
+		</li>
+	  </ul>
+	</div>
+	<div class="span3">
+	  <ul>
+		<li class="free">
+		<a class="csquare-pic" href="#" target="_blank"><img src="images/temp/course4.jpg" alt="" /></a>
+		<div class="csquare-info">
+		  <h4><a href="#" target="_blank">高一思想政治</a><span>售价：<em>免费</em></span></h4>
+		  <span>教师：<a href="#" target="_blank">userName</a></span>
+		</div>
+		<div class="csquare-footer clearfix">
+		  <div class="course-rating">
+			<span class="fL">评分：</span>
+			<ul class="right">
+			  <li><a class="rating-one" href="javascript:;"></a></li><li><a class="rating-half" href="javascript:;"></a></li><li><a href="javascript:;"></a></li><li><a href="javascript:;"></a></li><li><a href="javascript:;"></a></li>
+			</ul>
+		  </div>
+		  <span class="csquare-addnum"><em>986</em>人添加此课程</span>	
+		</div>
+		</li>
+		<li>
+		<a class="csquare-pic" href="#" target="_blank"><img src="images/temp/course4.jpg" alt="" /></a>
+		<div class="csquare-info">
+		  <h4><a href="#" target="_blank">高一思想政治</a><span>售价：<em>免费</em></span></h4>
+		  <span>教师：<a href="#" target="_blank">userName</a></span>
+		</div>
+		<div class="csquare-footer clearfix">
+		  <div class="course-rating">
+			<span class="fL">评分：</span>
+			<ul class="right">
+			  <li><a class="rating-one" href="javascript:;"></a></li><li><a class="rating-half" href="javascript:;"></a></li><li><a href="javascript:;"></a></li><li><a href="javascript:;"></a></li><li><a href="javascript:;"></a></li>
+			</ul>
+		  </div>
+		  <span class="csquare-addnum"><em>986</em>人添加此课程</span>	
+		</div>
+		</li>
+		<li>
+		<a class="csquare-pic" href="#" target="_blank"><img src="images/temp/course4.jpg" alt="" /></a>
+		<div class="csquare-info">
+		  <h4><a href="#" target="_blank">高一思想政治</a><span>售价：<em>免费</em></span></h4>
+		  <span>教师：<a href="#" target="_blank">userName</a></span>
+		</div>
+		<div class="csquare-footer clearfix">
+		  <div class="course-rating">
+			<span class="fL">评分：</span>
+			<ul class="right">
+			  <li><a class="rating-one" href="javascript:;"></a></li><li><a class="rating-half" href="javascript:;"></a></li><li><a href="javascript:;"></a></li><li><a href="javascript:;"></a></li><li><a href="javascript:;"></a></li>
+			</ul>
+		  </div>
+		  <span class="csquare-addnum"><em>986</em>人添加此课程</span>	
+		</div>
+		</li>
+		<li>
+		<a class="csquare-pic" href="#" target="_blank"><img src="images/temp/course4.jpg" alt="" /></a>
+		<div class="csquare-info">
+		  <h4><a href="#" target="_blank">高一思想政治</a><span>售价：<em>免费</em></span></h4>
+		  <span>教师：<a href="#" target="_blank">userName</a></span>
+		</div>
+		<div class="csquare-footer clearfix">
+		  <div class="course-rating">
+			<span class="fL">评分：</span>
+			<ul class="right">
+			  <li><a class="rating-one" href="javascript:;"></a></li><li><a class="rating-half" href="javascript:;"></a></li><li><a href="javascript:;"></a></li><li><a href="javascript:;"></a></li><li><a href="javascript:;"></a></li>
+			</ul>
+		  </div>
+		  <span class="csquare-addnum"><em>986</em>人添加此课程</span>	
+		</div>
+		</li>
+	  </ul>
+	</div>
+  </div>
+
+  <!--ul class="csquare-clist clearfix">
+  <li>
+  <a class="csquare-pic" href="#" target="_blank"><img src="images/temp/course4.jpg" alt="" /></a>
+  <div class="csquare-info">
+	<h4><a href="#" target="_blank">高一思想政治</a><span>售价：<em>免费</em></span></h4>
+	<span>教师：<a href="#" target="_blank">userName</a></span>
+  </div>
+  <div class="csquare-footer">
+	<div class="course-rating">
+	  <span class="fL">评分：</span>
+	  <ul class="right">
+		<li><a class="rating-one" href="javascript:;"></a></li><li><a class="rating-half" href="javascript:;"></a></li><li><a href="javascript:;"></a></li><li><a href="javascript:;"></a></li><li><a href="javascript:;"></a></li>
+	  </ul>
+	</div>
+	<span class="csquare-addnum"><em>986</em>人添加此课程</span>	
+  </div>
+  </li>
+  <li>
+  <a class="csquare-pic" href="#" target="_blank"><img src="images/temp/course4.jpg" alt="" /></a>
+  <div class="csquare-info">
+	<h4><a href="#" target="_blank">高一思想政治</a><span>售价：<em>免费</em></span></h4>
+	<span>教师：<a href="#" target="_blank">userName</a></span>
+  </div>
+  <div class="csquare-footer">
+	<span class="csquare-addnum"><em>986</em>人添加此课程</span>	
+	<div class="course-rating">
+	  <span class="fL">评分：</span>
+	  <ul class="right">
+		<li><a class="rating-one" href="javascript:;"></a></li><li><a class="rating-half" href="javascript:;"></a></li><li><a href="javascript:;"></a></li><li><a href="javascript:;"></a></li><li><a href="javascript:;"></a></li>
+	  </ul>
+	</div>
+  </div>
+  </li>
+  <li>
+  <a class="csquare-pic" href="#" target="_blank"><img src="images/temp/course4.jpg" alt="" /></a>
+  <div class="csquare-info">
+	<h4><a href="#" target="_blank">高一思想政治</a><span>售价：<em>免费</em></span></h4>
+	<span>教师：<a href="#" target="_blank">userName</a></span>
+  </div>
+  <div class="csquare-footer">
+	<span class="csquare-addnum"><em>986</em>人添加此课程</span>	
+	<div class="course-rating">
+	  <span class="fL">评分：</span>
+	  <ul class="right">
+		<li><a class="rating-one" href="javascript:;"></a></li><li><a class="rating-half" href="javascript:;"></a></li><li><a href="javascript:;"></a></li><li><a href="javascript:;"></a></li><li><a href="javascript:;"></a></li>
+	  </ul>
+	</div>
+  </div>
+  </li>
+  <li>
+  <a class="csquare-pic" href="#" target="_blank"><img src="images/temp/course4.jpg" alt="" /></a>
+  <div class="csquare-info">
+	<h4><a href="#" target="_blank">高一思想政治</a><span>售价：<em>免费</em></span></h4>
+	<span>教师：<a href="#" target="_blank">userName</a></span>
+  </div>
+  <div class="csquare-footer">
+	<span class="csquare-addnum"><em>986</em>人添加此课程</span>	
+	<div class="course-rating">
+	  <span class="fL">评分：</span>
+	  <ul class="right">
+		<li><a class="rating-one" href="javascript:;"></a></li><li><a class="rating-half" href="javascript:;"></a></li><li><a href="javascript:;"></a></li><li><a href="javascript:;"></a></li><li><a href="javascript:;"></a></li>
+	  </ul>
+	</div>
+  </div>
+  </li>
+  <li>
+  <a class="csquare-pic" href="#" target="_blank"><img src="images/temp/course4.jpg" alt="" /></a>
+  <div class="csquare-info">
+	<h4><a href="#" target="_blank">高一思想政治</a><span>售价：<em>免费</em></span></h4>
+	<span>教师：<a href="#" target="_blank">userName</a></span>
+  </div>
+  <div class="csquare-footer">
+	<span class="csquare-addnum"><em>986</em>人添加此课程</span>	
+	<div class="course-rating">
+	  <span class="fL">评分：</span>
+	  <ul class="right">
+		<li><a class="rating-one" href="javascript:;"></a></li><li><a class="rating-half" href="javascript:;"></a></li><li><a href="javascript:;"></a></li><li><a href="javascript:;"></a></li><li><a href="javascript:;"></a></li>
+	  </ul>
+	</div>
+  </div>
+  </li>
+  </ul-->
+
 </div>
 </section>
 <footer id="footer"></footer>
 <script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/coursesquare.js" type="text/javascript"></script>
 </body>
 </html>
