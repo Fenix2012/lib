@@ -9,20 +9,6 @@
 <link rel="stylesheet" href="css/coursesquare.css" type="text/css" media="all" />
 <script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
 <script src="js/jquery.select-1.3.6.js" type="text/javascript"></script>
-<script type="text/javascript">
-$(function(){
-//美化select
-$("#select-course").sSelect();
-$("#select-grade").sSelect();
-//增加序号和FREE图标
-$('.row-fluid .span3').each(function(i){
-  if(i < 3){
- 	$(this).find('ul li:eq(0)').append('<span class="csquare-rank"></span>');
-  }
-});
-$('li.free').append('<span class="csquare-free"></span>');
-});
-</script>
 </head>
 <body>
 <header id="header">
@@ -62,48 +48,47 @@ $('li.free').append('<span class="csquare-free"></span>');
 	  </div>
 	</div>
 </header>
-<section class="lib-main">
+<section class="lib-main" style="padding-top:10px">
 <div class="recommend">
-	<ul class="pic_list">
-	  <li><a href="video.html"><img src="images/temp/01.jpg" alt=""/></a></li
-	  ><li><a href="video.html"><img src="images/temp/02.jpg" alt="" /></a></li
-	  ><li><a href="video.html"><img src="images/temp/03.jpg" alt="" /></a></li
-	  ><li><a href="video.html"><img src="images/temp/04.jpg" alt="" /></a></li
-	  ><li><a href="video.html"><img src="images/temp/05.jpg" alt="" /></a></li>
-	</ul>
-	<ul class="thumb">
-	  <li><span class="cur"></span></li
-	  ><li><span></span></li
-	  ><li><span></span></li
-	  ><li><span></span></li
-	  ><li><span></span></li>
-	</ul>
-  </div>
+  <ul class="pic_list">
+	<li><a href="video.html"><img src="images/temp/01.jpg" alt=""/></a></li
+	><li><a href="video.html"><img src="images/temp/02.jpg" alt="" /></a></li
+	><li><a href="video.html"><img src="images/temp/03.jpg" alt="" /></a></li
+	><li><a href="video.html"><img src="images/temp/04.jpg" alt="" /></a></li
+	><li><a href="video.html"><img src="images/temp/05.jpg" alt="" /></a></li>
+  </ul>
+  <ul class="thumb">
+	<li><span class="cur"></span></li
+	><li><span></span></li
+	><li><span></span></li
+	><li><span></span></li
+	><li><span></span></li>
+  </ul>
+</div>
 <div class="container">
-  
   <div class="csquare-nav">
 	<div class="csquare-nav-t navbar">
 	  <div class="navbar-inner">
 		<div class="container">
-<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </a>
+		  <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		  </a>
 
 		  <div class="nav-collapse collapse">
-		  
-		  <ul class="nav">
-			<li class="active">
-			<a href="#">人气课程</a>
-			</li>
-			<li><a href="#">最新课程</a></li>
-			<li><a href="#">全部课程</a></li>
-		  </ul>
-		  <form class="navbar-form csquare-search pull-left">
-			<input type="text" class="search-query" placeholder="Search">
-			<button type="submit" class="btn"></button>
-		  </form>
+
+			<ul class="nav">
+			  <li class="active">
+			  <a href="#">人气课程</a>
+			  </li>
+			  <li><a href="#">最新课程</a></li>
+			  <li><a href="#">全部课程</a></li>
+			</ul>
+			<form class="navbar-form csquare-search pull-left">
+			  <input type="text" class="search-query" placeholder="Search">
+			  <button type="submit" class="btn"></button>
+			</form>
 
 		  </div>
 		</div>
@@ -510,7 +495,6 @@ $('li.free').append('<span class="csquare-free"></span>');
   </div>
   </li>
   </ul-->
-
 </div>
 </section>
 <footer id="footer"></footer>
