@@ -34,7 +34,7 @@ span.cnav-stu-r { display: inline-block; background: #676767 url(../images/bg-co
 .course-main { margin-top: 3px; border-radius: 5px; box-shadow: 1px 1px 5px #999; background-color: #fff;}
 .course-main.row-fluid [class*="span"] { margin-left: 0; }
 
-.course-outline { /*margin-right: -30px;*/ padding: 20px; border-right: 1px solid #adb2bd;}
+.course-con, .course-outline { /*margin-right: -30px;*/ padding: 20px; border-right: 1px solid #adb2bd;}
 .course-outline .dl-horizontal { margin: 0; }
 .course-outline .dl-horizontal dt { position: relative; width: auto; font-weight: normal; text-indent: 50px; overflow: visible; display: inline-block; }
 .course-outline .dl-horizontal dt span { position: absolute; right:-39px; top: 14px; width: 12px; height: 12px; background: url(../images/icon.png) right top no-repeat;}
@@ -75,3 +75,20 @@ span.cnav-stu-r { display: inline-block; background: #676767 url(../images/bg-co
 .course-visited li p { color: #a5a5a5; }
 .course-visited li span { display: block; padding: 2px 0; color: #747474; }
 
+.dthumb { position: relative;}
+.no-data .accordion-heading { position: relative; }
+.course-con .btn.btn-add-data { position: absolute; right:10px; top: 10px; color: #fff; font-size: 12px; text-shadow: none; background: -webkit-linear-gradient(top,#2ea4cb,#45a1c4,#619dbb); }
+.no-data .accordion-heading .btn.btn-add-data { top: 12px; }
+/*课程学生*/
+#cedit-stu {}
+#cedit-stu .form-horizontal .controls { margin-left: 0; }
+.cedit-stu-num { height: 40px; line-height: 40px; margin-left: 20px; }
+.cedit-stu-num em { color: #275d79;}
+.cedit-stu-list { margin: 0; }
+.cedit-stu-list li { float: left; padding-top: 15px; width: 140px; height: 140px; text-align: center; border: 1px solid #fff; }
+.cedit-stu-list li a { color: #4f4f4f; text-decoration: none;}
+.cedit-stu-list li span { display: block; padding: 8px 0 0;}
+.cedit-stu-list li p { margin: 0 0 8px; }
+.cedit-stu-list .btn-cedit-sendmsg  { display: none; padding: 4px 36px; font-size: 12px; color: #fff; background: -webkit-linear-gradient(top,#85a0be,#7992ad,#6c839c); text-shadow: none;}
+.cedit-stu-list li:hover { background-color: #fefefe; border-radius: 4px; box-shadow: 1px 1px 5px #999;}
+.cedit-stu-list li:hover .btn-cedit-sendmsg { display: inline-block; }

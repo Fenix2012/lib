@@ -323,29 +323,6 @@
 </section>
 <footer id="footer"></footer>
 <script src="js/bootstrap.min.js" type="text/javascript"></script>
-<script type="text/javascript">
-$(function(){
-//----------
-$('.accordion-toggle').append('<span class="arrow-gray-right"></span>');
-$('.no-data .accordion-toggle').css('cursor','default');
-$('.no-data .accordion-toggle').find('.arrow-gray-right').remove();
-
-//资料翻页
-var dataLen = $('.cdetail-data-list').length;
-var dataPage = 1;
-$(".dthumb li").click(function(){
-  dataPage =   $(".dthumb li").index(this);
-  DataScroll(dataPage);
-});	
-function DataScroll(page){
-  $('.cdetail-data-list').eq(page).fadeIn().siblings().fadeOut();
-  //$('.pic_list li').eq(page).fadeOut();
-  $('.dthumb li span').eq(page).addClass('cur')
-  $('.dthumb li span').eq(page).parent('li').siblings('li').find('span').removeClass('cur');
-}
-$('.cdetail-data-list-wrap').height($(this).find('.cdetail-data-list').height());
-//--------------
-});
-</script>
+<script src="js/global.js" type="text/javascript"></script>
 </body>
 </html>

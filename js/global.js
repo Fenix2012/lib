@@ -1,5 +1,5 @@
 ﻿$(function(){
-//----------------------------------------
+
 //回答追问
 $('.ufeeds-answer').live('click',function(){
   questionAction($(this));
@@ -39,6 +39,31 @@ $('.ucenter-feeds-unfold').live('click',function(){
 $('.ucenter-feeds-fold').live('click',function(){
 	$(this).siblings('.ufeeds-detail-foldarea').css({'height':'40px','overflow':'hidden'});
 	$(this).removeClass('ucenter-feeds-fold').addClass('ucenter-feeds-unfold').text('显示全部内容');
+});
+//课程大纲手风琴
+$('.accordion-toggle').append('<span class="arrow-gray-right"></span>');
+$('.no-data .accordion-toggle').css('cursor','default');
+$('.no-data .accordion-toggle').find('.arrow-gray-right').remove();
+
+//课程大纲资料翻页
+var dataLen = $('.cdetail-data-list').length;
+var dataPage = 1;
+$(".dthumb li").click(function(){
+  dataPage =   $(".dthumb li").index(this);
+  DataScroll(dataPage);
+});	
+function DataScroll(page){
+  $('.cdetail-data-list').eq(page).fadeIn().siblings().fadeOut();
+  //$('.pic_list li').eq(page).fadeOut();
+  $('.dthumb li span').eq(page).addClass('cur')
+  $('.dthumb li span').eq(page).parent('li').siblings('li').find('span').removeClass('cur');
+}
+$('.cdetail-data-list-wrap').height($(this).find('.cdetail-data-list').height());
+//上传课程图片
+var textButton="<input type='button' name='button' id='button' value='上传课程图片' class='type-file-button btn' />";
+$(textButton).insertBefore("#fileField");
+$("#fileField").change(function(){
+	$("#textfield").val($("#fileField").val());
 });
 
 //----------------------------------------
