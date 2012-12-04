@@ -8,11 +8,12 @@
 <link rel="stylesheet" href="css/common.css" type="text/css" media="all" />
 <link rel="stylesheet" href="css/courseview.css" type="text/css" media="all" />
 <script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="js/jscroll.js" type="text/javascript"></script>
 </head>
 <body>
 <section class="course-view">
 <div class="row-fluid">
-  <div class="main span9">
+  <div class="main span8">
 	<a class="cview-back" href="#" title="返回课程首页">返回课程首页</a>
 	<ul class="cview-list">
 	  <li>
@@ -40,20 +41,9 @@
 	  </li>
 	</ul>
 	<div class="sidebar-switch"></div>
-	<script type="text/javascript">
-	$(function(){
-		var w_main = $('.course-view .main').width();
-		$('.sidebar-switch').toggle(function(){
-		  $(this).parents('.main').animate({'width':'100%'},500);
-		  $(this).addClass('sidebar-switch-i');
-		},function(){
-		  $(this).parents('.main').animate({'width':w_main},500);
-		  $(this).removeClass('sidebar-switch-i');
-		});
-	})
-	</script>
+	
   </div>
-  <div class="sidebar span3">
+  <div class="sidebar span4">
 	<ul class="cview-sidebar-nav clearfix">
 	  <li class="resource active"><a href="#cview-resource" data-toggle="tab">资料</a></li>
 	  <li class="task"><a href="#cview-task" data-toggle="tab">作业</a></li>
@@ -63,7 +53,6 @@
 	<div class="cview-sidebar-con tab-content clearb">
 	  <div class="tab-pane active" id="cview-resource">
 		<!--单个资料start-->
-		
 		<div class="cview-sidebar-hd"><span><i class="icon-arrowdown"></i>查看资料</span><button class="btn" href="#">返回</button></div>
 		<div class="cres-page">
 		  <div class="cres-con">
@@ -652,7 +641,7 @@
 		<!--笔记首页start-->
 		<div class="cview-sidebar-hd">
 		  <span><i class="icon-arrowdown"></i>笔记</span>
-		  <button class="btn" href="#"><i class="icon-plus"></i>添加笔记</button>
+		  <button class="btn-add-note btn" id="btn-addnote" href="#"><i class="icon-plus"></i>添加笔记</button>
 		</div>
 		<div class="cview-sidebar-list">
 		  <ul class="note">
@@ -687,44 +676,6 @@
 		  </ul>
 		</div>
 		<!--笔记首页end-->
-		<!--添加笔记start-->
-		<div class="cview-sidebar-hd">
-		  <span><i class="icon-arrowdown"></i>写笔记</span>
-		  <button class="btn" href="#">返回</button>
-		</div>
-		<div class="cview-sidebar-form">
-		  <form>
-			<input type="text" class="input-xlarge" id="input01" placeholder="输入标题"/>
-			<textarea class="input-xlarge" id="textarea" rows="3" placeholder="输入问题"></textarea>
-			<p class="cview-note-opt clearfix">
-			<span>查看权限</span>：
-			<button type="submit" class="btn-achieve btn">完成</button>
-			<button type="submit" class="btn-noteauth btn">公开</button>
-			</p>
-		  </form>
-		
-		</div>	
-		<!--添加笔记end-->
-		<!--查看笔记start-->
-		<div class="cview-sidebar-hd">
-		  <span><i class="icon-arrowdown"></i>查看笔记</span>
-		  <button class="btn" href="#">返回</button>
-		</div>
-		<div class="cview-sidebar-detail clearfix">
-		  <div class="fL">
-			<h5>笔记</h5>
-			<span class="cview-sidebar-time">2012-09-12  12:00</span>
-		  </div>
-		  <div class="fR">
-			<div class="cres-opt">
-			  <a class="btn-preview btn" href="#">编辑</a><a class="btn-play btn" href="#">删除</a>
-			</div>
-		  </div>
-		</div>
-		<div class="cview-note-con">
-			<p>这里是笔记正文这里是笔记正文这里是笔记正文这里是笔记正文</p>  
-		</div>
-		<!--查看笔记end-->
 	  </div>
 	</div>
   </div>
@@ -732,54 +683,6 @@
 </section>
 <script src="js/bootstrap.min.js" type="text/javascript"></script>
 <script src="js/global.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-function resize(){
-  var h=document.documentElement.clientHeight;
-  //$('.course-view').height(h);
-  $('.course-view .main').height(h);
-  //$('.course-view .sidebar').height(h);
-  $('.cview-sidebar-con').height(h-96);
-  $('.cview-res-wrap').height(h-154);
-  //$('.cview-res-bd.all').height(h-208);
-
-}
-resize();
-$(window).resize(function(){
-	resize();	
-});
-$(function(){
-//查看全部
-$('.cview-sidebar-hd .btn').live('click',function(){
-  viewAll($(this));
-});
-//查看单个资料
-$('.cview-res-bd li').live('click',function(){
-	viewOne();
-});
-//---------
-})
-function viewAll(obj){
-  if(!obj.hasClass('go-back')){
- 	obj.parents('.cview-res').siblings('.cview-res').hide();
-	obj.addClass('go-back').text('返回');
-  } else {
- 	obj.parents('.cview-res').siblings('.cview-res').show();
-	obj.removeClass('go-back').text('查看全部');
-  }
-}
-function viewOne(){
-  $.ajax({
-	type : 'GET',	  
-	url : 'http://localhost/Libedu2/viewone.php',
-	beforeSend : function(){
-		//alert('正在请求...');	
-	},
-	success : function(data){
-		alert(data);	
-	}
-  });
-}
-</script>
+<script src="js/courseview.js" type="text/javascript"></script>
 </body>
 </html>

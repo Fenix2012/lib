@@ -3,11 +3,7 @@
 $("#select-course").sSelect();
 $("#select-grade").sSelect();
 //增加序号和FREE图标
-$('.row-fluid .span3').each(function(i){
-  if(i < 3){
- 	$(this).find('ul li:eq(0)').append('<span class="csquare-rank"></span>');
-  }
-});
+$('.csquare-clist>li').each(function(i){ if(i < 3){ $(this).append('<span class="csquare-rank"></span>'); } });
 $('li.free').append('<span class="csquare-free"></span>');
 //大图轮播
 var len = $('.pic_list li').length;
