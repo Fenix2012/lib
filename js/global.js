@@ -59,13 +59,23 @@ function DataScroll(page){
   $('.dthumb li span').eq(page).parent('li').siblings('li').find('span').removeClass('cur');
 }
 $('.cdetail-data-list-wrap').height($(this).find('.cdetail-data-list').height());
-//上传课程图片
-var textButton="<input type='button' name='button' id='button' value='上传课程图片' class='type-file-button btn' />";
-$(textButton).insertBefore("#fileField");
-$("#fileField").change(function(){
-	$("#textfield").val($("#fileField").val());
+//上传本地文件
+
+$('.type-file-file').each(function(i){
+  var _value = $(this).attr('data-value');
+  var textButton="<input type='button' name='button' id='button' value='"+_value+"' class='type-file-button btn' />";
+  $(textButton).insertBefore(this);
+});
+$('.type-file-button').live('click',function(){
+	$(this).next('.type-file-file').trigger('click');
 });
 
+//var _value = $('#fileField').attr('data-value');
+//var textButton="<input type='button' name='button' id='button' value='"+_value+"' class='type-file-button btn' />";
+//$(textButton).insertBefore("#fileField");
+//$("#fileField").change(function(){
+//	$("#textfield").val($("#fileField").val());
+//});
 //----------------------------------------
 });
 
