@@ -1,1 +1,24 @@
-﻿
+﻿#task .lib-con  { padding-bottom: 0; }
+#task .lib-con .tab-pane { padding: 18px 0 8px; }
+#task .task-list { margin: 0; }
+#task .task-list li { position: relative; padding: 12px 15px 15px 70px; background: url(../images/icon-mod-large.png) 15px 15px no-repeat; border-radius: 4px;}
+#task .task-list li:hover { background-color:#e8ecf2;  }
+#task .task-li-sub { display: none; position: absolute; right: 15px; top: 15px;}
+#task .task-list li:hover .task-li-sub { display: block;}
+#task .task-list h6 { margin: 0 0 5px; font-size: 14px; font-weight: normal;}
+#task .task-list p { margin: 0;}
+#task .task-list .btn { margin-left: 12px; padding: 0; width: 92px; height: 38px; line-height: 38px; font-size: 12px; color: #fff; background: #8f9fb6; text-shadow: none; }
+#task .task-list .btn:hover { background-color: #aabdd9;}
+
+#task .pagination  { margin-top: 30px; text-align: center;}
+#task .pagination a { color: #6d7a96;}
+#task .pagination ul { float: none;}
+#task .pagination ul > li > a:hover, #task .pagination ul > .active > a, #task .pagination ul > .active > span { background-color: #9fa5b2; color: #fff; }
+#task .pagination form { position: relative; top: -10px;}
+
+span.static { display: inline-block; margin: 0 10px; }
+#modal-view-task { width: 760px; margin:-330px 0 0 -380px}
+#modal-view-task .modal-body { padding: 10px; max-height: 560px; }
+
+#modal-set-homework { width: 760px; margin:-330px 0 0 -380px}
+#modal-set-homework .modal-body { padding: 10px; max-height: 560px; }

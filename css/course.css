@@ -41,7 +41,7 @@
 .dthumb { position: relative;}
 .no-data .accordion-heading { position: relative; }
 .lib-con .btn.btn-add-data { position: absolute; right:10px; top: 10px; color: #fff; font-size: 12px; text-shadow: none; background: -webkit-linear-gradient(top,#2ea4cb,#45a1c4,#619dbb); }
-.no-data .accordion-heading .btn.btn-add-data { top: 12px; }
+.no-data .accordion-heading .btn.btn-add-data { top: 10px; }
 /*课程学生*/
 #cedit-stu {}
 #cedit-stu .form-horizontal .controls { margin-left: 0; }
@@ -56,3 +56,4 @@
 .cedit-stu-list li:hover { background-color: #fefefe; border-radius: 4px; box-shadow: 1px 1px 5px #999;}
 .cedit-stu-list li:hover .btn-cedit-sendmsg { display: inline-block; }
 
+#form-cedit-setting .control-label { text-indent: 1em;}

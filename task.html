@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
 <link rel="stylesheet" href="css/common.css" type="text/css" />
 <link rel="stylesheet" href="css/task.css" type="text/css" />
+<script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
 </head>
 <body>
 <header id="header">
@@ -47,7 +48,7 @@
 	</div>
 </header>
 <section class="lib-main">
-  <div class="container" id="task">
+  <div class="container">
 	<div class="lib-menu clearfix">
 	  <dl class="lib-menu-course dl-horizontal">
 		<dt><a href="#"><img src="images/temp/course.jpg" alt="高二数学" /></a></dt>	
@@ -63,29 +64,401 @@
 	  	<li class="statistics"><a href="#">统计</a><span>47</span></li>
 	  </ul>
 	</div>
-	<div class="lib-container row-fluid">
-	  <div class="lib-con span8">
-		<div class="lib-hd-bar">
-		  <ul class="nav nav-tabs">
-			<li class="active"><a href="#task-new" data-toggle="tab">最近作业</a></li>
-			<li><a href="#task-all" data-toggle="tab">全部作业</a></li>
-		  </ul>
-		</div>	
-		<div class="tab-content">
-		  <div class="tab-pane active" id="task-new">111</div>
-		  <div class="tab-pane" id="task-all">222</div>
+<div class="lib-container row-fluid" id="task">
+<div class="lib-con span8">
+<div class="lib-hd-bar">
+<ul class="nav nav-tabs">
+<li class="active"><a href="#task-new" data-toggle="tab">最近作业</a></li>
+<li><a href="#task-all" data-toggle="tab">全部作业</a></li>
+</ul>
+</div>	
+<div class="tab-content">
+<div class="tab-pane active" id="task-new">
+<ul class="task-list">
+<li>
+<h6>三角函数作业作业</h6>	
+<p><span>第一章第一节<span><span class="static">发布于</span><span>2012-02-21 12：00</span></p>
+<div class="task-li-sub"><i class="btn-icon" title="删除"></i><a href="#" class="btn">作业详情</a><a href="#" class="btn">完成情况</a></div>
+</li>
+
+<li>
+<h6>三角函数作业作业</h6>	
+<p><span>第一章第一节<span><span class="static">发布于</span><span>2012-02-21 12：00</span></p>
+<div class="task-li-sub"><i class="btn-icon" title="删除"></i><a href="#" class="btn">作业详情</a><a href="#" class="btn">完成情况</a></div>
+</li>
+
+<li>
+<h6>三角函数作业作业</h6>	
+<p><span>第一章第一节<span><span class="static">发布于</span><span>2012-02-21 12：00</span></p>
+<div class="task-li-sub"><i class="btn-icon" title="删除"></i><a href="#" class="btn">作业详情</a><a href="#" class="btn">完成情况</a></div>
+</li>
+<li>
+<h6>三角函数作业作业</h6>	
+<p><span>第一章第一节<span><span class="static">发布于</span><span>2012-02-21 12：00</span></p>
+<div class="task-li-sub"><i class="btn-icon" title="删除"></i><a href="#" class="btn">作业详情</a><a href="#" class="btn">完成情况</a></div>
+</li>
+<li>
+<h6>三角函数作业作业</h6>	
+<p><span>第一章第一节<span><span class="static">发布于</span><span>2012-02-21 12：00</span></p>
+<div class="task-li-sub"><i class="btn-icon" title="删除"></i><a href="#" class="btn">作业详情</a><a href="#" class="btn">完成情况</a></div>
+</li>
+<li>
+<h6>三角函数作业作业</h6>	
+<p><span>第一章第一节<span><span class="static">发布于</span><span>2012-02-21 12：00</span></p>
+  <div class="task-li-sub"><i class="btn-icon" title="删除"></i><a href="#" class="btn">作业详情</a><a href="#" class="btn">完成情况</a></div>
+  </li>
+  <li>
+  <h6>三角函数作业作业</h6>	
+  <p><span>第一章第一节<span><span class="static">发布于</span><span>2012-02-21 12：00</span></p>
+	  <div class="task-li-sub"><i class="btn-icon" title="删除"></i><a href="#" class="btn">作业详情</a><a href="#" class="btn">完成情况</a></div>
+	  </li>
+	  <li>
+	  <h6>三角函数作业作业</h6>	
+	  <p><span>第一章第一节<span><span class="static">发布于</span><span>2012-02-21 12：00</span></p>
+		  <div class="task-li-sub"><i class="btn-icon" title="删除"></i><a href="#" class="btn">作业详情</a><a href="#" class="btn">完成情况</a></div>
+		  </li>
+		</ul>	
+		<div class="pagination">
+		  <ul>
+			<li><a href="#">PREVIOUS </a></li>
+			<li class="active">
+			<a href="#">1</a>
+			</li>
+			<li><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+			<li><a href="#">4</a></li>
+			<li><a href="#">NEXT</a></li>
+			</ul><form action="#">
+			<input class="input-mini" type="text" placeholder="8">
+			<button class="btn" href="#">GO</button>
+		  </form>
 		</div>
 	  </div>
-	  <div class="lib-sidebar span4">
-		<div class="lib-sb-ring"></div>
-		<a class="btn- btn" href="javascript:;"><i class="icon-plus"></i>布置作业</a>
-	  </div>
+	  <div class="tab-pane" id="task-all">
+		<div class="accordion" id="accordion-section">
+		  <div class="accordion-group">
+			<div class="accordion-heading">
+			  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-section" href="#collapse-section1">第一章 三角函数</a>
+			</div>
+			<div id="collapse-section1" class="accordion-body collapse" style="height: 0px;">
+			  <div class="accordion-inner">
 
+				<div class="accordion" id="accordion-section1">
+				  <div class="accordion-group">
+					<div class="accordion-heading">
+					  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-section1" href="#collapse-section11">第一节 三角函数1</a>
+					</div>
+					<div id="collapse-section11" class="accordion-body collapse" style="height: 0px;">
+					  <div class="accordion-inner">
+						<div class="accordion" id="accordion-section11">
+						  <div class="have-data accordion-group">
+							<div class="accordion-heading">
+							  <a class="accordion-toggle" data-toggle="modal" href="#modal-view-task">1.1.1 三角函数1 (<span>3</span>)个作业</a>
+							</div>
+							<!--div id="collapse-section111" class="accordion-body collapse" style="height: 0px;">
+							<div class="accordion-inner">
+							  <div class="cdetail-data-list-wrap">
+								<ul class="cdetail-data-list clearfix">
+								  <li class="cview-res-video">
+								  <p>aaaVIDEO1.rm</p>	
+								  <p>111夏小强</p>	
+								  </li>
+								  <li class="cview-res-text">
+								  <p>TEXT.docx</p>	
+								  <p>夏小强</p>	
+								  </li>
+								  <li class="cview-res-ppt">
+								  <p>PPT.pptx</p>	
+								  <p>夏小强</p>	
+								  </li>
+								  <li class="cview-res-pdf">
+								  <p>PDF.pdf</p>	
+								  <p>夏小强</p>	
+								  </li>
+								  <li class="cview-res-ppt">
+								  <p>PPT.pptx</p>	
+								  <p>夏小强</p>	
+								  </li>
+								  <li class="cview-res-pdf">
+								  <p>PDF.pdf</p>	
+								  <p>夏小强</p>	
+								  </li>
+								</ul>
+
+								<ul class="cdetail-data-list clearfix">
+								  <li class="cview-res-video">
+								  <p>bbbVIDEO1.rm</p>	
+								  <p>222夏小强</p>	
+								  </li>
+								  <li class="cview-res-text">
+								  <p>TEXT.docx</p>	
+								  <p>夏小强</p>	
+								  </li>
+								  <li class="cview-res-ppt">
+								  <p>PPT.pptx</p>	
+								  <p>夏小强</p>	
+								  </li>
+								  <li class="cview-res-pdf">
+								  <p>PDF.pdf</p>	
+								  <p>夏小强</p>	
+								  </li>
+								  <li class="cview-res-ppt">
+								  <p>PPT.pptx</p>	
+								  <p>夏小强</p>	
+								  </li>
+								  <li class="cview-res-pdf">
+								  <p>PDF.pdf</p>	
+								  <p>夏小强</p>	
+								  </li>
+								</ul>
+
+								<ul class="cdetail-data-list clearfix">
+								  <li class="cview-res-video">
+								  <p>cccVIDEO1.rm</p>	
+								  <p>333夏小强</p>	
+								  </li>
+								  <li class="cview-res-text">
+								  <p>TEXT.docx</p>	
+								  <p>夏小强</p>	
+								  </li>
+								  <li class="cview-res-ppt">
+								  <p>PPT.pptx</p>	
+								  <p>夏小强</p>	
+								  </li>
+								  <li class="cview-res-pdf">
+								  <p>PDF.pdf</p>	
+								  <p>夏小强</p>	
+								  </li>
+								  <li class="cview-res-ppt">
+								  <p>PPT.pptx</p>	
+								  <p>夏小强</p>	
+								  </li>
+								  <li class="cview-res-pdf">
+								  <p>PDF.pdf</p>	
+								  <p>夏小强</p>	
+								  </li>
+								</ul>
+
+								<ul class="cdetail-data-list clearfix">
+								  <li class="cview-res-video">
+								  <p>dddVIDEO1.rm</p>	
+								  <p>444夏小强</p>	
+								  </li>
+								  <li class="cview-res-text">
+								  <p>TEXT.docx</p>	
+								  <p>夏小强</p>	
+								  </li>
+								  <li class="cview-res-ppt">
+								  <p>PPT.pptx</p>	
+								  <p>夏小强</p>	
+								  </li>
+								  <li class="cview-res-pdf">
+								  <p>PDF.pdf</p>	
+								  <p>夏小强</p>	
+								  </li>
+								  <li class="cview-res-ppt">
+								  <p>PPT.pptx</p>	
+								  <p>夏小强</p>	
+								  </li>
+								  <li class="cview-res-pdf">
+								  <p>PDF.pdf</p>	
+								  <p>夏小强</p>	
+								  </li>
+								</ul>
+
+								<ul class="cdetail-data-list clearfix">
+								  <li class="cview-res-video">
+								  <p>eeeVIDEO1.rm</p>	
+								  <p>555夏小强</p>	
+								  </li>
+								  <li class="cview-res-text">
+								  <p>TEXT.docx</p>	
+								  <p>夏小强</p>	
+								  </li>
+								  <li class="cview-res-ppt">
+								  <p>PPT.pptx</p>	
+								  <p>夏小强</p>	
+								  </li>
+								  <li class="cview-res-pdf">
+								  <p>PDF.pdf</p>	
+								  <p>夏小强</p>	
+								  </li>
+								  <li class="cview-res-ppt">
+								  <p>PPT.pptx</p>	
+								  <p>夏小强</p>	
+								  </li>
+								  <li class="cview-res-pdf">
+								  <p>PDF.pdf</p>	
+								  <p>夏小强</p>	
+								  </li>
+								</ul>
+							  </div>
+							  <div class="dthumb">
+								<ul>
+								  <li><span class="cur"></span></li
+								  ><li><span></span></li
+								  ><li><span></span></li
+								  ><li><span></span></li
+								  ><li><span></span></li>
+								</ul>
+							  </div>
+							</div>
+							</div-->
+						  </div>
+						  <div class="no-data accordion-group">
+							<div class="accordion-heading">
+							  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-section11" href="#collapse-section112">1.1.2 三角函数2 无作业</a></div>
+							<div id="collapse-section112" class="accordion-body collapse" style="height: 0px;">
+							  <div class="accordion-inner">
+								本小节无课程资料
+							  </div>
+							</div>
+						  </div>
+						</div>
+					  </div>
+					</div>
+				  </div>
+				  <div class="accordion-group">
+					<div class="accordion-heading">
+					  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-section1" href="#collapse-section12">第二节 三角函数2</a>
+					</div>
+					<div id="collapse-section12" class="accordion-body collapse" style="height: 0px;">
+					  <div class="accordion-inner">
+						22
+					  </div>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="accordion-group">
+			<div class="accordion-heading">
+			  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-section" href="#collapse-section2">第二章 四角函数</a>
+			</div>
+			<div id="collapse-section2" class="accordion-body collapse" style="height: 0px;">
+			  <div class="accordion-inner">
+				22
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+	  </div>
 	</div>
+	<div class="hide fade modal" id="modal-view-task">
+	  <div class="modal-header">
+		<a class="close" data-dismiss="modal"></a>
+		<h3>查看作业 第一章第一节</h3>
+	  </div>
+	  <div class="modal-body">
+		<ul class="task-list">
+		  <li>
+		  <h6>三角函数作业作业</h6>	
+		  <p><span>第一章第一节<span><span class="static">发布于</span><span>2012-02-21 12：00</span></p>
+			  <div class="task-li-sub"><i class="btn-icon" title="删除"></i><a href="#" class="btn">作业详情</a><a href="#" class="btn">完成情况</a></div>
+			  </li>
+
+			  <li>
+			  <h6>三角函数作业作业</h6>	
+			  <p><span>第一章第一节<span><span class="static">发布于</span><span>2012-02-21 12：00</span></p>
+				  <div class="task-li-sub"><i class="btn-icon" title="删除"></i><a href="#" class="btn">作业详情</a><a href="#" class="btn">完成情况</a></div>
+				  </li>
+				  <li>
+				  <h6>三角函数作业作业</h6>	
+				  <p><span>第一章第一节<span><span class="static">发布于</span><span>2012-02-21 12：00</span></p>
+					  <div class="task-li-sub"><i class="btn-icon" title="删除"></i><a href="#" class="btn">作业详情</a><a href="#" class="btn">完成情况</a></div>
+					  </li>
+					  <li>
+					  <h6>三角函数作业作业</h6>	
+					  <p><span>第一章第一节<span><span class="static">发布于</span><span>2012-02-21 12：00</span></p>
+						  <div class="task-li-sub"><i class="btn-icon" title="删除"></i><a href="#" class="btn">作业详情</a><a href="#" class="btn">完成情况</a></div>
+						  </li>
+
+						  <li>
+						  <h6>三角函数作业作业</h6>	
+						  <p><span>第一章第一节<span><span class="static">发布于</span><span>2012-02-21 12：00</span></p>
+							  <div class="task-li-sub"><i class="btn-icon" title="删除"></i><a href="#" class="btn">作业详情</a><a href="#" class="btn">完成情况</a></div>
+							  </li>
+
+							  <li>
+							  <h6>三角函数作业作业</h6>	
+							  <p><span>第一章第一节<span><span class="static">发布于</span><span>2012-02-21 12：00</span></p>
+								  <div class="task-li-sub"><i class="btn-icon" title="删除"></i><a href="#" class="btn">作业详情</a><a href="#" class="btn">完成情况</a></div>
+								  </li>
+								  <li>
+								  <h6>三角函数作业作业</h6>	
+								  <p><span>第一章第一节<span><span class="static">发布于</span><span>2012-02-21 12：00</span></p>
+									  <div class="task-li-sub"><i class="btn-icon" title="删除"></i><a href="#" class="btn">作业详情</a><a href="#" class="btn">完成情况</a></div>
+									  </li>
+									  <li>
+									  <h6>三角函数作业作业</h6>	
+									  <p><span>第一章第一节<span><span class="static">发布于</span><span>2012-02-21 12：00</span></p>
+										  <div class="task-li-sub"><i class="btn-icon" title="删除"></i><a href="#" class="btn">作业详情</a><a href="#" class="btn">完成情况</a></div>
+										  </li>
+										  <li>
+										  <h6>三角函数作业作业</h6>	
+										  <p><span>第一章第一节<span><span class="static">发布于</span><span>2012-02-21 12：00</span></p>
+											  <div class="task-li-sub"><i class="btn-icon" title="删除"></i><a href="#" class="btn">作业详情</a><a href="#" class="btn">完成情况</a></div>
+											  </li>
+											  <li>
+											  <h6>三角函数作业作业</h6>	
+											  <p><span>第一章第一节<span><span class="static">发布于</span><span>2012-02-21 12：00</span></p>
+												  <div class="task-li-sub"><i class="btn-icon" title="删除"></i><a href="#" class="btn">作业详情</a><a href="#" class="btn">完成情况</a></div>
+												  </li>
+												  <li>
+												  <h6>三角函数作业作业</h6>	
+												  <p><span>第一章第一节<span><span class="static">发布于</span><span>2012-02-21 12：00</span></p>
+													  <div class="task-li-sub"><i class="btn-icon" title="删除"></i><a href="#" class="btn">作业详情</a><a href="#" class="btn">完成情况</a></div>
+													  </li>
+													</ul>	
+												  </div>
+												</div>
+											  </div>
+											  <div class="lib-sidebar span4">
+												<div class="lib-sb-ring"></div>
+												<a class="btn-submod btn" href="#modal-set-homework" data-toggle="modal"><i class="icon-btn-submod"></i>布置作业</a>
+												<!--div class="hide fade modal" id="modal-set-homework"-->
+												<div class="modal" id="modal-set-homework">
+												  <div class="modal-header">
+													<a class="close" data-dismiss="modal"></a>
+													<h3>布置作业</h3>
+												  </div>
+												  <div class="modal-body">
+													<form action="#" id="form-set-homework" class="form-horizontal">
+													  <div class="control-group">
+														<input type="text" class="input-xlarge" placeholder="输入作业名">
+													  </div>
+													  <div class="control-group">
+														<label class="control-label">所属章节</label>
+														<div class="controls">
+														  <input type="button" value="选择章节" class="btn-set-section btn">
+														</div>
+													  </div>
+													  <div class="control-group">
+														<label class="control-label">布置对象</label>
+														<div class="controls">
+														  <label class="checkbox inline">
+															<input type="checkbox" id="inlineCheckbox1" value="1">1班</label>
+														  <label class="checkbox inline">
+															<input type="checkbox" id="inlineCheckbox2" value="2">2班</label>
+														  <label class="checkbox inline">
+															<input type="checkbox" id="inlineCheckbox3" value="3">3班</label>
+														</div>
+													  </div>
+													</form>
+												  </div>
+												</div>
+																						  </div>
+
+
+																						</div>
   </div>
 </section>
 <footer id="footer"></footer>
-<script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
+
+
 <script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/global.js" type="text/javascript"></script>
 </body>
 </html>

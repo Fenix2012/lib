@@ -15,6 +15,7 @@ ul { list-style: none;}
 .hide { display: none;}
 .clearfix:after { content: '\0020';display: block;height: 0;clear: both;font-size: 0;}
 .clearb { clear: both;}
+
 /*登录页*/
 #login-body { background: url(../images/bg-login-body.png); overflow: hidden; }
 #login-header { height: 50px; background: -webkit-linear-gradient(top,#363636,#1e1c1c,#060101); text-align: center;}
@@ -26,9 +27,9 @@ ul { list-style: none;}
 .login-box-logo { text-align: center; padding-top: 15px; height: 75px;}
 .login-box-main { border-radius: 4px; background-color: #fff; padding: 35px; box-shadow: 1px 1px 3px #999,-1px -1px 3px #999;}
 #form-login { margin: 0;}
-input.login-input { margin: 0; padding: 0; width: 100%; height: 40px; text-indent: 3em; font-size: 12px; background: #ededed url(../images/icon.png);}
-input#username { border-bottom-left-radius: 0; border-bottom-right-radius: 0; background-position: -48px -344px;}
-input#password { border-top: none;  border-top-left-radius: 0; border-top-right-radius: 0; box-shadow: 0 1px 1px #fff; background-position: -48px -394px; }
+#form-login input.login-input { margin: 0; padding: 0; width: 100%; height: 40px; text-indent: 3em; font-size: 12px; background: #ededed url(../images/icon.png);}
+#form-login input#username { border-bottom-left-radius: 0; border-bottom-right-radius: 0; background-position: -48px -344px;}
+#form-login input#password { border-top: none;  border-top-left-radius: 0; border-top-right-radius: 0; box-shadow: 0 1px 1px #fff; background-position: -48px -394px; }
 .login-operate { height: 60px; line-height: 60px;}
 .login-operate label { height: 60px; line-height: 60px; margin: 0; }
 .login-operate label input { margin-top: 0; }
@@ -44,6 +45,36 @@ input.form-login-submit:hover { background-position: 0 0; color: #fff;}
 #login-footer { position: absolute; left: 0; top: 100%; margin-top: -100px; width: 100%; height: 100px; background-color: #fff; box-shadow: 0 -1px 5px #999;}
 #login-footer a { display: block; text-align: center; width: 100%; height: 100%;}
 #login-footer a img { margin-top: 30px;}
+
+/*主结构*/
+.lib-main { box-shadow: 0 -1px 1px #fff;}
+.lib-menu { position: relative; margin-top: 75px; /*height: 120px;*/ border-radius: 5px; box-shadow: 1px 1px 5px #999; background: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#ebebeb)); font-size: 12px; }
+.lib-menu-course { position: relative; /*float: left;*/ padding-left: 22px; float: left; margin: 0; padding-top: 15px; padding-bottom: 42px; }
+.lib-subnav { float: right; position: relative; top: -15px; right: 15px; border-bottom: 1px solid #d8d8d8; border-right: 1px solid #d8d8d8; border-radius: 4px; /*-webkit-background-clip:content-box; -webkit-background-origin: border;*/ box-shadow: 0 1px 1px #fff; }
+.lib-container { margin-top: 3px; border-radius: 5px; box-shadow: 1px 1px 5px #999; background-color: #fff;}
+.lib-container.row-fluid [class*="span"] { margin-left: 0; }
+.lib-con { padding: 20px; border-right: 1px solid #adb2bd;}
+.lib-sidebar { position: relative; padding: 35px 0 20px;}
+.lib-sidebar .lib-hd-bar { margin: 0 20px; /*border-top: 1px solid #adb2bd;*/ }
+#task [class*="span"] { padding-left: 20px; }
+#task .lib-con { padding-top: 35px;}
+
+/*公共元素*/
+.lib-hd-bar { position: relative; padding: 0 20px; height: 45px; background-color: #6c829b; border-radius: 5px; color: #fff;}
+.lib-hd-bar h6 { margin: 0; font: bold 14px/45px Microsoft YaHei;}
+.lib-hd-bar .right { position: absolute; right: 8px; top: 0; margin-top: 10px; padding: 3px 9px; border-radius: 2px; background-color: #44515f; background-image: -webkit-linear-gradient(top,#44515f,#44515f); font-size: 12px; color: #fff; text-decoration: none;}
+
+.lib-sb-ring { position: absolute; /*left: -15px;*/ left: 0; top: -22px; width: 100%; height: 40px; background: url(../images/bg-ring.png) repeat-x; }
+.lib-line-l { border-top: 1px solid #adb2bd; height:0; margin: 25px 0; }
+/*按钮
+Default: padding: 4px 12px;
+*/
+.btn-submod { position: relative; padding: 22px 0; width: 100%; border: 1px solid #747474; background: -webkit-linear-gradient(top,#8eb03d,#779634,#5c782a); color: #fff; text-shadow: none; font-size: 15px; font-family: Microsoft YaHei; text-indent: 2em;}
+.btn-submod:hover { color: #fff; background-position: 0 0;}
+i.icon-btn-submod { background: url(../images/icon.png) -138px -308px no-repeat; width: 20px; height: 20px; position: absolute; top: 30px; left: 30%; top: 50%; margin-top: -10px;}
+
+i.btn-icon { display: inline-block; position: relative; top: 8px; width: 20px; margin-right: 15px; height: 20px; background: url(../images/icon-small.png) no-repeat; cursor: pointer;}
+i.btn-icon:hover { opacity: 0.7;}
 /*顶部*/
 #header { padding-top: 53px; /*height: 51px;*/ background: url(../images/bg-header.png) repeat; /*overflow: hidden;*/}
 #logo { width: 250px; height: 30px; padding-top: 10px; font: italic bold 20px Microsoft YaHei; color: #fff; overflow: hidden; }
@@ -103,25 +134,6 @@ input.form-login-submit:hover { background-position: 0 0; color: #fff;}
 #header .top-nav-profile .dropdown-menu:after { }
 
 #footer { height: 50px; }
-/*主结构*/
-.lib-main { box-shadow: 0 -1px 1px #fff;}
-.lib-menu { position: relative; margin-top: 75px; /*height: 120px;*/ border-radius: 5px; box-shadow: 1px 1px 5px #999; background: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#ebebeb)); font-size: 12px; }
-.lib-menu-course { position: relative; /*float: left;*/ padding-left: 22px; float: left; margin: 0; padding-top: 15px; padding-bottom: 42px; }
-.lib-subnav { float: right; position: relative; top: -15px; right: 15px; border-bottom: 1px solid #d8d8d8; border-right: 1px solid #d8d8d8; border-radius: 4px; /*-webkit-background-clip:content-box; -webkit-background-origin: border;*/ box-shadow: 0 1px 1px #fff; }
-.lib-container { margin-top: 3px; border-radius: 5px; box-shadow: 1px 1px 5px #999; background-color: #fff;}
-.lib-container.row-fluid [class*="span"] { margin-left: 0; }
-.lib-con { padding: 20px; border-right: 1px solid #adb2bd;}
-.lib-sidebar { position: relative; padding: 35px 0 20px;}
-.lib-sidebar .lib-hd-bar { margin: 0 20px; /*border-top: 1px solid #adb2bd;*/ }
-#task .lib-container.row-fluid [class*="span"] { padding-left: 20px; }
-
-/*公共块*/
-.lib-hd-bar { position: relative; padding: 0 20px; height: 45px; background-color: #6c829b; border-radius: 5px; color: #fff;}
-.lib-hd-bar h6 { margin: 0; font: bold 14px/45px Microsoft YaHei;}
-.lib-hd-bar .right { position: absolute; right: 8px; top: 0; margin-top: 10px; padding: 3px 9px; border-radius: 2px; background-color: #44515f; background-image: -webkit-linear-gradient(top,#44515f,#44515f); font-size: 12px; color: #fff; text-decoration: none;}
-
-.lib-sb-ring { position: absolute; /*left: -15px;*/ left: 0; top: -22px; width: 100%; height: 40px; background: url(../images/bg-ring.png) repeat-x; }
-.lib-line-l { border-top: 1px solid #adb2bd; height:0; margin: 25px 0; }
 
 /*子导航*/
 .lib-menu-course dt { position: absolute; top: -22px; width: 90px; }
@@ -182,14 +194,15 @@ span.cnav-stu-r { display: inline-block; background: #676767 url(../images/bg-co
 .comment-con p { margin: 0; text-indent: 2em;}
 .comment-time { float: right; padding-left: 25px; }
 
-.comment-box .pagination { height: 24px;}
-.comment-box .pagination ul { float: left; box-shadow: none;}
-.comment-box .pagination a { background: none; border: none; padding: 2px 9px;}
-.comment-box .pagination li:first-child a { /*padding-left: 0;*/}
-.comment-box .pagination form { margin: 0; display: inline-block; height: 30px; }
-.comment-box .pagination form .input-mini { margin: 0; padding: 0 10px; width: 20px;}
-.comment-box .pagination form .btn { margin: 0; height: 20px; line-height: 20px; padding: 0 5px; background-color: #475574; background-image: -webkit-linear-gradient(top, #75819d, #616e8b, #475574); color: #fff; font-size: 10px; }
- .comment-box .pagination ul > li > a:hover, .comment-box .pagination ul > .active > a, .comment-box .pagination ul > .active > span { background-color: #9fa5b2; color: #fff; }
+.lib-main .pagination { height: 24px;}
+.lib-main .pagination ul { float: left; box-shadow: none;}
+.lib-main .pagination a { background: none; border: none; padding: 2px 9px;}
+.lib-main .pagination li:first-child a { /*padding-left: 0;*/}
+.lib-main .pagination form { margin: 0; display: inline-block; height: 30px; }
+.lib-main .pagination form .input-mini { margin: 0; padding: 0 10px; width: 20px;}
+.lib-main .pagination form .btn { margin: 0; height: 20px; line-height: 20px; padding: 0 5px; background-color: #475574; background-image: -webkit-linear-gradient(top, #75819d, #616e8b, #475574); color: #fff; font-size: 10px; }
+.lib-main .pagination ul > li > a:hover, .lib-main .pagination ul > .active > a, .lib-main .pagination ul > .active > span { background-color: #9fa5b2; color: #fff; }
+
 .comment-box a.comment-fold { float: right; margin-right: 10px; padding-right: 22px; color: #4e5d7b; background: url(../images/icon-feeds.png) -143px -70px; font-weight: normal; }
 .comment-fold:hover { background-position: -139px -105px;}
 /*遮罩弹层*/
@@ -198,6 +211,10 @@ span.cnav-stu-r { display: inline-block; background: #676767 url(../images/bg-co
 .modal-header h3 { line-height: 52px; font-size: 14px; }
 .modal-header .close { position: absolute; right: -19px; top: -19px; width: 38px; height: 38px; background: url(../images/icon.png) -142px -142px no-repeat; opacity: 1;}
 .modal-header .close:hover { opacity: 0.6;}
+/*表单*/
+form { margin: 0; padding: 0; }
+textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input { width: 100%; text-indent:1em; margin: 0; padding: 10px 0; font-size: 12px; }
+
 /*课程大纲手风琴*/
 .accordion-group { margin: 0 0 15px 25px; border: none;}
 .accordion-heading .accordion-toggle { height: 38px; line-height: 38px; background: -webkit-linear-gradient(top,#fff,#f5f5f5,#ececec); border: 1px solid #d0d0d0; border-radius: 4px; color: #606060; text-decoration: none; font-family: Microsoft YaHei; position: relative;}
@@ -210,6 +227,7 @@ span.cnav-stu-r { display: inline-block; background: #676767 url(../images/bg-co
 .have-data .accordion-heading .accordion-toggle .arrow-gray-right { background: url(../images/icon.png) -16px -479px no-repeat; }
 .have-data .accordion-heading .accordion-toggle.collapsed .arrow-gray-right { background: url(../images/icon.png) 0 -479px no-repeat; }
 .have-data .accordion-inner { border: 1px solid #bdbdbd; border-top: none; position: relative; top: -2px; width: 96%; margin: 0 auto; border-bottom-left-radius: 4px; border-bottom-right-radius: 4px;  padding: 0;}
+.accordion-group .accordion-group .accordion-heading .accordion-toggle { height: 32px; line-height: 32px;}
 /*课程大纲资料*/
 
 .cdetail-data-list { margin: 0; padding: 0 0 10px; border-top: none; border-bottom-left-radius: 2px; border-bottom-right-radius: 2px;}
@@ -249,13 +267,14 @@ li.cview-res-pdf:hover { background-position: -454px -479px; }
 .lib-con .tab-pane { padding: 18px 0;}
 .lib-con .accordion-group { margin-left: 0;}
 /*主内容区表单*/
-.lib-con .form-horizontal { padding-left: 10px;}
-.lib-con .form-horizontal .control-label { width: 75px; height: 30px; line-height: 30px; text-align: left; font-size: 12px; }
-.lib-con .form-horizontal .controls { margin-left: 75px; }
-.lib-con .input-xlarge { width: 96%; border: 1px solid #a9a9a9;}
-.lib-con input.input-xlarge { height: 30px; line-height: 30px;}
-.lib-con textarea.input-xlarge { width: 98%; height: 120px;}
-.lib-con button.btn { margin-left: 75px; padding: 9px 28px; background-color: #475574; background-image: -webkit-linear-gradient(top, #75819d, #616e8b, #475574); font-size: 12px; color: #fff; text-shadow: none;}
+.lib-main .form-horizontal { /*padding-left: 10px;*/}
+.lib-main .form-horizontal .control-label { width: 75px; height: 30px; line-height: 30px; text-align: left; font-size: 12px; }
+.lib-main .form-horizontal .controls { margin-left: 75px; }
+.lib-main .input-xlarge { margin: 0; padding: 0; width: 100%; border: 1px solid #a9a9a9;}
+.lib-main input.input-xlarge { height: 40px; /*line-height: 40px;*/}
+.lib-main textarea.input-xlarge { height: 120px;}
+.lib-main button.btn { margin-left: 75px; padding: 9px 28px; background-color: #475574; background-image: -webkit-linear-gradient(top, #75819d, #616e8b, #475574); font-size: 12px; color: #fff; text-shadow: none;}
+
 .cedit-course-pic  { width: 150px; border: 2px solid #333; background-color: #464646; vertical-align: middle; text-align: center; display: table-cell;}
 
 .type-file-box{ position:relative; margin-left: 25px; width:100px; cursor: pointer;}
