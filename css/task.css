@@ -17,8 +17,15 @@
 #task .pagination form { position: relative; top: -10px;}
 
 span.static { display: inline-block; margin: 0 10px; }
+
 #modal-view-task { width: 760px; margin:-330px 0 0 -380px}
 #modal-view-task .modal-body { padding: 10px; max-height: 560px; }
 
 #modal-set-homework { width: 760px; margin:-330px 0 0 -380px}
-#modal-set-homework .modal-body { padding: 10px; max-height: 560px; }
+#modal-set-homework .modal-body { padding: 20px 15px; max-height: 560px; }
+#modal-set-homework .start-date, #modal-set-homework .over-date  { width: 55%;}
+#modal-set-homework .start-time, #modal-set-homework .over-time { margin-left: 4%; width: 20%;}
+
+.btn-myself, .btn-storage { width: 49%; margin: 0; padding: 0; height: 40px; line-height: 40px; background:-webkit-linear-gradient(top, #75819D, #616E8B, #475574); color: #fff; font-size: 12px; text-shadow: none;}
+.btn-myself:hover, .btn-storage:hover { background-position: 0 0; color: #fff; }
+.btn-storage { float: right;}

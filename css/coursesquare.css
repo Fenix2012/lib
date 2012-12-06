@@ -12,10 +12,9 @@
 .csquare-nav-t .nav > li > a:hover { color: #fff;}
 .csquare-nav-t .nav > .active > a, .csquare-nav-t .nav > .active > a:hover, .csquare-nav-t .nav > .active > a:focus { background: url(../images/bg-csquare-nav-cur.png) repeat-x; color: #fff;  }
 
-.csquare-search {float: right; position: relative; right: 5px;/*height: 40px;*/ margin: 7px 0 0; width: 160px; /*min-width: 140px;*/  }
-.csquare-search input { width: 82%;}
-.csquare-search .search-query { margin: 0; height: 30px; border: none; background-color: #282f3c; border-radius: 4px; box-shadow:0 1px 1px #131212 inset,0 1px 1px #576074; color: #b2bac8; }
-.csquare-search .btn { position: absolute; right: 4px; top: 2px; margin-top: 0; width: 34px; height: 34px; background: url(../images/icon.png) 10px -348px no-repeat; border: none; box-shadow: none;}
+.csquare-search {float: right; position: relative; right: 8px;/*height: 40px;*/ margin: 7px 0 0; width: 160px; /*min-width: 140px;*/  }
+.csquare-search .search-query { margin: 0; /*height: 30px;*/ border: none; background-color: #282f3c; border-radius: 4px; box-shadow:0 1px 1px #131212 inset,0 1px 1px #576074; color: #b2bac8; }
+.csquare-search .btn { position: absolute; right: 5px; top: 5px; margin-top: 0; width: 34px; height: 34px; background: url(../images/icon.png) 10px -348px no-repeat; border: none; box-shadow: none;}
 .csquare-nav-t .nav-collapse, .nav-collapse.collapse { background-color: #323d55; position: relative; z-index: 3;}
 .csquare-nav-t .btn-navbar { margin-top: 13px;}
 .nav-collapse .navbar-form { padding: 0; border: none;}

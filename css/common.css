@@ -84,10 +84,10 @@ i.btn-icon:hover { opacity: 0.7;}
 #nav li.cur { background-position: 0 -51px; z-index: 2; position: relative;}
 #nav li:first-child { position: relative; right: -30px; }
 #nav a { display: block; font: bold 14px/51px Microsoft YaHei; color: #fff; text-decoration: none; text-shadow: 1px 1px 1px #333;}
-#header .navbar-search { position: relative; /*height: 40px;*/ margin: 0; width: 160px; /*min-width: 140px;*/  }
-#header .navbar-search input { width: 80%;}
-#header .search-query { height: 30px; border: none; background-color: #1a1a1a; border-radius: 5px; color: #fff; box-shadow:0 1px 1px #131212 inset,0 1px 1px #3d3d3d; color: #a3a3a3; }
-#header .navbar-search .btn { position: absolute; right: 7px; top: 2px; width: 34px; height: 34px; background: #2b2b2b url(../images/icon.png) -62px -97px no-repeat;}
+#header .navbar-search { position: relative; /*height: 40px;*/ margin: 0; /*width: 160px;*/ width: 16%; /*min-width: 140px;*/  }
+#header .navbar-search input { /*width: 80%;*/}
+#header .search-query { padding: 0; height: 38px; border: none; background-color: #1a1a1a; border-radius: 5px; color: #fff; box-shadow:0 1px 1px #131212 inset,0 1px 1px #3d3d3d; color: #a3a3a3; }
+#header .navbar-search .btn { position: absolute; right: 4px; top: 2px; width: 34px; height: 34px; background: #2b2b2b url(../images/icon.png) -62px -97px no-repeat;}
 
 /*头部下拉*/
 #header .dropdown-menu:after { content: ''; display: inline-block; border-left: 11px solid transparent; border-right: 11px solid transparent; border-bottom: 11px solid #000; position: absolute; top: -11px; left: 68px;}
@@ -177,7 +177,7 @@ span.cnav-stu-r { display: inline-block; background: #676767 url(../images/bg-co
 /*评论框*/
 .comment-box { border-top: 1px solid #a6a6a6; background-color: #d7dbe4; box-shadow: inset 0 1px 2px #999}
 .comment-box .input-form { display: -webkit-box; margin: 0; padding: 2%; border-bottom: 1px solid #b8bcc4; box-shadow: 0 1px 1px #fff;}
-.comment-box .input-xlarge { display: block; -webkit-box-flex:1; height: 30px; padding-top: 8px;/*line-height: 40px;*/ border: 1px solid #a9a9a9; box-shadow: inset 1px 1px 2px #bbb; border-radius: 4px; /*border: none; border-bottom: 1px solid #fff;*/ /*resize: none;*/}
+.comment-box .input-xlarge { display: block; -webkit-box-flex:1; height: 30px; padding-top: 8px;/*line-height: 40px;*/ border: 1px solid #a9a9a9; box-shadow: inset 1px 1px 2px #bbb; border-radius: 4px; /*border: none; border-bottom: 1px solid #fff;*/ /*resize: none;*/ padding:0;}
 .comment-box .input-form .btn { margin-left: 15px; padding: 10px 30px; background-color: #475574; background-image: -webkit-linear-gradient(top, #75819d, #616e8b, #475574); font: 12px Microsoft YaHei; color: #fff;}
 
 .comment-list { margin: 0; padding: 2%; border-radius: 5px; }
@@ -267,13 +267,13 @@ li.cview-res-pdf:hover { background-position: -454px -479px; }
 .lib-con .tab-pane { padding: 18px 0;}
 .lib-con .accordion-group { margin-left: 0;}
 /*主内容区表单*/
-.lib-main .form-horizontal { /*padding-left: 10px;*/}
-.lib-main .form-horizontal .control-label { width: 75px; height: 30px; line-height: 30px; text-align: left; font-size: 12px; }
-.lib-main .form-horizontal .controls { margin-left: 75px; }
-.lib-main .input-xlarge { margin: 0; padding: 0; width: 100%; border: 1px solid #a9a9a9;}
-.lib-main input.input-xlarge { height: 40px; /*line-height: 40px;*/}
-.lib-main textarea.input-xlarge { height: 120px;}
-.lib-main button.btn { margin-left: 75px; padding: 9px 28px; background-color: #475574; background-image: -webkit-linear-gradient(top, #75819d, #616e8b, #475574); font-size: 12px; color: #fff; text-shadow: none;}
+.lib-container .form-horizontal { /*padding-left: 10px;*/}
+.lib-container .form-horizontal .control-label { width: 75px; height: 30px; line-height: 30px; text-align: left; font-size: 12px; }
+.lib-container .form-horizontal .controls { margin-left: 75px; }
+.lib-container .input-xlarge { margin: 0; padding: 0; width: 100%; border: 1px solid #a9a9a9;}
+.lib-container input.input-xlarge { height: 40px; /*line-height: 40px;*/}
+.lib-container textarea.input-xlarge { height: 120px;}
+.lib-container button.btn { margin-left: 75px; padding: 9px 28px; background-color: #475574; background-image: -webkit-linear-gradient(top, #75819d, #616e8b, #475574); font-size: 12px; color: #fff; text-shadow: none;}
 
 .cedit-course-pic  { width: 150px; border: 2px solid #333; background-color: #464646; vertical-align: middle; text-align: center; display: table-cell;}
 
