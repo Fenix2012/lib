@@ -48,21 +48,29 @@ input.form-login-submit:hover { background-position: 0 0; color: #fff;}
 
 /*主结构*/
 .lib-main { box-shadow: 0 -1px 1px #fff;}
-.lib-menu { position: relative; margin-top: 75px; /*height: 120px;*/ border-radius: 5px; box-shadow: 1px 1px 5px #999; background: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#ebebeb)); font-size: 12px; }
+.lib-menu { position: relative; margin: 75px 0 3px; /*height: 120px;*/ border-radius: 5px; box-shadow: 1px 1px 5px #999; background: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#ebebeb)); font-size: 12px; }
 .lib-menu-course { position: relative; /*float: left;*/ padding-left: 22px; float: left; margin: 0; padding-top: 15px; padding-bottom: 42px; }
 .lib-subnav { float: right; position: relative; top: -15px; right: 15px; border-bottom: 1px solid #d8d8d8; border-right: 1px solid #d8d8d8; border-radius: 4px; /*-webkit-background-clip:content-box; -webkit-background-origin: border;*/ box-shadow: 0 1px 1px #fff; }
-.lib-container { margin-top: 3px; border-radius: 5px; box-shadow: 1px 1px 5px #999; background-color: #fff;}
+.lib-container { border-radius: 5px; box-shadow: 1px 1px 5px #999; background-color: #fff;}
 .lib-container.row-fluid [class*="span"] { margin-left: 0; }
 .lib-con { padding: 20px; border-right: 1px solid #adb2bd;}
 .lib-sidebar { position: relative; padding: 35px 0 20px;}
 .lib-sidebar .lib-hd-bar { margin: 0 20px; /*border-top: 1px solid #adb2bd;*/ }
-#task [class*="span"] { padding-left: 20px; }
-#task .lib-con { padding-top: 35px;}
+.lib-wide { margin-top: 50px; }
+
 
 /*公共元素*/
 .lib-hd-bar { position: relative; padding: 0 20px; height: 45px; background-color: #6c829b; border-radius: 5px; color: #fff;}
 .lib-hd-bar h6 { margin: 0; font: bold 14px/45px Microsoft YaHei;}
 .lib-hd-bar .right { position: absolute; right: 8px; top: 0; margin-top: 10px; padding: 3px 9px; border-radius: 2px; background-color: #44515f; background-image: -webkit-linear-gradient(top,#44515f,#44515f); font-size: 12px; color: #fff; text-decoration: none;}
+.lib-wide-hd { position: relative; border-top-left-radius: 4px; border-top-right-radius: 4px;  height: 50px; line-height: 50px; background: -webkit-linear-gradient(top, #59657d, #445068, #2d3850); text-align: center;}
+.lib-wide-hd h5 { line-height: 50px; color: #fff;}
+.lib-wide-hd .go-back { position: absolute; left: 10px; top: 10px; background: -webkit-linear-gradient(top, #8b96ac, #7e889e, #6d788e); color: #fff; font-size: 12px; text-shadow: none;}
+.lib-wide-hd select { position: absolute; right: 10px; top: 10px; }
+
+.lib-wide table thead { background-color: #6c829b; color: #fff}
+.lib-wide table th { line-height: 24px;}
+.lib-wide .dropdown { position: absolute; right: 0; top: 0;}
 
 .lib-sb-ring { position: absolute; /*left: -15px;*/ left: 0; top: -22px; width: 100%; height: 40px; background: url(../images/bg-ring.png) repeat-x; }
 .lib-line-l { border-top: 1px solid #adb2bd; height:0; margin: 25px 0; }
@@ -178,6 +186,7 @@ span.cnav-stu-r { display: inline-block; background: #676767 url(../images/bg-co
 .comment-box { border-top: 1px solid #a6a6a6; background-color: #d7dbe4; box-shadow: inset 0 1px 2px #999}
 .comment-box .input-form { display: -webkit-box; margin: 0; padding: 2%; border-bottom: 1px solid #b8bcc4; box-shadow: 0 1px 1px #fff;}
 .comment-box .input-xlarge { display: block; -webkit-box-flex:1; height: 30px; padding-top: 8px;/*line-height: 40px;*/ border: 1px solid #a9a9a9; box-shadow: inset 1px 1px 2px #bbb; border-radius: 4px; /*border: none; border-bottom: 1px solid #fff;*/ /*resize: none;*/ padding:0;}
+.comment-box textarea.input-xlarge { padding-top: 8px; }
 .comment-box .input-form .btn { margin-left: 15px; padding: 10px 30px; background-color: #475574; background-image: -webkit-linear-gradient(top, #75819d, #616e8b, #475574); font: 12px Microsoft YaHei; color: #fff;}
 
 .comment-list { margin: 0; padding: 2%; border-radius: 5px; }
@@ -214,7 +223,7 @@ span.cnav-stu-r { display: inline-block; background: #676767 url(../images/bg-co
 /*表单*/
 form { margin: 0; padding: 0; }
 textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input { width: 100%; text-indent:1em; margin: 0; padding: 10px 0; font-size: 12px; }
-
+span.help-inline { color: #747474; height: 24px;}
 /*课程大纲手风琴*/
 .accordion-group { margin: 0 0 15px 25px; border: none;}
 .accordion-heading .accordion-toggle { height: 38px; line-height: 38px; background: -webkit-linear-gradient(top,#fff,#f5f5f5,#ececec); border: 1px solid #d0d0d0; border-radius: 4px; color: #606060; text-decoration: none; font-family: Microsoft YaHei; position: relative;}
@@ -281,20 +290,23 @@ li.cview-res-pdf:hover { background-position: -454px -479px; }
 input.type-file-file{ position: absolute; top: 10px; left: 35px; opacity: 1; width: auto; height: auto; z-index: 1; }
 .btn.type-file-button { padding: 10px 12px; font-size: 12px; color: #747474; position: relative; z-index:2;}
 /*select美化*/
-.lib-con .dropdown {outline:none;display:inline-block;*display:inline;}
-.lib-con .dropdown h4{cursor:default; text-indent:20px; margin:0; padding:0;}
-.lib-con .dropdown * {-moz-user-select:none;}
-.lib-con .dropdown h4.over {}
-.lib-con .dropdown div {display:block; /*fix bug*/}
-.lib-con .dropdown ul{position:absolute;display:none;margin:0;padding:0;float:left;clear:both; z-index: 999;}
-.lib-con .dropdown ul li{text-indent:5px;margin:0;padding:0;list-style:none;display:block;cursor:default;}
-.lib-con .dropdown ul li.over{}
-.lib-con .dropselectbox {display:inline;}
-.lib-con /* write you style here */
-.lib-con .dropselectbox {/*background:#DDD url(../images/selectBg.png) repeat-x left top;*/}
-.lib-con .dropdown h4{height:38px; font:12px/38px Arial, Helvetica, sans-serif; border:solid 1px #aeaeae; background: #fff url(../images/droparrow.gif) no-repeat 198px center; border-radius: 4px; cursor: pointer;}
-.lib-con .dropdown h4.over{border-color:#369; background-image:url(../images/droparrowover.gif);}
-.lib-con .dropdown h4.current{border-color:#003;}
-.lib-con .dropdown ul{border:1px solid #AAA; background:#FFF;}
-.lib-con .dropdown ul li{background:#FFF;height:28px;font:400 12px/28px Arial, Helvetica, sans-serif; text-indent: 20px;}
-.lib-con .dropdown ul li.over{background:#369; color:#FFF;}
+.lib-container .dropdown {outline:none;display:inline-block;*display:inline;}
+.lib-container .dropdown h4{cursor:default; text-indent:20px; margin:0; padding:0;}
+.lib-container .dropdown * {-moz-user-select:none;}
+.lib-container .dropdown h4.over {}
+.lib-container .dropdown div {display:block; /*fix bug*/}
+.lib-container .dropdown ul{position:absolute;display:none;margin:0;padding:0;float:left;clear:both; z-index: 999;}
+.lib-container .dropdown ul li{text-indent:5px;margin:0;padding:0;list-style:none;display:block;cursor:default;}
+.lib-container .dropdown ul li.over{}
+.lib-container .dropselectbox {display:inline;}
+.lib-container /* write you style here */
+.lib-container .dropselectbox {/*background:#DDD url(../images/selectBg.png) repeat-x left top;*/}
+.lib-container .dropdown h4{height:38px; font:12px/38px Arial, Helvetica, sans-serif; border:solid 1px #aeaeae; background: #fff url(../images/droparrow.gif) no-repeat 198px center; border-radius: 4px; cursor: pointer;}
+.lib-container .dropdown h4.over{border-color:#369; background-image:url(../images/droparrowover.gif);}
+.lib-container .dropdown h4.current{border-color:#003;}
+.lib-container .dropdown ul{border:1px solid #AAA; background:#FFF;}
+.lib-container .dropdown ul li{background:#FFF;height:28px;font:400 12px/28px Arial, Helvetica, sans-serif; text-indent: 20px;}
+.lib-container .dropdown ul li.over{background:#369; color:#FFF;}
+
+
+.redactor_box{ -webkit-box-flex:1;}

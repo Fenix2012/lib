@@ -34,7 +34,7 @@
 
 dl.ucontent-add { display: inline-block; margin: 0; margin-top: 45px; width: 48%; min-width: 420px; height: 171px; border: 2px solid #fff; border-radius: 5px; background-color: #fff; }
 dl.ucontent-add:hover { border: 2px solid #e8eff4; border-radius: 5px; box-shadow: none;}
-.ucontent-add-btn { display: block; position: relative; top: 50%; margin: -55px auto 0; padding-top: 90px; width: 84px; /*height: 84px;*/ background: url(../images/bg-common.png) 0 -225px; text-align: center; font: bold 14px Microsoft YaHei; color: #9db2c7; cursor: pointer; }
+.ucontent-add-btn { display: block; position: relative; top: 50%; margin: -55px auto 0; padding-top: 90px; width: 84px; /*height: 84px;*/ background: url(../images/bg-common.png) -5px -225px; text-align: center; font: bold 14px Microsoft YaHei; color: #9db2c7; cursor: pointer; }
 
 .ucenter-course-info { margin: 0; margin-left: 115px; padding: 10px 10px 0; border-bottom: 1px solid #c8c8c8; background: url(../images/bg-ucenter-course.png) left -116px no-repeat, url(../images/bg-ucenter-course.png) right top no-repeat;}
 .ucourse-info-wrap { background: url(../images/bg-ucenter-course.png) left -232px repeat-x;}

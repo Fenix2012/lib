@@ -1,0 +1,59 @@
+﻿#task .lib-con  { padding-bottom: 0; }
+#task .lib-con .tab-pane { padding: 18px 0 8px; }
+#task .task-list { margin: 0; }
+#task .task-list li { position: relative; padding: 12px 15px 15px 70px; background: url(../images/icon-mod-large.png) 15px 15px no-repeat; border-radius: 4px;}
+#task .task-list li:hover { background-color:#e8ecf2;  }
+#task .task-li-sub { display: none; position: absolute; right: 15px; top: 15px;}
+#task .task-list li:hover .task-li-sub { display: block;}
+#task .task-list h6 { margin: 0 0 5px; font-size: 14px; font-weight: normal;}
+#task .task-list p { margin: 0;}
+#task .task-list .btn { margin-left: 12px; padding: 0; width: 92px; height: 38px; line-height: 38px; font-size: 12px; color: #fff; background: #8f9fb6; text-shadow: none; }
+#task .task-list .btn:hover { background-color: #aabdd9;}
+
+#task .pagination  { margin-top: 30px; text-align: center;}
+#task .pagination a { color: #6d7a96;}
+#task .pagination ul { float: none;}
+#task .pagination ul > li > a:hover, #task .pagination ul > .active > a, #task .pagination ul > .active > span { background-color: #9fa5b2; color: #fff; }
+#task .pagination form { position: relative; top: -10px;}
+
+span.static { display: inline-block; margin: 0 10px; }
+
+#modal-view-task { width: 760px; margin:-330px 0 0 -380px}
+#modal-view-task .modal-body { padding: 10px; max-height: 560px; }
+
+#modal-set-homework { width: 760px; margin:-360px 0 0 -380px}
+#modal-set-homework .modal-header { box-shadow: 0 1px 1px #fff;}
+#modal-set-homework .modal-body { padding: 20px 15px 0; /*max-height: 560px;*/ max-height: 650px; background-color: #D7DBE3;}
+#modal-set-homework .input-date { width: 55%; padding-right: 5px;}
+#modal-set-homework .input-time { margin-left: 4%; width: 22%;}
+#modal-set-homework .set-homework-stu { line-height: 34px; }
+#modal-set-homework .set-homework-stu .checkbox { cursor: pointer;}
+#modal-set-homework .set-homework-submit { line-height: 38px; }
+#modal-set-homework .set-homework-submit a { color: #4b6384;}
+
+.btn.btn-set-section { margin: 0; padding: 0; width: 95px; height: 38px; line-height: 38px; font-size: 12px; color: #747474; }
+.btn-myself, .btn-storage, #modal-set-homework input[type="submit"].btn { width: 49%; margin: 0; padding: 0; height: 40px; line-height: 40px; background:-webkit-linear-gradient(top, #75819D, #616E8B, #475574); color: #fff; font-size: 12px; text-shadow: none;}
+.btn-myself:hover, .btn-storage:hover { background-position: 0 0; color: #fff; }
+.btn-storage { float: right;}
+#modal-set-homework input[type="submit"].btn { float: right; width: 90%; }
+
+/*作业完成情况*/
+#task-status .go-back { margin-left: 10px; }
+#task-status table tr > :nth-child(1) { width: 15%; text-align: center; }
+#task-status table tr > :nth-child(2) { width: 15%; text-align: center; }
+#task-status table tr > :nth-child(3) { width: 70%; padding-left:6%;}
+#task-status table ul { margin: 14px 0 0; }
+#task-status table li { float: left; margin-right: 30px; text-align: center; }
+#task-status table li:hover { cursor: pointer; }
+#task-status table li i { display: block; margin:0 auto; width: 42px; height: 45px; background: url(../images/icon.png) no-repeat; }
+#task-status table li .icon-video { background-position: -454px -106px;}
+#task-status table li:hover .icon-video { background-position: -454px -159px; }
+#task-status table li .icon-text { background-position: -454px -213px;}
+#task-status table li:hover .icon-text { background-position: -454px -266px; }
+#task-status table li .icon-ppt { background-position: -454px -319px;}
+#task-status table li:hover .icon-ppt { background-position: -454px -372px; }
+#task-status table li .icon-pdf { background-position: -454px -426px;}
+#task-status table li:hover .icon-pdf { background-position: -454px -479px; }
+#task-status tbody tr td { height: 88px; line-height: 88px; padding-top: 0; padding-bottom: 0; }
+#task-status .lib-wide-bd { position: relative; padding-bottom: 40px; }
+#task-status .pagination { position: absolute; right: 2%; bottom: 0;}

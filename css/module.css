@@ -1,0 +1,62 @@
+﻿#mod-task .lib-con, 
+#mod-video .lib-con { padding-top: 35px; padding-bottom: 0;}
+#mod-task [class*="span"], 
+#mod-video [class*="span"]  { padding-left: 20px; }
+
+.lib-container .lib-con .tab-pane { padding: 18px 0 8px; }
+
+/*最近内容列表*/
+.mod-item-list { margin: 0; }
+.mod-item-list li { position: relative; padding: 12px 15px 15px 70px; background: url(../images/icon-mod-item.png) 15px 15px no-repeat; border-radius: 4px;}
+.mod-item-list li:hover { background-color:#e8ecf2;  }
+.task-li-sub { display: none; position: absolute; right: 15px; top: 15px;}
+.mod-item-list li:hover .task-li-sub { display: block;}
+.mod-item-list h6 { margin: 0 0 5px; font-size: 14px; font-weight: normal;}
+.mod-item-list p { margin: 0;}
+.mod-item-list .btn { margin-left: 12px; padding: 0; width: 92px; height: 38px; line-height: 38px; font-size: 12px; color: #fff; background: #8f9fb6; text-shadow: none; }
+.mod-item-list .btn:hover { background-color: #aabdd9;}
+
+#mod-video .mod-item-list li { background-position: 15px -56px;}
+#mod-video .mod-item-list li.complete { background-position: 15px -127px;}
+/*最近列表翻页*/
+.container .pagination  { margin-top: 30px; text-align: center;}
+.container .pagination a { color: #6d7a96;}
+.container .pagination ul { float: none;}
+.container .pagination ul > li > a:hover, #mod-task .pagination ul > .active > a, #mod-task .pagination ul > .active > span { background-color: #9fa5b2; color: #fff; }
+.container .pagination form { position: relative; top: -10px;}
+
+/*弹层表单*/
+.modal { width: 760px; margin:-360px 0 0 -380px}
+.modal .modal-header { box-shadow: 0 1px 1px #fff;}
+.modal .modal-body { padding: 20px 15px 0; /*max-height: 560px;*/ max-height: 650px; background-color: #D7DBE3;}
+.modal .input-date { width: 55%; padding-right: 5px;}
+.modal .input-time { margin-left: 4%; width: 22%;}
+#form-set-video .input-date { width: 44%;}
+#form-set-video .input-time:last-child { margin-left: 0;}
+span.static { display: inline-block; margin: 0 13px; }
+
+#modal-view-task { width: 760px; margin:-330px 0 0 -380px}
+#modal-view-task .modal-body { padding: 10px; max-height: 560px; background-color: #fff; }
+
+#modal-set-homework .set-homework-stu { line-height: 34px; }
+#modal-set-homework .set-homework-stu .checkbox { cursor: pointer;}
+#modal-set-homework .set-homework-submit { line-height: 38px; }
+#modal-set-homework .set-homework-submit a { color: #4b6384;}
+.btn.btn-set-section { margin: 0; padding: 0; width: 95px; height: 38px; line-height: 38px; font-size: 12px; color: #747474; }
+#modal-set-video { margin-top: -280px; }
+
+
+.toplimit, .inlimit { float: left; width: 50%; }
+.inlimit .input-time { width: 40%; } 
+.lib-container .form-horizontal .inlimit .controls { margin-left: 32px; }
+
+.btn-myself, 
+.btn-storage, 
+#modal-set-homework input[type="submit"].btn,
+#modal-set-video input[type="submit"].btn { width: 49%; margin: 0; padding: 0; height: 40px; line-height: 40px; background:-webkit-linear-gradient(top, #75819D, #616E8B, #475574); color: #fff; font-size: 12px; text-shadow: none;}
+
+.btn-myself:hover,
+.btn-storage:hover { background-position: 0 0; color: #fff; }
+.btn-storage { float: right;}
+#modal-set-homework input[type="submit"].btn { float: right; width: 90%; }
+#modal-set-video input[type="submit"].btn { width: 100%; }
