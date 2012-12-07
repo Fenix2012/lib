@@ -69,7 +69,19 @@ $('.type-file-file').each(function(i){
 $('.type-file-button').live('click',function(){
 	$(this).next('.type-file-file').trigger('click');
 });
-
+//html5进度条
+function Progress(obj){
+	var _width = obj.val();
+	var _textPos = parseInt(100-_width);
+	obj.next('span').find('em').text(_width);
+	obj.next('span').css({'right':_textPos+'%'});
+}
+$('progress').change(function(){
+  Progress($(this));
+});
+$('progress').each(function(){
+  Progress($(this));
+});
 //var _value = $('#fileField').attr('data-value');
 //var textButton="<input type='button' name='button' id='button' value='"+_value+"' class='type-file-button btn' />";
 //$(textButton).insertBefore("#fileField");

@@ -682,7 +682,8 @@
   </div>
 </div>
 </section>
-<div class="hide fade modal" id="modal-add-data">
+<!--div class="hide fade modal" id="modal-add-data"-->
+<div class="modal" id="modal-add-data">
   <div class="modal-header">
     <a class="close" data-dismiss="modal"></a>
     <h3>添加课程资料</h3>
@@ -708,6 +709,21 @@
 			<div class="tab-content">
 			  <div class="tab-pane active" id="local">
 				<div class="type-file-box"><input name="fileField" type="file" class="type-file-file" id="fileField" data-value="浏览本地文件"/></div>
+				<!--上传中start-->
+				<div class="uploading">
+				  <div class="progress-h5">
+					<progress max="100" value="48"></progress>
+					<span><em></em>%</span>
+				  </div>
+				  <span class="local-address"><em>C:\Program Files\Movie.rm</em>上传中...</span>
+				</div>
+				<!--上传中end-->
+				<!--上传完成end-->
+				<div class="uploaded">
+				  <span class="local-address"><em>C:\Program Files\Movie.rm</em>上传成功</span>
+				  <span class="upload-update">更改</span>
+				</div>
+				<!--上传完成end-->
 			  </div>
 			  <div class="tab-pane" id="nonlocal">
 				<div class="control-group">
