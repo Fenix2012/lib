@@ -83,6 +83,9 @@ i.icon-btn-submod { background: url(../images/icon.png) -138px -308px no-repeat;
 
 i.btn-icon { display: inline-block; position: relative; top: 8px; width: 20px; margin-right: 15px; height: 20px; background: url(../images/icon-small.png) no-repeat; cursor: pointer;}
 i.btn-icon:hover { opacity: 0.7;}
+/*icon*/
+[class^="icon-"], [class*=" icon-"] { width: 18px; height: 18px; line-height: 18px; margin: -1px 8px 0 0; }
+.icon-duration { background: url(../images/icon-small.png) 0 -36px;}
 /*顶部*/
 #header { padding-top: 53px; /*height: 51px;*/ background: url(../images/bg-header.png) repeat; /*overflow: hidden;*/}
 #logo { width: 250px; height: 30px; padding-top: 10px; font: italic bold 20px Microsoft YaHei; color: #fff; overflow: hidden; }
