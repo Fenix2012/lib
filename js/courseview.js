@@ -27,16 +27,12 @@ $('.sidebar-switch').toggle(function(){
 function Resize(){
   var pageHeight = document.documentElement.clientHeight;
   $('.course-view').height(pageHeight);
-  $('.course-view .main').height(pageHeight);
-  $('.course-view .sidebar').height(pageHeight-20);
-  $('.course-view .main .cview-con').height(pageHeight-200);
-  $('.cview-sidebar-list .note').height(pageHeight-160);
-  $('#cview-note .loading-box').height(pageHeight-160);
-  //$('#cview-note .loading-box').load(function(){alert(44);});
-  //$('.cview-sidebar-con').height(h-96);
-  //$('.cview-res-wrap').height(h-154);
-  //$('.cview-res-bd.all').height(h-208);
-
+ // $('.view-con').height(pageHeight);
+ // $('.view-sidebar').height(pageHeight-20);
+ // $('.view-main').height(pageHeight-200);
+ // $('.cview-sidebar-list .note').height(pageHeight-160);
+ // $('#cview-note .loading-box').height(pageHeight-160);
+	//$('#view-video-classroom .row-fluid').height();
 }
 Resize();
 $(window).resize(function(){

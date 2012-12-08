@@ -1,16 +1,11 @@
 ﻿/*bootstrap reset*/
 h5,h6 { margin: 0; padding: 0; }
 .course-view { background-color: #242424; /*height: 1300px;*/ overflow: hidden;}
-.course-view .main { position: relative; background: url(../images/bg-course-view.jpg); /*height: 100%;*/ box-shadow: 2px 0 1px #000;}
-.course-view .main:before { content: ' '; display: block; position: absolute; left:177px; top: 0; width: 4px; height: 2000px; background: url(../images/bg-cview-line.png) repeat-y; }
-.csquare-pic:after { /*content: ''; display: block; width: 60px; height: 35px; background-color: #000; position: absolute; bottom: -10px; left: 2px;  margin: 0 auto; min-width: 100%; background: url(../images/bg-csquare-shadow.png) center top no-repeat; position:relative; top: -12px; z-index: 1; */}
 .csquare-pic img { max-width: 100%; position: relative; z-index: 2;}
 
-a.cview-back { position: absolute; top: 15px; left: 15px; padding-left: 30px; color: #fff; text-decoration: none; background: url(../images/bg-cview.png) -120px -70px no-repeat;}
-a.cview-back:hover { background-position: -120px -105px; }
 
 .cview-list { margin: 0;}
-.cview-list li { /*position: relative;*/ padding: 50px 18px 20px;}
+.cview-list li { /*position: relative; padding: 50px 18px 20px;*/}
 .prev-lecture { position: absolute; top: 12px; left: 165px;  display: block; height: 27px; line-height: 27px; color: #fff; text-decoration: none;}
 .prev-lecture span { display: block; float: left; margin-right: 10px; width: 26px; height: 27px; background: url(../images/bg-cview.png) 0 -53px no-repeat; }
 .prev-lecture:hover { color: #fff;}
@@ -31,13 +26,8 @@ a.next-lecture { float: left; position: relative; top: -5px; margin-right: 15px;
 .cview-top .le{float:left;background:#181818;border-radius:8px;padding:0px 30px 0 12px;margin:11px 0 0 -20px;position:relative;font-size:12px;font-weight:bold;color:#999;}
 .cview-top .no{float:left; background: #216100 -webkit-linear-gradient(top, #438802, #317400, #216100); width:32px;height:32px;line-height:30px;text-align:center;border-radius:99em;box-shadow:0 1px rgba(255, 255, 255, 0.45) inset,0 0 0px 3px #000000,4px 0 rgba(255, 255, 255, 0.1);font-size:16px;font-weight:bold;color:#000;text-shadow:0 1px rgba(255, 255, 255, 0.4);margin:4px 0 0 -9px;position:relative;}
 .cview-top h6 { height: 36px; line-height: 36px;  color:#fff; margin:2px 0 0 9px; text-shadow:0 1px 1px rgba(0, 0, 0, 0.5); float: left;}
-.cview-switch { float: right; }
-.cview-switch li { float: left; margin: 10px 0 0 5px; padding: 0; width: 18px; height: 18px; background: url(../images/bg-cview.png) -71px -53px no-repeat; cursor: pointer;}
-.cview-switch li.cur { background-position: -88px -53px;}
-.cview-con { margin: 15px 0; width: auto; /*height: 550px;*/ background-color: #212121; position: relative; box-shadow: inset 1px 1px 2px #000, inset -1px -1px 2px #000;}
 
 /*右边栏*/
-.course-view .sidebar { /*min-width: 250px;*/ padding: 10px 10px 10px 0; /*margin-left: 1%;*/ }
 .sidebar-switch { position: absolute; right: 0px; top: 15px; width: 30px; height: 31px; background: url(../images/bg-cview.png) 0 -89px no-repeat; cursor: pointer; }
 .sidebar-switch-i { background-position: -36px -89px ;}
 
