@@ -21,7 +21,18 @@ a.view-back:hover { background-position: -120px -105px; }
 
 
 /*视频面授*/
+#view-video-classroom .view-main { background: none; box-shadow: none;}
+#view-video-classroom .view-block, .vclassroom-teach, .vclassroom-stu {  background-color: #212121; box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.4), inset -1px -1px 2px rgba(0, 0, 0, 0.4);}
+
+.vclassroom-user { width: 28%; height: 90%; }
+.vclassroom-teach, .vclassroom-stu { width: 100%; height: 48%;}
+.vclassroom-teach { margin-bottom: 6.8%; }
+#view-video-classroom .view-block { width: 70%; height: 90%; }
+
+
+
 .board-switch { display: block; float: right; margin: 6px 2px 0 0; width: 36px; height: 23px; line-height: 23px; background-color: rgba(0,0,0,0.2); text-align: center; border-radius: 3px; cursor: pointer; box-shadow: inset 1px 1px 6px rgba(0,0,0,0.4),1px 1px 1px rgba(255,255,255,0.1);}
+
 .video-gallery { /*position: absolute; top:100%; margin-top: -170px; width: 100%;*/}
 .video-gallery { position: relative; }
 .gallery-switch { padding-top: 8px;  height: 20px; text-align: center; background: url(../images/bg-course-view.jpg); cursor: pointer; box-shadow: 0 -1px 1px rgba(255,255,255,0.3),0 1px 1px #000; }

@@ -1,14 +1,15 @@
 ﻿$(function(){
 //边栏开关
-var w_main = $('.course-view .main').width();
-var w_sidebar = $('.course-view .sidebar').width();
+var w_con= $('.course-view .view-con').width()+36,
+	w_sidebar = $('.course-view .view-sidebar').width()+10,
+	$con = $('.sidebar-switch').parents('.view-con');
 $('.sidebar-switch').toggle(function(){
-  $(this).parents('.main').animate({'width':'100%'},300);
-  $(this).parents('.main').siblings('.sidebar').animate({'width':'0','opacity':'0'},250);
+  $con.animate({'width':'100%'},300);
+  $con.siblings('.view-sidebar').animate({'width':'0','opacity':'0'},250,function(){ $(this).hide(); });
   $(this).addClass('sidebar-switch-i');
 },function(){
-  $(this).parents('.main').animate({'width':w_main},300);
-  $(this).parents('.main').siblings('.sidebar').animate({'width':w_sidebar,'opacity':'1'},250);
+  $con.animate({'width':w_con},300);
+  $con.siblings('.view-sidebar').animate({'width':w_sidebar,'opacity':'1'},250,function(){ $(this).show(); });
   $(this).removeClass('sidebar-switch-i');
 });
 //滚动条美化
@@ -24,20 +25,30 @@ $('.sidebar-switch').toggle(function(){
 //  ,Fn:function(){}//滚动时候触发的方法
 //});
 //页面高度调整
+Resize();
+$(window).resize(function(){ Resize();	});
 function Resize(){
   var pageHeight = document.documentElement.clientHeight;
-  $('.course-view').height(pageHeight);
- // $('.view-con').height(pageHeight);
- // $('.view-sidebar').height(pageHeight-20);
- // $('.view-main').height(pageHeight-200);
- // $('.cview-sidebar-list .note').height(pageHeight-160);
- // $('#cview-note .loading-box').height(pageHeight-160);
-	//$('#view-video-classroom .row-fluid').height();
+  var videoGalleryHeight = $('.video-gallery').height()+78;
+  //alert(videoGalleryHeight);
+  $('#view-course').height(pageHeight);
+  $('#view-video-classroom').height(pageHeight);
+  if($('.video-gallery').length == 0){
+	$('.view-con').height(pageHeight);
+	$('.view-sidebar').height(pageHeight-20);
+	$('.view-main').height(pageHeight-200);
+  } else {
+	//$('#view-video-classroom .row-fluid').height(pageHeight-$('.video-gallery').height());
+	$('.view-con').height(pageHeight-videoGalleryHeight);
+	$('.view-sidebar').height(pageHeight-videoGalleryHeight);
+	$('.view-main').height(pageHeight-280);
+	//$('#view-video-classroom .row-fluid').height(pageHeight-$('.video-gallery').height());
+  }
+
+
+  $('.cview-sidebar-list .note').height(pageHeight-160);
+  $('#cview-note .loading-box').height(pageHeight-160);
 }
-Resize();
-$(window).resize(function(){
-	Resize();	
-});
 
 var CVIEW = {
   	GetNote : function(){

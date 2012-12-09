@@ -10,6 +10,7 @@
 .mod-item-list li { position: relative; padding: 12px 15px 15px 70px; background: url(../images/icon-mod-item.png) 15px 15px no-repeat; border-radius: 4px;}
 .mod-item-list li:hover { background-color:#e8ecf2;  }
 .mod-item-sub { display: none; position: absolute; right: 15px; top: 15px;}
+.mod-item-sub .btn-icon { background-position: 2px 0; }
 .mod-item-list li:hover .mod-item-sub { display: block;}
 .mod-item-list h6 { margin: 0 0 5px; font-size: 14px; font-weight: normal;}
 .mod-item-list p { margin: 0;}

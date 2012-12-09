@@ -18,8 +18,8 @@
   $(function(){ $('#btn-video-info').popover(); });
 </script>
 </head>
-<body id="view-video-classroom">
-<section class="course-view">
+<body>
+<section class="course-view" id="view-video-classroom">
 <div class="row-fluid">
   <div class="view-con span8">
 	<a class="view-back" href="#" title="返回">返回</a>
@@ -30,171 +30,22 @@
 	  <span class="board-switch">白板</span>
 	</div>
 	<div class="view-main">
-	  <div class="view-block">111</div>
+	  <div class="vclassroom-user fL">
+	  	<div class="vclassroom-teach">这里是教师视频</div>
+	  	<div class="vclassroom-stu">这里是学生视频</div>
+	  </div>
+	  <div class="view-block fR">这里是资料播放区域</div>
 	</div>
   </div>
   <div class="view-sidebar span4">
 	<ul class="cview-sidebar-nav clearfix">
 	  <li class="resource active"><a href="#cview-resource" data-toggle="tab">资料</a></li>
 	  <li class="task"><a href="#cview-task" data-toggle="tab">作业</a></li>
-	  <li class="question"><a href="#cview-question" data-toggle="tab">问答</a></li>
-	  <li class="note"><a href="#cview-note" data-toggle="tab">笔记</a></li>
 	</ul>
 	<div class="cview-sidebar-con tab-content clearb">
 	  <div class="tab-pane active" id="cview-resource">
-		<!--单个资料start-->
-		<!--div class="cview-sidebar-hd"><span><i class="icon-arrowdown"></i>查看资料</span><button class="btn" href="#">返回</button></div>
-	  <div class="cres-page">
-		<div class="cres-con">
-		  <div class="cres-video">
-			<div class="cres-pic"></div>
-			<p>VIDEO1.rm</p>	
-			<p>夏小强</p>	
-			</div-->
-			<!--div class="cres-text">
-			<div class="cres-pic"></div>
-			<p>TEXT1.docx</p>	
-			<p>夏小强</p>	
-		  </div>
-		  <div class="cres-ppt">
-			<div class="cres-pic"></div>
-			<p>PPT1.pptx</p>	
-			<p>夏小强</p>	
-		  </div>
-		  <div class="cres-pdf">
-			<div class="cres-pic"></div>
-			<p>PDF1.pdf</p>	
-			<p>夏小强</p>	
-			</div-->
-			<!--/div>
-			<div class="cres-opt">
-			  <a class="btn-preview btn" href="#"><i class="icon-preview"></i>预览</a><a class="btn-play btn" href="#">播放<i class="icon-play"></i></a>
-			</div>
-			<p class="cres-intro">本资料是对今天上课内容的讲解。本资料是对今天上课内容的讲解。本资料是对今天上课内容的讲解。</p>
-			<div class="cres-liked">
-			  <div class="cres-liked-hd"><p>喜欢该资料的人(<em>73</em>)</p></div>
-			  <ul class="cres-liked-bd clearfix">
-				<li>
-				<a href="#" target="_blank"><img src="images/top-nav-avatar.png" alt="userName"><span>userName</span></a>
-				</li>
-				<li>
-				<a href="#" target="_blank"><img src="images/top-nav-avatar.png" alt="userName"><span>userName</span></a>
-				</li>
-				<li>
-				<a href="#" target="_blank"><img src="images/top-nav-avatar.png" alt="userName"><span>userName</span></a>
-				</li>
-				<li>
-				<a href="#" target="_blank"><img src="images/top-nav-avatar.png" alt="userName"><span>userName</span></a>
-				</li>
-				<li>
-				<a href="#" target="_blank"><img src="images/top-nav-avatar.png" alt="userName"><span>userName</span></a>
-				</li>
-				<li>
-				<a href="#" target="_blank"><img src="images/top-nav-avatar.png" alt="userName"><span>userName</span></a>
-				</li>
-			  </ul>
-			</div>
-			</div-->
-			<!--单个资料end-->
-			<!--资料首页start-->
-			<div class="cview-res-wrap">
-			  <div class="cview-res">
-				<div class="cview-sidebar-hd">
-				  <span><i class="icon-arrowdown"></i>本课程老师的资料(<em>8</em>)</span>
-				  <button class="btn" href="#">查看全部</button>
-				</div>	
-				<ul class="cview-res-bd clearfix">
-				  <li class="cview-res-video">
-				  <p>VIDEO1.rm</p>	
-				  <p>夏小强</p>	
-				  </li>
-				  <li class="cview-res-text">
-				  <p>TEXT.docx</p>	
-				  <p>夏小强</p>	
-				  </li>
-				  <li class="cview-res-ppt">
-				  <p>PPT.pptx</p>	
-				  <p>夏小强</p>	
-				  </li>
-				  <li class="cview-res-pdf">
-				  <p>PDF.pdf</p>	
-				  <p>夏小强</p>	
-				  </li>
-
-				  <li class="cview-res-ppt">
-				  <p>PPT.pptx</p>	
-				  <p>夏小强</p>	
-				  </li>
-				  <li class="cview-res-pdf">
-				  <p>PDF.pdf</p>	
-				  <p>夏小强</p>	
-				  </li>
-				</ul>
-			  </div>
-			  <div class="cview-res">
-				<div class="cview-sidebar-hd">
-				  <span><i class="icon-arrowdown"></i>学生共建的资料(<em>8</em>)</span>
-				  <button class="btn" href="#">查看全部</button>
-				</div>	
-				<ul class="cview-res-bd clearfix">
-				  <li class="cview-res-video">
-				  <p>VIDEO1.rm</p>	
-				  <p>夏小强</p>	
-				  </li>
-				  <li class="cview-res-text">
-				  <p>TEXT.docx</p>	
-				  <p>夏小强</p>	
-				  </li>
-				  <li class="cview-res-ppt">
-				  <p>PPT.pptx</p>	
-				  <p>夏小强</p>	
-				  </li>
-				  <li class="cview-res-pdf">
-				  <p>PDF.pdf</p>	
-				  <p>夏小强</p>	
-				  </li>
-
-				  <li class="cview-res-ppt">
-				  <p>PPT.pptx</p>	
-				  <p>夏小强</p>	
-				  </li>
-				  <li class="cview-res-pdf">
-				  <p>PDF.pdf</p>	
-				  <p>夏小强</p>	
-				  </li>
-
-				</ul>
-			  </div>
-			  <div class="cview-res">
-				<div class="cview-sidebar-hd">
-				  <span><i class="icon-arrowdown"></i>其他老师的资料(<em>8</em>)</span>
-				  <button class="btn" href="#">查看全部</button>
-				</div>	
-				<ul class="cview-res-bd clearfix">
-				  <li class="cview-res-video">
-				  <p>VIDEO1.rm</p>	
-				  <p>夏小强</p>	
-				  </li>
-				  <li class="cview-res-text">
-				  <p>TEXT.docx</p>	
-				  <p>夏小强</p>	
-				  </li>
-				  <li class="cview-res-ppt">
-				  <p>PPT.pptx</p>	
-				  <p>夏小强</p>	
-				  </li>
-				  <li class="cview-res-pdf">
-				  <p>PDF.pdf</p>	
-				  <p>夏小强</p>	
-				  </li>
-				</ul>
-			  </div>
-			</div>
-			<a class="btn-cview-sidebar btn" data-toggle="modal" href="#modal-add-data"><i class="icon-add-res"></i>添加课程资料</a>
-
-			<!--资料首页end-->
 			<!--查看全部start-->
-			<!--div class="cview-res-wrap">
+			<div class="cview-res-wrap">
 			<div class="cview-res">
 			  <div class="cview-sidebar-hd">
 				<span><i class="icon-arrowdown"></i>本课程老师的资料(<em>8</em>)</span>
@@ -253,23 +104,6 @@
 				<p>夏小强</p>	
 				</li>
 
-				<li class="cview-res-video">
-				<p>VIDEO1.rm</p>	
-				<p>夏小强</p>	
-				</li>
-				<li class="cview-res-text">
-				<p>TEXT.docx</p>	
-				<p>夏小强</p>	
-				</li>
-				<li class="cview-res-ppt">
-				<p>PPT.pptx</p>	
-				<p>夏小强</p>	
-				</li>
-				<li class="cview-res-pdf">
-				<p>PDF.pdf</p>	
-				<p>夏小强</p>	
-				</li>
-
 				<li class="cview-res-ppt">
 				<p>PPT.pptx</p>	
 				<p>夏小强</p>	
@@ -292,7 +126,7 @@
 		  </div>
 		  <ul class="cview-pagination">
 			<li class="cur"></li><li></li><li></li><li></li><li></li>
-			</ul-->
+			</ul>
 			<!--查看全部end-->
 
 
@@ -348,325 +182,6 @@
 			  </ul>
 			</div>
 			<!--作业首页end-->
-			<!--作业详情start-->
-			<div class="cview-sidebar-hd">
-			  <span><i class="icon-arrowdown"></i>作业一</span>
-			  <button class="btn" href="#">返回</button>
-			</div>
-			<div class="cview-sidebar-detail clearfix">
-			  <div class="fL">
-				<h5>作业名</h5>
-				<span class="cview-sidebar-time">2012-09-12  12:00</span>
-			  </div>
-			  <div class="fR">
-				<div class="cres-opt">
-				  <a class="btn-preview btn" href="#">预览</a><a class="btn-play btn" href="#">播放</a>
-				</div>
-			  </div>
-			</div>
-			<div class="cview-sidebar-bd">
-			  <select id="" name="">
-				<option value="13">高一三班</option>
-			  </select>
-			  <table class="table-bordered table-condensed table">
-				<thead>
-				  <tr>
-					<th>学号</th>
-					<th>姓名</th>
-					<th>作业</th>
-				  </tr>
-				</thead>
-				<tbody>
-				  <tr>
-					<td>01</td>
-					<td>userName</td>
-					<td class="uncommitted">未提交<span class="arrow-right"></span></td>
-				  </tr>
-				  <tr>
-					<td>01</td>
-					<td>userName</td>
-					<td>已提交<span class="arrow-right"></span></td>
-				  </tr>
-				  <tr>
-					<td>01</td>
-					<td>userName</td>
-					<td>已提交<span class="arrow-right"></span></td>
-				  </tr>
-				  <tr>
-					<td>01</td>
-					<td>userName</td>
-					<td>已提交<span class="arrow-right"></span></td>
-				  </tr>
-				  <tr>
-					<td>01</td>
-					<td>userName</td>
-					<td>已提交<span class="arrow-right"></span></td>
-				  </tr>
-				  <tr>
-					<td>01</td>
-					<td>userName</td>
-					<td>已提交<span class="arrow-right"></span></td>
-				  </tr>
-				  <tr>
-					<td>01</td>
-					<td>userName</td>
-					<td>已提交<span class="arrow-right"></span></td>
-				  </tr>
-				</tbody>
-			  </table>
-			</div>
-			<!--作业详情end-->
-			<!--单个用户作业start-->
-			<div class="cview-sidebar-hd">
-			  <span><i class="icon-arrowdown"></i>userName的作业</span>
-			  <button class="btn" href="#">返回</button>
-			</div>
-			<div class="cview-sidebar-detail clearfix">
-			  <div class="cview-utask-avatar">
-				<img src="images/top-nav-avatar.png" alt="" />
-			  </div>
-			  <h5>userName</h5>
-			  <span>学号：<em>01</em></span>
-			</div>
-			<div class="cview-utask-list">
-			  <div class="cview-utask-list-hd clearfix">
-				<span class="cview-sidebar-time">2012-09-12  12:00</span>
-				<h5><i class="icon-sidebar-item"></i>作业名</h5>	 
-			  </div>
-			  <ul class="cview-utask-list-bd">
-				<li class="clearfix">
-				<div class="fL">
-				  <h5>作业名</h5><span class="cview-sidebar-time">2012-09-12  12:00</span>
-				</div>
-				<div class="fR">
-				  <div class="cres-opt">
-					<a class="btn-preview btn" href="#">预览</a><a class="btn-play btn" href="#">播放</a>
-				  </div>
-				</div>
-				</li>
-				<li class="clearfix">
-				<div class="fL">
-				  <h5>作业名</h5><span class="cview-sidebar-time">2012-09-12  12:00</span>
-				</div>
-				<div class="fR">
-				  <div class="cres-opt">
-					<a class="btn-preview btn" href="#">预览</a><a class="btn-play btn" href="#">播放</a>
-				  </div>
-				</div>
-				</li>
-				<li class="clearfix">
-				<div class="fL">
-				  <h5>作业名</h5><span class="cview-sidebar-time">2012-09-12  12:00</span>
-				</div>
-				<div class="fR">
-				  <div class="cres-opt">
-					<a class="btn-preview btn" href="#">预览</a><a class="btn-play btn" href="#">播放</a>
-				  </div>
-				</div>
-				</li>
-				<li class="clearfix">
-				<div class="fL">
-				  <h5>作业名</h5><span class="cview-sidebar-time">2012-09-12  12:00</span>
-				</div>
-				<div class="fR">
-				  <div class="cres-opt">
-					<a class="btn-preview btn" href="#">预览</a><a class="btn-play btn" href="#">播放</a>
-				  </div>
-				</div>
-				</li>
-			  </ul>
-			</div>
-			<!--单个用户作业end-->
-		  </div>
-		  <div class="tab-pane" id="cview-question">
-			<!--提问首页start-->
-			<div class="cview-sidebar-hd">
-			  <span><i class="icon-arrowdown"></i>提问</span>
-			  <button class="btn" href="#"><i class="icon-plus"></i>提交问题</button>
-			</div>
-			<div class="cview-sidebar-list">
-			  <ul class="question">
-				<li>
-				<span class="cview-item-name"><i class="icon-sidebar-item"></i><a href="#" target="_blank">什么是集合？</a><span class="arrow-right"></span></span>
-				<p class="clearfix"><span class="answer">答案(<em>5</em>)</span><span class="addask">追问(<em>5</em>)</span><span class="cview-sidebar-time">2012-09-12  12:00</span></p>
-				</li>
-				<li>
-				<span class="cview-item-name"><i class="icon-sidebar-item"></i><a href="#" target="_blank">什么是集合？</a><span class="arrow-right"></span></span>
-				<p class="clearfix"><span class="answer">答案(<em>5</em>)</span><span class="addask">追问(<em>5</em>)</span><span class="cview-sidebar-time">2012-09-12  12:00</span></p>
-				</li>
-				<li>
-				<span class="cview-item-name"><i class="icon-sidebar-item"></i><a href="#" target="_blank">什么是集合？</a><span class="arrow-right"></span></span>
-				<p class="clearfix"><span class="answer">答案(<em>5</em>)</span><span class="addask">追问(<em>5</em>)</span><span class="cview-sidebar-time">2012-09-12  12:00</span></p>
-				</li>
-				<li>
-				<span class="cview-item-name"><i class="icon-sidebar-item"></i><a href="#" target="_blank">什么是集合？</a><span class="arrow-right"></span></span>
-				<p class="clearfix"><span class="answer">答案(<em>5</em>)</span><span class="addask">追问(<em>5</em>)</span><span class="cview-sidebar-time">2012-09-12  12:00</span></p>
-				</li>
-				<li>
-				<span class="cview-item-name"><i class="icon-sidebar-item"></i><a href="#" target="_blank">什么是集合？</a><span class="arrow-right"></span></span>
-				<p class="clearfix"><span class="answer">答案(<em>5</em>)</span><span class="addask">追问(<em>5</em>)</span><span class="cview-sidebar-time">2012-09-12  12:00</span></p>
-				</li>
-			  </ul>
-			</div>
-			<!--提问首页end-->
-			<!--添加问题start-->
-			<div class="cview-sidebar-hd">
-			  <span><i class="icon-arrowdown"></i>提问</span>
-			  <button class="btn" href="#">返回</button>
-			</div>
-			<div class="cview-sidebar-form">
-			  <form>
-				<input type="text" class="input-xlarge" id="" placeholder="输入标题"/>
-				<textarea class="input-xlarge" id="textarea" rows="3" placeholder="输入问题"></textarea>
-				<button type="submit" class="btn-publish btn">发布问题</button>
-			  </form>
-
-			</div>	
-			<!--添加问题end-->
-			<!--问题详情start-->
-			<div class="cview-sidebar-hd">
-			  <span><i class="icon-arrowdown"></i>查看提问</span>
-			  <button class="btn" href="#">返回</button>
-			</div>
-			<div class="cview-uask-detail cview-sidebar-detail clearfix">
-			  <div class="cview-utask-avatar">
-				<img src="images/top-nav-avatar.png" alt="" />
-			  </div>
-			  <h5>userName</h5>
-			  <span class="cview-sidebar-time">2012-09-12  12:00</span>
-			</div>
-
-			<div class="cview-uask-bd">
-			  <div class="cview-uask-question">
-				<h5>什么是集合？什么是逻辑？</h5>
-				<p>问题补充问题补充问题补充问题补充问题补充问题补充问题补充问题补充问题补充问题补充问题补充问题补充</p>
-				<div class="btn-group" data-toggle="buttons-radio">
-				  <button class="btn-cview-answer btn btn-primary">回答(<em>5</em>)</button>
-				  <button class="btn-cview-addask btn btn-primary">追问(<em>5</em>)</button>
-				</div>
-			  </div>
-			  <div class="comment-box">
-				<form class="input-form">
-				  <textarea class="input-xlarge" id="textarea" rows="3" placeholder="我来回答"></textarea>
-				  <button type="submit" class="btn-large btn">回答</button>
-				</form>
-				<ul class="cview-uask-answer">
-				  <li>
-				  <div class="cview-uanswer-hd">
-					<span class="cview-uanswer-user">userName</span>
-					<span class="cview-sidebar-time">2012-09-12  12:00</span>
-				  </div>
-				  <p>回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答</p>
-				  <span class="btn-addask btn btn-mini">追问(<em>3</em>)</span>
-				  </li>
-				  <li>
-				  <div class="cview-uanswer-hd">
-					<span class="cview-uanswer-user">userName</span>
-					<span class="cview-sidebar-time">2012-09-12  12:00</span>
-				  </div>
-				  <p>回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答</p>
-				  <span class="btn-addask btn btn-mini">追问(<em>3</em>)</span>
-				  </li>
-				  <li>
-				  <div class="cview-uanswer-hd">
-					<span class="cview-uanswer-user">userName</span>
-					<span class="cview-sidebar-time">2012-09-12  12:00</span>
-				  </div>
-				  <p>回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答</p>
-				  <span class="btn-addask btn btn-mini">追问(<em>3</em>)</span>
-				  </li>
-				</ul>
-			  </div>
-			</div>
-			<!--问题详情end-->
-			<!--查看回答start-->
-			<div class="cview-sidebar-hd">
-			  <span><i class="icon-arrowdown"></i>查看回答</span>
-			  <button class="btn" href="#">返回</button>
-			</div>
-			<div class="alert alert-info"><a href="#">原问题：什么是集合？</a></div>
-			<div class="cview-uask-bd">
-			  <div class="cview-uask-question">
-				<h5>什么是集合？什么是逻辑？</h5>
-				<p>问题补充问题补充问题补充问题补充问题补充问题补充问题补充问题补充问题补充问题补充问题补充问题补充</p>
-				<div class="btn-group" data-toggle="buttons-radio">
-				  <button class="btn-cview-addask btn btn-primary">追问(<em>5</em>)</button>
-				</div>
-			  </div>
-			  <div class="comment-box">
-				<form class="input-form">
-				  <textarea class="input-xlarge" id="textarea" rows="3" placeholder="我来追问"></textarea>
-				  <button type="submit" class="btn-large btn">追问</button>
-				</form>
-				<ul class="cview-uask-answer">
-				  <li>
-				  <div class="cview-uanswer-hd">
-					<span class="cview-uanswer-user">userName</span>
-					<span class="cview-sidebar-time">2012-09-12  12:00</span>
-				  </div>
-				  <p>回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答</p>
-				  <span class="btn-addask btn btn-mini">回答(<em>3</em>)</span>
-				  </li>
-				  <li>
-				  <div class="cview-uanswer-hd">
-					<span class="cview-uanswer-user">userName</span>
-					<span class="cview-sidebar-time">2012-09-12  12:00</span>
-				  </div>
-				  <p>回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答</p>
-				  <span class="btn-addask btn btn-mini">回答(<em>3</em>)</span>
-				  </li>
-				  <li>
-				  <div class="cview-uanswer-hd">
-					<span class="cview-uanswer-user">userName</span>
-					<span class="cview-sidebar-time">2012-09-12  12:00</span>
-				  </div>
-				  <p>回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答</p>
-				  <span class="btn-addask btn btn-mini">回答(<em>3</em>)</span>
-				  </li>
-				</ul>
-			  </div>
-			</div>
-			<!--查看回答end-->
-		  </div>
-		  <div class="tab-pane" id="cview-note">
-			<!--笔记首页start-->
-			<div class="cview-sidebar-hd">
-			  <span><i class="icon-arrowdown"></i>笔记</span>
-			  <button class="btn-add-note btn" id="btn-addnote" href="#"><i class="icon-plus"></i>添加笔记</button>
-			</div>
-			<div class="cview-sidebar-list">
-			  <ul class="note">
-				<li>
-				<span class="cview-item-name"><i class="icon-sidebar-item"></i><a href="#" target="_blank">笔记</a><span class="arrow-right"></span></span>
-				<p><span class="cview-sidebar-time">2012-09-12  12:00</span></p>
-				</li>
-				<li>
-				<span class="cview-item-name"><i class="icon-sidebar-item"></i><a href="#" target="_blank">笔记</a><span class="arrow-right"></span></span>
-				<p><span class="cview-sidebar-time">2012-09-12  12:00</span></p>
-				</li>
-				<li>
-				<span class="cview-item-name"><i class="icon-sidebar-item"></i><a href="#" target="_blank">笔记</a><span class="arrow-right"></span></span>
-				<p><span class="cview-sidebar-time">2012-09-12  12:00</span></p>
-				</li>
-				<li>
-				<span class="cview-item-name"><i class="icon-sidebar-item"></i><a href="#" target="_blank">笔记</a><span class="arrow-right"></span></span>
-				<p><span class="cview-sidebar-time">2012-09-12  12:00</span></p>
-				</li>
-				<li>
-				<span class="cview-item-name"><i class="icon-sidebar-item"></i><a href="#" target="_blank">笔记</a><span class="arrow-right"></span></span>
-				<p><span class="cview-sidebar-time">2012-09-12  12:00</span></p>
-				</li>
-				<li>
-				<span class="cview-item-name"><i class="icon-sidebar-item"></i><a href="#" target="_blank">笔记</a><span class="arrow-right"></span></span>
-				<p><span class="cview-sidebar-time">2012-09-12  12:00</span></p>
-				</li>
-				<li>
-				<span class="cview-item-name"><i class="icon-sidebar-item"></i><a href="#" target="_blank">笔记</a><span class="arrow-right"></span></span>
-				<p><span class="cview-sidebar-time">2012-09-12  12:00</span></p>
-				</li>
-			  </ul>
-			</div>
-			<!--笔记首页end-->
 		  </div>
 		</div>
 	  </div>
@@ -683,125 +198,29 @@
 	<div class="gallery-switch" id="gallery-switch" title="收起"><span></span></div>
   </div>
   <script type="text/javascript">
+	FoldToggle($('#gallery-switch'), $('#video-gallery-con'));
 	function FoldToggle(obj,target){
-	  obj.click(function(){
+	  var _height = target.height();
+	  obj.toggle(function(){
 		target.animate({height:'0',opacity:'0'},200,function(){
 		  target.hide();
 		  obj.find('span').css({'border-bottom':'none','border-top':'10px solid #6e6e6e'});
 		  obj.attr('title','展开');
 		});
+		//$('.video-gallery').height(28);
+		//var pageHeight = document.documentElement.clientHeight;
+		//var videoGalleryHeight = $('.video-gallery').height()+78;
+		//$('.view-con').height(pageHeight-videoGalleryHeight);
+	  },function(){
+		target.animate({height:_height,opacity:'1'},200,function(){
+		  target.show();
+		  obj.find('span').css({'border-top':'none','border-bottom':'10px solid #6e6e6e'});
+		  obj.attr('title','收起');
+		});
 	  });
+
 	}
-FoldToggle($('#gallery-switch'), $('#video-gallery-con'));
   </script>
 </section>
-<div class="hide fade modal" id="modal-add-data">
-  <div class="modal-header">
-    <a class="close" data-dismiss="modal"></a>
-    <h3>添加课程资料</h3>
-  </div>
-  <div class="modal-body">
-	<div class="modal-adddata-tabs clearfix">
-	  <ul class="nav nav-tabs">
-		<li class="video active"><a href="#modal-adddata-video" data-toggle="tab"><i class="icon"></i>视频</a></li>
-		<li class="text"><a href="#modal-adddata-text" data-toggle="tab"><i class="icon"></i>文档</a></li>
-		<li class="ppt"><a href="#modal-adddata-ppt" data-toggle="tab"><i class="icon"></i>PPT</a></li>
-		<li class="pdf"><a href="#modal-adddata-pdf" data-toggle="tab"><i class="icon"></i>PDF</a></li>
-	  </ul>
-	  <a href="javascript:;" class="disabled btn-storage btn"><i class="icon-storage"></i>课件资料库</a>
-	</div>
-	<div class="tab-content">
-	  <div class="tab-pane active" id="modal-adddata-video">
-		<form action="#" id="form-adddata-video">
-		  <div class="control-group" id="modal-adddata-video">
-			<ul class="nav nav-tabs">
-			  <li class="local active"><a href="#local" data-toggle="tab"><i class="icon-adddata-circle"></i>本地上传</a></li>
-			  <li class="nonlocal"><a href="#nonlocal" data-toggle="tab"><i class="icon-adddata-circle"></i>视频链接</a></li>
-			</ul>
-			<div class="tab-content">
-			  <div class="tab-pane active" id="local">
-				<div class="type-file-box"><input name="fileField" type="file" class="type-file-file" id="fileField" data-value="浏览本地文件"/></div>
-				<!--上传中start-->
-				<div class="uploading">
-				  <div class="progress-h5">
-					<progress max="100" value="48"></progress>
-					<span><em></em>%</span>
-				  </div>
-				  <span class="local-address"><em>C:\Program Files\Movie.rm</em>上传中...</span>
-				</div>
-				<!--上传中end-->
-				<!--上传完成end-->
-				<div class="uploaded">
-				  <span class="local-address"><em>C:\Program Files\Movie.rm</em>上传成功</span>
-				  <span class="upload-update">更改</span>
-				</div>
-				<!--上传完成end-->
-			  </div>
-			  <div class="tab-pane" id="nonlocal">
-				<div class="control-group">
-				  <div class="controls">
-					<input type="text" class="input-xlarge" id="" placeholder="输入外部视频链接">
-				  </div>
-				</div>
-			  </div>
-			</div>
-		  </div>
-		  <div class="control-group">
-			<div class="controls">
-			  <textarea class="input-xlarge" id="textarea" placeholder="添加资料描述"></textarea>
-			</div>
-		  </div>
-		  <input class="btn" type="submit" value="提交" />
-		</form>
-	  </div>
-	  <div class="tab-pane" id="modal-adddata-text">
-		<form action="#" id="form-adddata-text">
-		  <div class="control-group">
-			<div class="controls">
-			  <input type="text" class="input-xlarge" id="" placeholder="输入标题">
-			</div>
-		  </div>
-		  <div class="control-group">
-			<div class="controls">
-			  <textarea class="input-xlarge" id="textarea" placeholder="资料正文"></textarea>
-			</div>
-		  </div>
-		  <input class="btn" type="submit" value="提交" />
-		</form>
-	  </div>
-	  <div class="tab-pane" id="modal-adddata-ppt">
-		<form action="#" id="form-adddata-ppt">
-		  <div class="control-group">
-			<div class="controls">
-			  <div class="type-file-box"><input name="fileField" type="file" class="type-file-file" id="fileField" data-value="浏览本地文件"/></div>
-			</div>
-		  </div>
-		  <div class="control-group">
-			<div class="controls">
-			  <textarea class="input-xlarge" id="textarea" placeholder="添加资料描述"></textarea>
-			</div>
-		  </div>
-		  <input class="btn" type="submit" value="提交" />
-		</form>
-	  </div>
-	  <div class="tab-pane" id="modal-adddata-pdf">
-		<form action="#" id="form-adddata-pdf">
-		  <div class="control-group">
-			<div class="controls">
-			  <div class="type-file-box"><input name="fileField" type="file" class="type-file-file" id="fileField" data-value="浏览本地文件"/></div>
-			</div>
-		  </div>
-		  <div class="control-group">
-			<div class="controls">
-			  <textarea class="input-xlarge" id="textarea" placeholder="添加资料描述"></textarea>
-			</div>
-		  </div>
-		  <input class="btn" type="submit" value="提交" />
-		</form>
-	  </div>
-	</div>
-  </div>
-</div>
-
 </body>
 </html>
