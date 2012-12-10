@@ -1,4 +1,28 @@
-﻿/*作业完成情况*/
+﻿/*布置作业*/
+#mod-sethomework .set-homework-stu { line-height: 34px; }
+#mod-sethomework .set-homework-stu .checkbox { cursor: pointer;}
+#mod-sethomework .set-homework-submit { line-height: 38px; }
+#mod-sethomework .set-homework-submit a { color: #4b6384;}
+.btn.btn-set-section { margin: 0; padding: 0; width: 95px; height: 38px; line-height: 38px; font-size: 12px; color: #747474; }
+#modal-set-video { margin-top: -280px; }
+
+
+.toplimit, .inlimit { float: left; width: 50%; }
+.inlimit .input-time { width: 40%; } 
+.lib-container .form-horizontal .inlimit .controls { margin-left: 32px; }
+
+.btn-myself, 
+.btn-storage, 
+#mod-sethomework input[type="submit"].btn,
+#modal-set-video input[type="submit"].btn { width: 49%; margin: 0; padding: 0; height: 40px; line-height: 40px; background:-webkit-linear-gradient(top, #75819D, #616E8B, #475574); color: #fff; font-size: 12px; text-shadow: none;}
+
+.btn-myself:hover,
+.btn-storage:hover { background-position: 0 0; color: #fff; }
+.btn-storage { float: right;}
+#modal-set-homework input[type="submit"].btn { float: right; width: 90%; }
+#modal-set-video input[type="submit"].btn { width: 100%; }
+
+/*作业完成情况*/
 #mod-taskstatus .go-back { margin-left: 10px; }
 #mod-taskstatus table tr > :nth-child(1) { width: 15%; text-align: center; }
 #mod-taskstatus table tr > :nth-child(2) { width: 15%; text-align: center; }
@@ -18,3 +42,4 @@
 #mod-taskstatus tbody tr td { height: 88px; line-height: 88px; padding-top: 0; padding-bottom: 0; }
 #mod-taskstatus .lib-wide-bd { position: relative; padding-bottom: 40px; }
 #mod-taskstatus .pagination { position: absolute; right: 2%; bottom: 0;}
+
