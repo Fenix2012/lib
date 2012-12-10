@@ -27,10 +27,13 @@ $('.sidebar-switch').toggle(function(){
 //页面高度调整
 Resize();
 $(window).resize(function(){ Resize();	});
+
 function Resize(){
   var pageHeight = document.documentElement.clientHeight;
-  var videoGalleryHeight = $('.video-gallery').height()+78;
-  //alert(videoGalleryHeight);
+  //var videoGalleryHeight = $('.video-gallery').height()+78;
+  console.log(pageHeight); 
+  var videoGalleryHeight = $('.video-gallery').height();
+  console.log(videoGalleryHeight);
   $('#view-course').height(pageHeight);
   $('#view-video-classroom').height(pageHeight);
   if($('.video-gallery').length == 0){
@@ -38,9 +41,8 @@ function Resize(){
 	$('.view-sidebar').height(pageHeight-20);
 	$('.view-main').height(pageHeight-200);
   } else {
-	//$('#view-video-classroom .row-fluid').height(pageHeight-$('.video-gallery').height());
-	$('.view-con').height(pageHeight-videoGalleryHeight);
-	$('.view-sidebar').height(pageHeight-videoGalleryHeight);
+	$('.view-con').height(pageHeight-videoGalleryHeight-78);
+	$('.view-sidebar').height(pageHeight-videoGalleryHeight-20);
 	$('.view-main').height(pageHeight-280);
 	//$('#view-video-classroom .row-fluid').height(pageHeight-$('.video-gallery').height());
   }

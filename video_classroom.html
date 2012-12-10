@@ -35,6 +35,17 @@
 	  	<div class="vclassroom-stu">这里是学生视频</div>
 	  </div>
 	  <div class="view-block fR">这里是资料播放区域</div>
+	  
+	  <div class="classroom-operate">
+		<a class="record btn" href="javascript:;">
+		  <span>录制中...</span>
+		  <span>00:05:45</span>
+		</a>
+		<a class="over btn" href="javascript:;">
+		  <span>00:05:45</span>
+		  <span>结束面授</span>
+		</a>
+	  </div>
 	</div>
   </div>
   <div class="view-sidebar span4">
@@ -201,21 +212,27 @@
 	FoldToggle($('#gallery-switch'), $('#video-gallery-con'));
 	function FoldToggle(obj,target){
 	  var _height = target.height();
+	  var pageHeight = document.documentElement.clientHeight;
+	  var videoGalleryHeight = $('.video-gallery').height();
 	  obj.toggle(function(){
-		target.animate({height:'0',opacity:'0'},200,function(){
+		target.slideDown('3000',function(){
 		  target.hide();
 		  obj.find('span').css({'border-bottom':'none','border-top':'10px solid #6e6e6e'});
 		  obj.attr('title','展开');
+
+		  $('.view-con').height(pageHeight-videoGalleryHeight-78+142);
+		  $('.view-sidebar').height(pageHeight-videoGalleryHeight-20+142);
+		  $('.view-main').height(pageHeight-280+142);
 		});
-		//$('.video-gallery').height(28);
-		//var pageHeight = document.documentElement.clientHeight;
-		//var videoGalleryHeight = $('.video-gallery').height()+78;
-		//$('.view-con').height(pageHeight-videoGalleryHeight);
 	  },function(){
-		target.animate({height:_height,opacity:'1'},200,function(){
+		target.slideUp('fast',function(){
 		  target.show();
 		  obj.find('span').css({'border-top':'none','border-bottom':'10px solid #6e6e6e'});
 		  obj.attr('title','收起');
+
+		  $('.view-con').height(pageHeight-videoGalleryHeight-78);
+		  $('.view-sidebar').height(pageHeight-videoGalleryHeight-20);
+		  $('.view-main').height(pageHeight-280);
 		});
 	  });
 
