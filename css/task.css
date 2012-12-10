@@ -15,7 +15,7 @@
 .btn-storage, 
 #mod-sethomework input[type="submit"].btn,
 #modal-set-video input[type="submit"].btn { width: 49%; margin: 0; padding: 0; height: 40px; line-height: 40px; background:-webkit-linear-gradient(top, #75819D, #616E8B, #475574); color: #fff; font-size: 12px; text-shadow: none;}
-
+#mod-sethomework input[type="submit"].btn { /*width: -webkit-calc(100% - 51px); */ width: 100%;}
 .btn-myself:hover,
 .btn-storage:hover { background-position: 0 0; color: #fff; }
 .btn-storage { float: right;}
