@@ -56,3 +56,17 @@ span.static { display: inline-block; margin: 0 13px; }
 #mod-statistics .btn-submod { margin-bottom: 20px; text-indent: 0; }
 #mod-statistics .lib-container .dropdown { float: right; margin-top: 4px; }
 #mod-statistics .lib-container .dropdown h4 { width: 50px; height: 28px; line-height: 28px;}
+/*account*/
+#mod-setaccount .lib-wide-bd { padding: 25px; }
+#mod-setaccount .block { margin-bottom: 25px; }
+#mod-setaccount .account-avatar  { margin-top: -5px; padding-top: 8px; background: url(../images/account-avatar.png) center top no-repeat; text-align: center; }
+#mod-setaccount .account-avatar img { width: 256px; height: 256px; }
+#mod-setaccount .account-uname { margin: 0; text-align: center; line-height: 70px; font-size: 18px; font-weight: bold; }
+#mod-setaccount .btn-avatar { margin: 0; padding: 0; width: 73%; height: 40px; line-height: 40px; background: -webkit-linear-gradient(top, #75819D, #616E8B, #475574); color: #fff; text-shadow: 1px 1px 1px #333;}
+#mod-setaccount .span4 { text-align: center; }
+#mod-setaccount .span8 ul { margin: 0; }
+#mod-setaccount .span8 ul li { display: inline; padding-right: 20px;}
+#mod-setaccount .span8 a { color: #44567c; }
+#mod-setaccount .block-pw {}
+#mod-setaccount .block-pw .block-hd { height: 50px; line-height: 50px; background: -webkit-linear-gradient(top,#c2cbdd,#b9c2d6,#b6bccb); border-bottom: 1px solid #fff; color: #fff; }
+#mod-setaccount .block-pw .block-bd { background: #e2e7f2;}

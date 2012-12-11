@@ -72,8 +72,8 @@ input.form-login-submit:hover { background-position: 0 0; color: #fff;}
 .lib-wide table th { line-height: 24px;}
 .lib-wide .dropdown {/* position: absolute; right: 0; top: 0;*/}
 
-.block { border: 1px solid #cacaca; border-radius: 4px; }
-.block-hd { padding: 0 20px; height: 38px; line-height: 38px; border-top-left-radius: 4px; background: -webkit-linear-gradient(top,#fff,#f7f7f7,#eee); border-bottom: 1px solid #cacaca;}
+.block { border: 1px solid #cacaca; border-radius: 3px; }
+.block-hd { padding: 0 20px; height: 38px; line-height: 38px; border-top-left-radius: 3px; background: -webkit-linear-gradient(top,#fff,#f7f7f7,#eee); border-bottom: 1px solid #cacaca;}
 .block-bd { padding: 20px; background-color: #fff;}
 
 
