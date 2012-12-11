@@ -1,6 +1,8 @@
 ﻿#mod-task .lib-con, 
+#mod-statistics .lib-con, 
 #mod-video .lib-con { padding-top: 35px; padding-bottom: 0;}
 #mod-task [class*="span"], 
+#mod-statistics [class*="span"], 
 #mod-video [class*="span"]  { padding-left: 20px; }
 
 .lib-container .lib-con .tab-pane { padding: 18px 0 8px; }
@@ -49,3 +51,8 @@ span.static { display: inline-block; margin: 0 13px; }
 #mod-settask .lib-hd-bar h6 { line-height: 40px; font-weight: normal;}
 #mod-settask .lib-hd-bar .right { padding: 2px 0; width: 65px; right: 20px; top: 7px; background: #384e67; text-align: center;}
 #mod-settask .block { margin: 20px; }
+
+/*statistics*/
+#mod-statistics .btn-submod { margin-bottom: 20px; text-indent: 0; }
+#mod-statistics .lib-container .dropdown { float: right; margin-top: 4px; }
+#mod-statistics .lib-container .dropdown h4 { width: 50px; height: 28px; line-height: 28px;}

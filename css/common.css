@@ -72,9 +72,9 @@ input.form-login-submit:hover { background-position: 0 0; color: #fff;}
 .lib-wide table th { line-height: 24px;}
 .lib-wide .dropdown {/* position: absolute; right: 0; top: 0;*/}
 
-.block { border: 1px solid #cacaca;}
-.block-hd { padding: 0 20px; height: 38px; line-height: 38px; border-top-left-radius: 4px; border-top-right-radius: 4px; background: -webkit-linear-gradient(top,#fff,#f7f7f7,#eee); border-bottom: 1px solid #cacaca;}
-.block-bd { padding: 20px; border-bottom-left-radius: 4px; border-bottom-right-radius: 4px; background-color: #fff;}
+.block { border: 1px solid #cacaca; border-radius: 4px; }
+.block-hd { padding: 0 20px; height: 38px; line-height: 38px; border-top-left-radius: 4px; background: -webkit-linear-gradient(top,#fff,#f7f7f7,#eee); border-bottom: 1px solid #cacaca;}
+.block-bd { padding: 20px; background-color: #fff;}
 
 
 .lib-sb-ring { position: absolute; /*left: -15px;*/ left: 0; top: -22px; width: 100%; height: 40px; background: url(../images/bg-ring.png) repeat-x; }
@@ -82,8 +82,9 @@ input.form-login-submit:hover { background-position: 0 0; color: #fff;}
 /*按钮
 Default: padding: 4px 12px;
 */
-.btn-submod { position: relative; padding: 22px 0; width: 100%; border: 1px solid #747474; background: -webkit-linear-gradient(top,#8eb03d,#779634,#5c782a); color: #fff; text-shadow: none; font-size: 15px; font-family: Microsoft YaHei; text-indent: 2em;}
-.btn-submod:hover { color: #fff; background-position: 0 0;}
+.btn-submod { position: relative; padding: 22px 0; width: 100%; border: 1px solid #b6b6b6; color: #fff; text-shadow: none; font-size: 15px; font-family: Microsoft YaHei; text-indent: 2em; color: #747474;}
+.btn-submod:hover { color: #fff; background-position: 0 0; color: #747474; }
+.btn-submod.active { background: -webkit-linear-gradient(top,#8eb03d,#779634,#5c782a); color: #fff; box-shadow: none;}
 i.icon-btn-submod { background: url(../images/icon.png) -138px -308px no-repeat; width: 20px; height: 20px; position: absolute; top: 30px; left: 30%; top: 50%; margin-top: -10px;}
 
 i.btn-icon { display: inline-block; position: relative; top: 8px; width: 20px; margin-right: 15px; height: 20px; background: url(../images/icon-small.png) no-repeat; cursor: pointer;}

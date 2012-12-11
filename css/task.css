@@ -27,7 +27,7 @@
 
 #mod-settask .block-hd { padding-left: 0; }
 #mod-settask .block-hd span { display: inline-block; padding: 0 20px; border-right: 1px solid #cacaca; }
-#mod-settask .block-bd { border-top-left-radius: 4px; border-top-right-radius: 4px; }
+#mod-settask .block-bd { border-radius: 4px; }
 /*作业完成情况*/
 #mod-taskstatus .go-back { margin-left: 10px; }
 #mod-taskstatus table tr > :nth-child(1) { width: 15%; text-align: center; }
