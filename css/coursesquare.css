@@ -25,7 +25,6 @@
 .csquare-nav-b .btn-inner, .csquare-nav-b .btn-outer { border: 1px solid #aeaeae;  background: -webkit-linear-gradient(top, #fff, #f6f6f6, #ececec) repeat-x; color: #747474; font-size: 12px; text-shadow: none;}
 .csquare-nav-b .control-label { width: 36px; line-height: 50px; padding: 0; margin: 0; font-size: 12px; float: left;}
 .csquare-nav-b .controls { margin-left: 40px; }
-.csquare-nav-b select {}
 
 
 .csquare-clist { margin: 0; position: relative; z-index: 1;}

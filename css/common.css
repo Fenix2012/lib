@@ -62,15 +62,20 @@ input.form-login-submit:hover { background-position: 0 0; color: #fff;}
 /*公共元素*/
 .lib-hd-bar { position: relative; padding: 0 20px; height: 45px; background-color: #6c829b; border-radius: 5px; color: #fff;}
 .lib-hd-bar h6 { margin: 0; font: bold 14px/45px Microsoft YaHei;}
-.lib-hd-bar .right { position: absolute; right: 8px; top: 0; margin-top: 10px; padding: 3px 9px; border-radius: 2px; background-color: #44515f; background-image: -webkit-linear-gradient(top,#44515f,#44515f); font-size: 12px; color: #fff; text-decoration: none;}
-.lib-wide-hd { position: relative; border-top-left-radius: 4px; border-top-right-radius: 4px;  height: 50px; line-height: 50px; background: -webkit-linear-gradient(top, #59657d, #445068, #2d3850); text-align: center;}
-.lib-wide-hd h5 { line-height: 50px; color: #fff;}
+.lib-hd-bar .right { position: absolute; right: 8px; top: 9px; padding: 3px 9px; border-radius: 2px; background-color: #44515f; background-image: -webkit-linear-gradient(top,#44515f,#44515f); font-size: 12px; color: #fff; text-decoration: none;}
+.lib-wide-hd { position: relative; border-top-left-radius: 4px; border-top-right-radius: 4px;  height: 50px; line-height: 50px; background: -webkit-linear-gradient(top, #59657d, #445068, #2d3850); }
+.lib-wide-hd h5 { line-height: 50px; color: #fff; text-align: center;}
 .lib-wide-hd .go-back { position: absolute; left: 10px; top: 10px; background: -webkit-linear-gradient(top, #8b96ac, #7e889e, #6d788e); color: #fff; font-size: 12px; text-shadow: none;}
 .lib-wide-hd select { position: absolute; right: 10px; top: 10px; }
 
 .lib-wide table thead { background-color: #6c829b; color: #fff}
 .lib-wide table th { line-height: 24px;}
 .lib-wide .dropdown {/* position: absolute; right: 0; top: 0;*/}
+
+.block { border: 1px solid #cacaca;}
+.block-hd { padding: 0 20px; height: 38px; line-height: 38px; border-top-left-radius: 4px; border-top-right-radius: 4px; background: -webkit-linear-gradient(top,#fff,#f7f7f7,#eee); border-bottom: 1px solid #cacaca;}
+.block-bd { padding: 20px; border-bottom-left-radius: 4px; border-bottom-right-radius: 4px; background-color: #fff;}
+
 
 .lib-sb-ring { position: absolute; /*left: -15px;*/ left: 0; top: -22px; width: 100%; height: 40px; background: url(../images/bg-ring.png) repeat-x; }
 .lib-line-l { border-top: 1px solid #adb2bd; height:0; margin: 25px 0; }

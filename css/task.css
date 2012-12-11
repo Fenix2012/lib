@@ -1,8 +1,8 @@
 ﻿/*布置作业*/
-#mod-sethomework .set-homework-stu { line-height: 34px; }
-#mod-sethomework .set-homework-stu .checkbox { cursor: pointer;}
-#mod-sethomework .set-homework-submit { line-height: 38px; }
-#mod-sethomework .set-homework-submit a { color: #4b6384;}
+.set-task-stu { line-height: 34px; }
+.set-task-stu .checkbox { cursor: pointer;}
+.set-task-submit { line-height: 38px; }
+.set-task-submit a { color: #4b6384;}
 .btn.btn-set-section { margin: 0; padding: 0; width: 95px; height: 38px; line-height: 38px; font-size: 12px; color: #747474; }
 #modal-set-video { margin-top: -280px; }
 
@@ -13,15 +13,21 @@
 
 .btn-myself, 
 .btn-storage, 
-#mod-sethomework input[type="submit"].btn,
+#mod-settask input[type="submit"].btn,
+#mod-settask input[type="submit"].btn,
 #modal-set-video input[type="submit"].btn { width: 49%; margin: 0; padding: 0; height: 40px; line-height: 40px; background:-webkit-linear-gradient(top, #75819D, #616E8B, #475574); color: #fff; font-size: 12px; text-shadow: none;}
-#mod-sethomework input[type="submit"].btn { /*width: -webkit-calc(100% - 51px); */ width: 100%;}
+#mod-settask input[type="submit"].btn { /*width: -webkit-calc(100% - 51px); */ width: 100%;}
 .btn-myself:hover,
 .btn-storage:hover { background-position: 0 0; color: #fff; }
 .btn-storage { float: right;}
-#modal-set-homework input[type="submit"].btn { float: right; width: 90%; }
+
+#mod-settask input[type="submit"].btn { width: 100%; }
+#modal-set-task input[type="submit"].btn { float: right; width: 90%; }
 #modal-set-video input[type="submit"].btn { width: 100%; }
 
+#mod-settask .block-hd { padding-left: 0; }
+#mod-settask .block-hd span { display: inline-block; padding: 0 20px; border-right: 1px solid #cacaca; }
+#mod-settask .block-bd { border-top-left-radius: 4px; border-top-right-radius: 4px; }
 /*作业完成情况*/
 #mod-taskstatus .go-back { margin-left: 10px; }
 #mod-taskstatus table tr > :nth-child(1) { width: 15%; text-align: center; }

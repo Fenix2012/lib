@@ -59,7 +59,7 @@ function PopSection(){ return '这里是章节内容';}
 	</div>
 </header>
 <section class="lib-main">
-<div class="container" id="mod-sethomework">
+<div class="container" id="mod-settask">
   <div class="lib-container">
 	<div class="lib-wide">
 	  <div class="lib-wide-hd">
@@ -67,17 +67,17 @@ function PopSection(){ return '这里是章节内容';}
 		<h5>查看作业详情</h5>
 	  </div>
 	  <div class="lib-wide-bd">
-		<form action="#" id="form-set-homework" class="form-horizontal">
+		<form action="#" id="form-set-task" class="form-horizontal">
 		  <div class="control-group">
 			<input type="text" class="input-xlarge" placeholder="三角函数作业">
 		  </div>
 		  <div class="control-group">
 			<label class="control-label">所属章节</label>
-			<div class="controls">
+			<div class="controls" style="line-height: 40px;">
 			  <span>第一章第一节</span>
 			</div>
 		  </div>
-		  <div class="set-homework-stu control-group">
+		  <div class="set-task-stu control-group">
 			<label class="control-label">布置对象</label>
 			<div class="controls">
 			  <label class="checkbox inline">
@@ -121,6 +121,18 @@ function PopSection(){ return '这里是章节内容';}
 			</div>
 		  </div>
 		</form>
+		<div class="lib-hd-bar">
+		  <h6>作业内容</h6>
+		  <a class="right" href="javascript:;" title="编辑课程">编辑</a>
+		</div>
+		<div class="block">
+		  <!--div class="block-hd">
+			<span class="knowledge">知识点：<em>三角函数</em></span>
+			<span class="topic-type">题型：<em>单项选择</em></span>
+			<span class="knowledge">难度：<em>中</em></span>
+		  </div-->
+			<div class="block-bd">这里是作业正文</div>
+		</div>
 	  </div>
 	</div>
   </div>

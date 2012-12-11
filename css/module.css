@@ -39,4 +39,13 @@ span.static { display: inline-block; margin: 0 13px; }
 #modal-view-task { width: 760px; margin:-330px 0 0 -380px}
 #modal-view-task .modal-body { padding: 10px; max-height: 560px; background-color: #fff; }
 
-#mod-sethomework .lib-wide-bd { padding: 20px 25px; background-color: #D7DBE3; }
+#mod-settask .lib-wide-bd { background-color: #D7DBE3; }
+#mod-settask .lib-wide-bd  { padding-bottom:20px;}
+
+#mod-settask .btn-parse, .mod-settask .btn-delete { /*padding: 0; width: 40px; height: 28px; line-height: 28px; text-align: center; border: 1px solid #aeaeae;  background: -webkit-linear-gradient(top, #fff, #f6f6f6, #ececec) repeat-x; color: #747474; font-size: 12px; text-shadow: none;*/ }
+
+#form-set-task { padding: 20px 25px 10px;}
+#mod-settask .lib-hd-bar { padding: 0 20px; height: 40px; border-radius: 0; background-color: #6c829b;}
+#mod-settask .lib-hd-bar h6 { line-height: 40px; font-weight: normal;}
+#mod-settask .lib-hd-bar .right { padding: 2px 0; width: 65px; right: 20px; top: 7px; background: #384e67; text-align: center;}
+#mod-settask .block { margin: 20px; }
