@@ -15,6 +15,4 @@ a.view-back:hover { background-position: -120px -105px; }
 #view-course .view-con-switch { margin-top: 8px; }
 #btn-video-info { background-position: -18px 0;}
 /*边栏*/
-.view-sidebar { padding: 10px 10px 10px 0; }
-
-
+.view-sidebar { position: relative; right: 10px; margin: 10px 0; /*padding: 10px 10px 10px 0;*/  background-color: #fff; border-radius: 4px;}

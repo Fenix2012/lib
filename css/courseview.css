@@ -17,13 +17,14 @@ h5,h6 { margin: 0; padding: 0; }
 .cview-complete{ background-position: -120px -35px;}
 a.next-lecture { float: left; position: relative; top: -5px; margin-right: 15px; width: 120px; height: 40px; line-height: 30px; background: url(../images/bg-cview.png) 0 0 no-repeat; text-align: center; text-decoration: none;}
 .cview-bottom h6 { float: left; color: #fff;}
-.mark-like { float: right; position: relative; top: -8px; width: auto; height: 40px; line-height: 40px; padding-right: 50px; background: url(../images/bg-cview.png) 25px -142px no-repeat; cursor: pointer; font-weight: bold;}
-.cview-like { background-position: 25px -195px;}
+.mark-like { float: right; position: relative; top: -8px; width: auto; height: 40px; line-height: 40px; /*padding-right: 50px; background: url(../images/bg-cview.png) 25px -142px no-repeat;*/ cursor: pointer; font-weight: bold;}
+.mark-like .icon-like { background: url(../images/bg-cview.png) 0 -142px no-repeat; width: 40px; height: 40px; position: relative; margin: 0; top: -12px; margin-left: 10px; }
+.cview-like .icon-like { background-position: 0 -195px;}
 
 .cview-top { }
 .cview-top-l { -webkit-box-flex: 2; }
-.cview-top .ch{ float:left; background:#939393; color:#181818; font-weight:bold; border-radius:8px; padding:0 40px 0 12px; text-shadow:0 1px rgba(255, 255, 255, 0.15); position:relative; margin-top:11px; text-align:center;}
-.cview-top .le{float:left;background:#181818;border-radius:8px;padding:0px 30px 0 12px;margin:11px 0 0 -20px;position:relative;font-size:12px;font-weight:bold;color:#999;}
+.cview-top .ch{ float:left; width: 52px; background:#939393; color:#181818; font-weight:bold; border-radius:8px; padding:0 40px 0 12px; text-shadow:0 1px rgba(255, 255, 255, 0.15); position:relative; margin-top:11px; text-align:center;}
+.cview-top .le{float:left; width: 27px; background:#181818;border-radius:8px;padding:0px 30px 0 12px;margin:11px 0 0 -20px;position:relative;font-size:12px;font-weight:bold;color:#999; text-align: center; }
 .cview-top .no{float:left; background: #216100 -webkit-linear-gradient(top, #438802, #317400, #216100); width:32px;height:32px;line-height:30px;text-align:center;border-radius:99em;box-shadow:0 1px rgba(255, 255, 255, 0.45) inset,0 0 0px 3px #000000,4px 0 rgba(255, 255, 255, 0.1);font-size:16px;font-weight:bold;color:#000;text-shadow:0 1px rgba(255, 255, 255, 0.4);margin:4px 0 0 -9px;position:relative;}
 .cview-top h6 { height: 36px; line-height: 36px;  color:#fff; margin:2px 0 0 9px; text-shadow:0 1px 1px rgba(0, 0, 0, 0.5); float: left;}
 
