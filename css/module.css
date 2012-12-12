@@ -6,6 +6,7 @@
 #mod-video [class*="span"]  { padding-left: 20px; }
 
 .lib-container .lib-con .tab-pane { padding: 18px 0 8px; }
+#mod-video .btn-submod { background: -webkit-linear-gradient(top,#8eb03d,#779634,#5c782a); color: #fff; }
 
 /*最近内容列表*/
 .mod-item-list { margin: 0; }
@@ -69,7 +70,7 @@ span.static { display: inline-block; margin: 0 13px; }
 #mod-setaccount .block-pw {}
 #mod-setaccount .block-pw .block-hd { height: 50px; line-height: 50px; background: -webkit-linear-gradient(top,#c2cbdd,#b9c2d6,#b6bccb); border-bottom: 1px solid #fff; color: #fff; }
 #mod-setaccount .block-pw .block-bd { background: #e2e7f2;}
-/*message*/
+/*task-stu*/
 #mod-stutask .span8 { box-shadow: 1px 1px 5px #999;}
 #mod-stutask .lib-wide-bd { padding-bottom:20px; background-color: #f3f2e8; border-bottom-left-radius: 4px; border-bottom-right-radius: 4px;}
 #mod-stutask .lib-wide-hd h5 { margin: 0; text-shadow: 1px 1px 1px #333;}
@@ -108,3 +109,53 @@ span.static { display: inline-block; margin: 0 13px; }
 #mod-stutask .mytask-aside-ft { margin-bottom: 10px; padding: 0 10px; line-height: 42px; }
 #mod-stutask .mytask-aside-ft a { color: #6d7a96; }
 #mod-stutask .btn.btn-handover { background: -webkit-linear-gradient(top,#9fc641,#64a203,#488f07); color: #fff; text-shadow: none; }
+
+/*message*/
+#mod-message .lib-container { background: none; box-shadow: none; }
+#mod-message .nav-tabs { margin: 0 auto; padding: 0; width: 97.5%; border: none; position: relative; z-index: 2;}
+#mod-message .nav-tabs > li { width: 50%; height: 47px; line-height: 47px; background: url(../images/message-nav.png) 0 -53px repeat-x; border-top-left-radius: 3px; border-top-right-radius: 3px; position: relative; top: 2px; }
+#mod-message .nav-tabs > li .icon-pm {  background: url(../images/icon-small.png) 3px -53px no-repeat; }
+#mod-message .nav-tabs > li .icon-notice {  background: url(../images/icon-small.png) 3px -68px no-repeat; }
+#mod-message .nav-tabs > li a { display: block; padding: 0; margin: 0; height: 100%; line-height: 47px; text-align: center; color: #fff; }
+#mod-message .nav-tabs > li a:hover { border: none; background: none; }
+#mod-message .nav-tabs > li.active { position: relative; top: -1px; height: 50px; }
+#mod-message .nav-tabs > li.active:before { content: ''; display: block; position: absolute; left: 50%;  bottom: 0;  width: 0; height: 0; border-left:10px solid transparent; border-right:10px solid transparent; border-bottom:10px solid #fff;}
+#mod-message .nav-tabs > li.active a { border: none; background: url(../images/message-nav.png) repeat-x; }
+#mod-message .nav-tabs > li .message-num { position: absolute; right: -10px; top: -10px; width: 22px; height: 22px; line-height: 22px; border-radius: 13px; background-color: #930000; text-align: center; color: #fff; border: 2px solid #fff; z-index: 1;}
+
+#mod-message .lib-wide-bd { background: #fff; border-bottom-left-radius: 4px; border-bottom-right-radius: 4px; border-top-left-radius: 2px; border-top-right-radius: 2px;  box-shadow: 1px 1px 5px #999; position: relative; z-index: 1; }
+#mod-message .lib-wide-bd:before { content: ''; display: block; position: absolute; left: 0; top: -9px; width: 15px; height: 9px; background: url(../images/message-con.png) no-repeat; }
+#mod-message .lib-wide-bd:after { content: ''; display: block; position: absolute; right: 0; top: -9px; width: 15px; height: 9px; background: url(../images/message-con.png) no-repeat; -webkit-transform: rotateY(180deg);}
+#mod-message .pm-hd { padding: 0 25px; /*height: 72px;*/ line-height: 72px; border-bottom: 1px solid #e5e5e5; position: relative; }
+#mod-message .pm-hd span { font-size: 14px; font-weight: bold; }
+#mod-message .pm-hd .btn-wpm { position: absolute; right: 25px; top: 18px; padding: 8px 30px;font-size: 12px; background: -webkit-linear-gradient(top,#8EB03D,#779634,#5C782A); color: #fff; text-shadow: 1px 1px 1px #333; border: none;}
+#mod-message .pm-hd .icon-wpm { background: url(../images/icon-small.png) 1px -86px no-repeat;  }
+#mod-message .message-list { margin: 0; min-height: 400px; }
+#mod-message .message-list li { display: -webkit-box; padding: 20px 25px; border-bottom: 1px solid #e5e5e5; }
+#mod-message .message-list li:hover .message-avatar { opacity: 0.8; }
+#mod-message .pm-con { -webkit-box-flex:1; margin-top: -3px; padding-left: 15px;}
+#mod-message .pm-info { margin-bottom: 4px;}
+#mod-message .pm-info a { color: #000; }
+#mod-message .pm-operate { float: right; }
+#mod-message .pm-operate a { padding: 0 15px; color: #747474; text-decoration: none; }
+#mod-message .pm-operate a:hover { color: #44567C; }
+#mod-message .pm-operate i { background: url(../images/icon-small.png) no-repeat;}
+#mod-message .pm-operate .icon-reply { background-position: -18px -35px;}
+#mod-message .pm-operate .icon-search { background-position: -18px -53px;}
+#mod-message .pm-operate .icon-delete { background-position: -18px -70px;}
+#mod-message .pagination { margin-top: 20px; }
+
+#modal-send-message .modal-body { display: -webkit-box; padding: 0; }
+#modal-send-message form,#modal-send-reply form  { padding: 20px 15px 5px; }
+#form-send-message { position: relative; -webkit-box-flex:1 ; }
+#modal-send-message .input-xlarge, #modal-send-reply .input-xlarge  { width: 100%; } 
+#modal-send-message textarea.input-xlarge, #modal-send-reply textarea.input-xlarge { min-height: 320px; } 
+#modal-send-message input.input-xlarge { width: -webkit-calc(100% - 108px); } 
+.btn-linkman { position: absolute; right: 0; top: 20px; padding: 9px 12px; color: #545f76; background: #bac1cf; text-shadow: none; box-shadow: none; border-top-right-radius: 0;  border-bottom-right-radius: 0; font-size: 12px; border-right: none; }
+.icon-arrow { margin-right: 0; background: url(../images/icon-small.png) -18px -88px no-repeat;}
+.unfold .icon-arrow { background-position: -18px -106px;}
+
+#modal-send-message .btn-submit, #modal-send-reply .btn-submit { width: 100%; margin: 0; padding: 0; height: 40px; line-height: 40px; background: -webkit-linear-gradient(top, #75819D, #616E8B, #475574); color: white; font-size: 12px; text-shadow: none; border: none; }
+.linkman-tree { width: 230px; background: #9aa3b6; }
+
+#modal-send-reply .modal-body { padding: 0; }
