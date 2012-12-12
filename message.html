@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>私信_励博教育</title>
+<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+<link rel="stylesheet" href="css/common.css" type="text/css" />
+<link rel="stylesheet" href="css/module.css" type="text/css" />
+<script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+</head>
+<body>
+<header id="header">
+  <div class="container">
+	<div id="logo" class="fL"><img src="images/logo.png" alt="励博教育" />中国人民大学附属中学</div> 
+	<ul id="nav" class="fL">
+	  <li class="cur"><a href="#">个人中心</a></li><li><a href="#">课程广场</a></li>
+	</ul>
+	<form class="navbar-search fL">
+	  <input type="text" class="search-query" placeholder="Search">
+	  <button type="submit" class="btn"></button>
+	</form>
+	<div class="top-nav-profile btn-group fR">
+	  <a href="javascript:;" class="tnav-profile-a dropdown-toggle" data-toggle="dropdown"><span>夏小强</span><img src="images/top-nav-avatar.png" alt="userName" /></a>
+	  <ul class="dropdown-menu">
+		<li><a href="#" title="账号设置">账号设置</a></li>
+		<li class="divider"></li>
+		<li><a href="#" title="退出系统">退出系统</a></li>
+	  </ul>
+	</div>
+	<!-- 有消息时：加类名be-message -->
+	<!--div class="be-message message fL"-->
+	<div class="message btn-group fR">
+	  <!--span class="wrap-envelope"><a href="javascript:;" class="envelope dropdown-toggle" data-toggle="dropdown" ></a></span-->
+	  <a class="wrap-envelope dropdown-toggle" data-toggle="dropdown" href="javascript:;"><span class="envelope" ></span></a>
+	  <ul class="dropdown-menu">
+		<li><a href="#" title="查看私信">查看私信(<em>23</em>)</a></li>
+		<li class="divider"></li>
+		<li><a href="#" title="查看通知">查看通知</a></li>
+	  </ul>
+	  <div class="message-box">
+		<span class="message-arrow"></span>
+		<ul>
+		  <li><a href="#"><em>1</em>条私信</a><span title="关闭"></span></li> 
+		  <li><a href="#"><em>2</em>条通知</a><span title="关闭"></span></li> 
+		</ul>
+	  </div>
+	</div>
+</header>
+<section class="lib-main">
+<div class="container" id="mod-settask">
+  <div class="lib-container">
+	<div class="lib-wide">
+		<ul class="nav nav-tabs">
+		  <li class="active"><a href="#pm" data-toggle="tab">查看私信</a></li>
+		  <li><a href="#notice" data-toggle="tab">查看通知</a></li>
+		</ul>
+	  <div class="lib-wide-bd">
+		<div class="tab-content">
+		  <div class="tab-pane active" id="pm">
+			这里是私信列表		
+		  </div>
+		  <div class="tab-pane" id="notice">
+			这里是通知列表		
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </div>
+</div>
+</section>
+<footer id="footer"></footer>
+</body>
+</html>
