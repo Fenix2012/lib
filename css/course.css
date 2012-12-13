@@ -1,7 +1,4 @@
-﻿
-
-
-.course-outline { /*margin-right: -30px;*/ padding: 20px; border-right: 1px solid #adb2bd;}
+﻿.course-outline { /*margin-right: -30px;*/ padding: 20px; border-right: 1px solid #adb2bd;}
 .course-outline .dl-horizontal { margin: 0; }
 .course-outline .dl-horizontal dt { position: relative; width: auto; font-weight: normal; text-indent: 50px; overflow: visible; display: inline-block; }
 .course-outline .dl-horizontal dt span { position: absolute; right:-39px; top: 14px; width: 12px; height: 12px; background: url(../images/icon.png) right top no-repeat;}
@@ -30,13 +27,14 @@
 
 /*课程评分*/
 .course-rating { margin: 25px 0; background-color: #343434; box-shadow: inset 1px 1px 1px #252525; }
-.course-rating ul.right { background: none; margin: 10px 0 0; height: 20px; }
+.course-rating ul.right { background: none; margin: 10px 0 0; height: 20px; margin: 0; }
 .course-rating ul { background: none; margin: 10px 0 0; height: 20px; }
 /*最近来访*/
 .course-visited { padding-top: 25px; }
 .course-visited li { float: left; /*margin: 0 24px;*/ margin: 0 7%; width: 60px; text-align: center; overflow: hidden; }
 .course-visited li p { color: #a5a5a5; }
 .course-visited li span { display: block; padding: 2px 0; color: #747474; }
+.course-visited img { width: 60px; height: 60px; }
 
 .dthumb { position: relative;}
 .no-data .accordion-heading { position: relative; }
