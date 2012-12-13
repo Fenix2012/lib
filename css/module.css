@@ -145,6 +145,18 @@ span.static { display: inline-block; margin: 0 13px; }
 #mod-message .pm-operate .icon-delete { background-position: -18px -70px;}
 #mod-message .pagination { margin-top: 20px; }
 
+#dialog .message-list { padding: 10px 0;  background: #e5e5e5; }
+#dialog .message-list li { display: block; padding: 12px 50px 0; }
+#dialog .message-con { position: relative; margin-top: 12px; padding: 10px 38px 20px; background-color: #fff; }
+#dialog .message-con:before { position: absolute; top: -10px; left: 55px; content: ''; display: block; width: 0; height: 0; border-left: 10px solid #fff; border-top: 10px solid transparent; border-bottom: 10px solid transparent; }
+#dialog .me .message-con:before { top: -10px; left: auto; right: 55px; border-left: none; border-right: 10px solid #fff;}
+#dialog .message-con p { padding-right: 170px; }
+#dialog .pm-operate { float: none; text-align: right; }
+#dialog .message-user { padding: 0 20px; color: #000; }
+.me .message-info { line-height: 42px; }
+.me .message-info a { float: right; }
+.me .message-info span { float: right; }
+
 #modal-send-message .modal-body { display: -webkit-box; padding: 0; }
 #modal-send-message form,#modal-send-reply form  { padding: 20px 15px 5px; }
 #form-send-message { position: relative; -webkit-box-flex:1 ; }
