@@ -47,6 +47,7 @@
 .csquare-info h4 a { font-size: 20px; color: #747474; text-decoration: none; }
 .csquare-info h4 span { font-size: 12px; position: absolute; right: 10px; top:15px; }
 .csquare-info h4 em { color: #327b00;}
+.csquare-info span a { color: #396ba4;}
 .csquare-footer { padding: 0 15px; height: auto; line-height: 38px;}
 .csquare-footer .course-rating { float: left;}
 .csquare-footer .course-rating ul { position: relative; top: 3px; min-width: 147px; }

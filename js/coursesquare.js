@@ -39,7 +39,7 @@ function PicScroll(page){
 	$('.recommend').height($('.pic_list img').eq(page).height());
   });
 }
-//-------------------------------
-});
 //初始化焦点图高度
 $('.pic_list img').eq(0).load(function(){ imgHeight = this.height; $('.recommend').height(imgHeight).show(); });
+//-------------------------------
+});
