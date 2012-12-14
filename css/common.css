@@ -263,7 +263,7 @@ span.help-inline { color: #747474; height: 24px;}
 
 .cdetail-data-list { margin: 0; padding: 0 0 10px; border-top: none; border-bottom-left-radius: 2px; border-bottom-right-radius: 2px;}
 .cdetail-data-list.all { border-radius: 0;}
-.cdetail-data-list li { position: relative; float: left; margin: 10px 10px 0; padding-left: 52px; width: 52px;/*min-width: 60px;*/  height: 42px; background: url(../images/icon.png) no-repeat; cursor: pointer;}
+.cdetail-data-list li { position: relative; float: left; margin: 10px 10px 0; padding-left: 52px; width: 150px; height: 42px; background: url(../images/icon.png) no-repeat; cursor: pointer;}
 .cdetail-data-list p { margin: 0; height: 20px; overflow: hidden;}
 li.cview-res-video { background-position: -454px -106px; }
 li.cview-res-video:hover { background-position: -454px -159px; }

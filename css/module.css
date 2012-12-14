@@ -163,7 +163,7 @@ span.static { display: inline-block; margin: 0 13px; }
 #mod-message .pm-hd span { font-size: 14px; font-weight: bold; }
 #mod-message .pm-hd .btn-wpm { position: absolute; right: 25px; top: 18px; padding: 8px 30px;font-size: 12px; background: -webkit-linear-gradient(top,#8EB03D,#779634,#5C782A); color: #fff; text-shadow: 1px 1px 1px #333; border: none;}
 #mod-message .pm-hd .icon-wpm { background: url(../images/icon-small.png) 1px -86px no-repeat;  }
-#mod-message .message-list { margin: 0; min-height: 400px; }
+#mod-message .message-list { margin: 0; min-height: 500px; }
 #mod-message .message-list li { display: -webkit-box; padding: 20px 25px; border-bottom: 1px solid #e5e5e5; }
 #mod-message .message-list li:hover .message-avatar { opacity: 0.8; }
 #mod-message .pm-con { -webkit-box-flex:1; margin-top: -3px; padding-left: 15px;}
