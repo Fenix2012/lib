@@ -28,7 +28,7 @@ $('.comment-fold').live('click',function(){
 $('.ucenter-content-course dl:not(.ucontent-add)').hover(function(){
   //e.stopPropagation();
   var _href = $(this).find('dt a').attr('href');
-  $(this).find('dt').append('<a class="ucourse-hover" target="_blank"></a><a class="ucourse-hover-span" target="_blank">进入课程</a>');
+  $(this).find('dt').append('<a class="ucourse-hover"></a><a class="ucourse-hover-span" target="_blank">进入课程</a>');
   $(this).find('dt .ucourse-hover').animate({opacity:'0.3'},100);
   $(this).find('dt .ucourse-hover-span').animate({left:'0'},100);
 
