@@ -137,6 +137,10 @@ span.static { display: inline-block; margin: 0 13px; }
 
 #mod-stutask .mytask-aside-ft { margin-bottom: 10px; padding: 0 10px; line-height: 42px; }
 #mod-stutask .mytask-aside-ft a { color: #6d7a96; }
+/*自定义交作业翻页*/
+#worklist .mytask-aside-ft { margin-top:10px; border-top:1px dotted #e0e0e0;}
+#mod-stutask .mytask-aside-bd { padding: 10px 10px;}
+
 #mod-stutask .btn.btn-handover { background: -webkit-linear-gradient(top,#9fc641,#64a203,#488f07); color: #fff; text-shadow: none; }
 
 /*message*/

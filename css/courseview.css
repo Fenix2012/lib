@@ -124,7 +124,7 @@ li.cview-res-pdf:hover { background-position: -454px -479px; }
 .cview-sidebar-bd table { margin: 0; background-color: #fff; border-radius: 0;}
 .cview-sidebar-bd .uncommitted { color: #DA0000;}
 .cview-sidebar-bd table.table-bordered th { border-radius: 0;}
-.cview-sidebar-bd tbody tr:hover { background-color: #EBEBEB;}
+.cview-sidebar-bd tbody tr:hover { background-color: #EBEBEB; cursor : pointer;}
 
 
 .cview-sidebar-bd tbody tr .arrow-right { visibility: hidden; float: right; margin-top: 5px; width: 12px; height: 12px; background: url(../images/icon-feeds.png) -136px -35px;}
