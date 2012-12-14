@@ -188,7 +188,8 @@ var CVIEW = {
 									   		{
 										   		alert("添加笔记成功");									   
 									   		}
-								 	   		CVIEW.GetNote();
+									   		CVIEW.ViewNoteById( json.nid );
+								 	   		//CVIEW.GetNote();
 									}
 								},
 							});	
@@ -259,6 +260,35 @@ var CVIEW = {
 	},
 	AddNote : function(obj){
 		this._loadNoteEditFormCode();
+	},
+	ViewNoteById : function( nid ) {
+		$.ajax({
+					'type' : 'GET',
+					'url' : libSchoolBaseUrl + 'teach/note/getNoteContent&note_id=' +  nid,
+					'beforeSend' : function(){
+						$('#cview-note .cview-sidebar-hd').after('<div class="loading-box"><img src="images/loading.gif" alt="" /></div>');
+					},
+					success : function(data){
+							var json = eval( '(' + data + ')' );
+							//拼接查看笔记html
+							var html = '';
+							html += '<div class="cview-sidebar-hd"><span><i class="icon-arrowdown"></i>查看笔记</span>';
+							html += '<button class="go-back btn-add-note btn" href="#">返回</button></div><div class="cview-sidebar-detail clearfix">';
+							html += '<div class="fL"><h5>';
+							html += '<span id="cur_note_title">';
+							html += json['note_title'];
+							html += '</span>';
+							html += '</h5><span class="cview-sidebar-time">';
+							html += json['note_uptime'] ;
+							html += '</span> </div> <div class="fR"> <div class="cres-opt"> <a class="btn-preview btn" id="btn-editnote" href="#">编辑</a><a class="btn-play btn" id="btn-delnote" href="#">删除</a> </div> </div> </div>';
+							html += '<div class="cview-note-con"> <p>';
+							html += json['note_content'];
+							html += '</p></div>';		 
+							$('#cview-note').html(html);
+							$('#btn-delnote').attr( 'data-nid' , nid );
+							$('#btn-editnote').attr( 'data-nid' , nid );
+					},
+			});
 	},
 	ViewNote : function(obj){
 		if(obj.hasClass('go-back')){
