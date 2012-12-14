@@ -3,8 +3,10 @@
 .course-outline .dl-horizontal dt { position: relative; width: auto; font-weight: normal; text-indent: 50px; overflow: visible; display: inline-block; }
 .course-outline .dl-horizontal dt span { position: absolute; right:-39px; top: 14px; width: 12px; height: 12px; background: url(../images/icon.png) right top no-repeat;}
 .course-outline .dl-horizontal dd { position: relative; margin-left: 130px; padding-left: 20px; }
-.course-outline .dl-horizontal dd:hover { background-color: #e2e6eb; border-radius:5px; /*height: 28px; line-height: 28px; margin-top: 5px;*/ }
-.course-outline .dl-horizontal dd a { position: relative; color: #747474;}
+.course-outline .dl-horizontal dd:hover { /*height: 28px; line-height: 28px; margin-top: 5px;*/ }
+.course-outline .dl-horizontal dd a { display: block; margin-left: -15px; padding-left: 15px; width: 77%; color: #747474; text-decoration: none; }
+.course-outline .dl-horizontal dd a:hover { background-color: #e2e6eb; border-radius:5px; }
+.course-outline .dl-horizontal dd a em { position: relative;}
 .course-outline .dl-horizontal dd span { position: absolute; right: -10px; top: 0; width: 7px; height: 7px; background: url(../images/icon.png) right -18px; }
 
 .chapter { margin: 0; padding: 0 20px; background: url(../images/bg-chapter.png) 5px -25px no-repeat; color: #747474; font-size: 12px; }
@@ -12,11 +14,19 @@
 .chapter ul.unstyled { margin: 0; }
 .chapter-label { display: inline-block; width: 150px; font-size: 12px;}
 .chapter-label em { margin-right: 37px; color: #4f4f4f;}
-.section-name .chapter-label { text-indent: 50px; }
+.section-name .chapter-label { position: relative; text-indent: 50px; }
+.section-name .chapter-label span { position: absolute; left:104px; top: 14px; width: 12px; height: 12px; background: url(../images/icon.png) right top no-repeat;}
 
 .chapter-name, .section-name, .course-outline .dl-horizontal dt, .course-outline .dl-horizontal dd {height: 37px; line-height: 37px;}
 .chapter-name { margin: 0; }
 .chapter-name .chapter-label { color: #fff;} 
+
+.section-name a { display: inline-block; margin-left: -15px; padding-left: 15px; width: 60%; color: #747474; text-decoration: none; }
+.section-name a:hover { background-color: #e2e6eb; border-radius:5px; }
+.section-name a em { position: relative;}
+.section-name a em span { position: absolute; right: -10px; top: 0; width: 7px; height: 7px; background: url(../images/icon.png) right -18px; }
+/*.section-name a { display: inline-block; width: 70%;  color: #747474; }
+.section-name a:hover { background-color: #e2e6eb; border-radius:5px; }*/
 
 /*进度条*/
 .course-progress { margin: 0 20px;}

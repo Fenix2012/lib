@@ -1,6 +1,6 @@
 ﻿#view-video-classroom .view-con { padding-top: 58px; }
 #view-video-classroom .view-con:before { display: none; }
-#view-video-classroom .view-main { background: none; box-shadow: none;}
+#view-video-classroom .view-main { background: none; box-shadow: none; padding: 0; }
 #view-video-classroom .view-block, .vclassroom-teach, .vclassroom-stu {  background-color: #212121; box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.4), inset -1px -1px 2px rgba(0, 0, 0, 0.4);}
 
 .vclassroom-user { width: 28%; height: 90%; }

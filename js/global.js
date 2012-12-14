@@ -1,6 +1,6 @@
 ﻿$(function(){
 //资料&笔记等的删除
-$('#mod-course').find('.cdetail-data-list li span').live('click',function(){ Delete(); });
+$('.cdetail-data-list li span').live('click',function(){ Delete(); });
 function Delete(){
   /*
   $.ajax({
