@@ -1,5 +1,13 @@
 ﻿$(function(){
+//资料&笔记等的删除
+$('#mod-course').find('.cdetail-data-list li span').live('click',function(){ Delete(); });
+function Delete(){
+  /*
+  $.ajax({
 
+  });
+  */
+}
 //回答追问
 $('.ufeeds-answer').live('click',function(){
   questionAction($(this));

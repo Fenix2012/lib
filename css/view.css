@@ -3,7 +3,8 @@ a.view-back:hover { background-position: -120px -105px; }
 .view-con { position: relative; padding:50px 18px 20px; background: url(../images/bg-course-view.jpg); /*height: 100%;*/ box-shadow: 2px 0 1px #000;}
 .view-con:before { content: ' '; display: block; position: absolute; left:177px; top: 0; width: 4px; height: 2000px; background: url(../images/bg-cview-line.png) repeat-y; }
 
-.view-main { margin: 15px 0; width: auto; /*height: 550px;*/ background-color: #212121; position: relative; box-shadow: inset 1px 1px 2px rgba(0,0,0,0.4), inset -1px -1px 2px rgba(0,0,0,0.4);}
+.view-main { margin: 15px 0; width: auto; /*height: 550px;*/ background-color: #212121; position: relative; box-shadow: inset 1px 1px 2px rgba(0,0,0,0.4), inset -1px -1px 2px rgba(0,0,0,0.4); padding: 5px; overflow-y: auto; }
+.view-main-text { padding: 0 10%; }
 
 .view-heading { height: 30px; line-height: 30px; }
 .view-heading h4 { display: inline-block; margin: 0 10px 0 0; color: #fff; font-family: Microsoft Yahei; text-shadow: 1px 1px 2px #000;}
@@ -15,4 +16,6 @@ a.view-back:hover { background-position: -120px -105px; }
 #view-course .view-con-switch { margin-top: 8px; }
 #btn-video-info { background-position: -18px 0;}
 /*边栏*/
-.view-sidebar { position: relative; right: 10px; margin: 10px 0; /*padding: 10px 10px 10px 0;*/  background-color: #fff; border-radius: 4px;}
+.view-sidebar { position: relative; right: 10px; margin: 10px 0; /*padding: 10px 10px 10px 0;*/  background-color: #fff; border-radius: 4px; }
+/*.view-sidebar.span4 { width: 325px;}
+.row-fluid .span8 { width: 65%;}*/

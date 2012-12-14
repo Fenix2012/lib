@@ -1,7 +1,7 @@
 ﻿$(function(){
 //边栏开关
-var w_con= $('.course-view .view-con').width()+36,
-	w_sidebar = $('.course-view .view-sidebar').width(),
+var w_con= $('.course-view .view-con').width()+47,
+	w_sidebar = $('.course-view .view-sidebar').width()+5,
 	$con = $('.sidebar-switch').parents('.view-con');
 $('.sidebar-switch').toggle(function(){
   $con.animate({'width':'100%'},300);
