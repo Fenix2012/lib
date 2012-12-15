@@ -315,6 +315,7 @@ li.cview-res-pdf:hover { background-position: -454px -479px; }
 .type-file-box{ position:relative; margin-left: 25px; width:100px; cursor: pointer;}
 input.type-file-file{ position: absolute; top: 10px; left: 35px; opacity: 1; width: auto; height: auto; z-index: 1; }
 .btn.type-file-button { padding: 10px 12px; font-size: 12px; color: #747474; position: relative; z-index:2;}
+.modal .btn.type-file-button { padding: 10px 12px; }
 /*select美化*/
 .dropdown {outline:none;display:inline-block;*display:inline;}
 .dropdown h4{cursor:default; text-indent:20px; margin:0; padding:0;}
@@ -339,7 +340,7 @@ input.type-file-file{ position: absolute; top: 10px; left: 35px; opacity: 1; wid
 /*添加资料弹层*/
 #modal-add-data { width: 760px; margin:-250px 0 0 -380px}
 #modal-add-data form { margin-bottom: 20px; }
-#modal-add-data .modal-body { padding: 0; max-height: 470px; }
+#modal-add-data .modal-body { padding: 0; max-height: 470px; background: none; }
 #modal-add-data .modal-adddata-tabs { padding: 15px 15px 0; }
 #modal-add-data .modal-adddata-tabs .nav-tabs { float: left;  margin: 0; border: none;}
 #modal-add-data .modal-adddata-tabs .nav-tabs > li { position: relative; margin-right: 25px; width: 42px; height: 80px; text-align: center;}
@@ -365,6 +366,7 @@ input.type-file-file{ position: absolute; top: 10px; left: 35px; opacity: 1; wid
 #modal-add-data textarea.input-xlarge { padding: 5px 0; width: 100%; height: 170px; }
 #modal-add-data input[type="submit"].btn { padding: 10px 0; width: 100%; font-size: 12px; color: #fff; background: -webkit-linear-gradient(top, #75819D, #616E8B, #475574) ;}
 #modal-add-data .control-group { margin-bottom: 15px;}
+#modal-add-data .controls { margin: 0;}
 
 #modal-adddata-video .controls { overflow: hidden; }
 #modal-adddata-video li { margin-right: 30px; }
@@ -381,3 +383,8 @@ input.type-file-file{ position: absolute; top: 10px; left: 35px; opacity: 1; wid
 #modal-adddata-pdf .input-xlarge { /*width: 99%;*/ margin: 0; padding: 10px 0; font-size: 12px;}
 #modal-adddata-pdf textarea.input-xlarge { height: 213px; }
 #modal-add-data .wrap-progress { width: 40%;}
+/*资料预览弹层*/
+#modal-preview-data {}
+#modal-preview-data .close { position: absolute; right: -19px; top: -19px; width: 38px; height: 38px; background: url(../images/icon.png) -142px -142px no-repeat; opacity: 1;}
+#modal-preview-data .close:hover { opacity: 0.6;}
+#modal-preview-data .modal-body { padding: 5px;}
