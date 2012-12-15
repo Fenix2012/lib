@@ -72,8 +72,13 @@ li.cview-res-pdf:hover { background-position: -454px -479px; }
 .cview-pagination li.cur { background-position: -425px -142px;}
 
 /*查看资料*/
-.cres-page {}
-.cres-page .popover{ left: 2px; width: 97%; }
+.cres-page { height: 100%; }
+.cres-page .popover{ left: 2px; width: 97%; height: 50%; }
+.cres-page .popover .popover-inner { height: 100%; }
+.cres-page .popover .popover-content { height: 100%; }
+.cres-page .popover .popover-content p { height: 100%; }
+.cres-page .popover .sidebar-preview-data-text { text-align: left; height: -webkit-calc(100% - 60px); overflow: auto; }
+.cres-page .popover .sidebar-preview-data-text p { text-indent: 2em; }
 .cres-con { width: 80px; margin: 0 auto; padding-top: 20px; text-align: center;}
 .cres-con p { margin: 0;}
 .cres-pic { height: 71px; background: url(../images/icon-feeds.png);}

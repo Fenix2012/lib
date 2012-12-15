@@ -27,6 +27,7 @@ function Resize(){
   if($('.video-gallery').length == 0){
 	$('.view-con').height(pageHeight);
 	$('.view-sidebar').height(pageHeight-20);
+	$('.cview-sidebar-con').height(pageHeight-120);
 	$('.view-main').height(pageHeight-200);
   } else {
 	$('.view-con').height(pageHeight-videoGalleryHeight-78);

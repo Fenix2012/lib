@@ -217,7 +217,7 @@
 	  obj.toggle(function(){
 		target.slideDown('3000',function(){
 		  target.hide();
-		  obj.find('span').css({'border-bottom':'none','border-top':'10px solid #6e6e6e'});
+		  obj.find('span').css({'border-top':'none','border-bottom':'10px solid #6e6e6e'});
 		  obj.attr('title','展开');
 
 		  $('.view-con').height(pageHeight-videoGalleryHeight-78+142);
@@ -227,7 +227,7 @@
 	  },function(){
 		target.slideUp('fast',function(){
 		  target.show();
-		  obj.find('span').css({'border-top':'none','border-bottom':'10px solid #6e6e6e'});
+		  obj.find('span').css({'border-bottom':'none','border-top':'10px solid #6e6e6e'});
 		  obj.attr('title','收起');
 
 		  $('.view-con').height(pageHeight-videoGalleryHeight-78);
