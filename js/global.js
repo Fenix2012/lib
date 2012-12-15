@@ -1,6 +1,14 @@
 ﻿$(function(){
+//课程大纲资料预览
+$('.cdetail-data-list li').live('click',function(){ $('#modal-preview-data').modal(); });
+//$('.btn-preview').live('click',function(){ $(this).popover(); });
+$('.btn-preview').popover({
+	placement : 'bottom',
+  	content : PreviewData
+});
+$('#modal-preview-data').on('shown', function () { PreviewData(); })
 //资料&笔记等的删除
-$('.cdetail-data-list li span').live('click',function(){ Delete(); });
+$('.cdetail-data-list li span').live('click',function(e){ e.stopPropagation(); Delete(); });
 function Delete(){
   /*
   $.ajax({
@@ -98,4 +106,7 @@ $('progress').each(function(){
 //});
 //----------------------------------------
 });
-
+function PreviewData(){
+	//alert('ajax加载资料预览数据');
+	return "这里是资料预览数据";
+}
