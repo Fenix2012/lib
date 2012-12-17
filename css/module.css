@@ -72,7 +72,7 @@
 #modal-set-course #import-outline li { float: left; text-align: center; cursor: pointer; }
 #modal-set-course #import-outline li:hover img, #modal-set-course #import-outline li.cur img { border: 2px solid #a9b2c1; border-radius: 2px; }
 #modal-set-course #import-outline li p { margin: 0; }
-#modal-set-course #import-outline li .icon-mark { display: none; position: absolute; right: -16px; top: -10px; width: 28px; height: 28px; background: url(../images/icon.png) -73px -429px;}
+#modal-set-course #import-outline li .icon-mark { display: none; position: absolute; right: -16px; top: -10px; width: 28px; height: 28px; background: url(../images/icon.png) -73px -449px;}
 #modal-set-course #import-outline li.cur .icon-mark { display: block; }
 
 #modal-set-course .step-auth .control-group { border-bottom: 1px solid #bbc2d2; margin: 0; padding: 20px 0 30px; }
