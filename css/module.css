@@ -176,6 +176,9 @@ span.static { display: inline-block; margin: 0 13px; }
 
 #mod-stutask .btn.btn-handover { background: -webkit-linear-gradient(top,#9fc641,#64a203,#488f07); color: #fff; text-shadow: none; }
 
+/*作业里边disabled的按钮样式*/
+#mod-stutask .btn.btn-handover.disabled { background: -webkit-linear-gradient(top,#fefefe,#efefef,#fefefe); color: #000; text-shadow: none;}
+
 /*message*/
 #mod-message .lib-container { background: none; box-shadow: none; }
 #mod-message .nav-tabs { margin: 0 auto; padding: 0; width: 97.5%; border: none; position: relative; z-index: 2;}
