@@ -799,8 +799,6 @@
 	</div>
 	</div>
   </div>
-</section>
-<footer id="footer"></footer>
 <div class="hide fade modal" id="preview">
   <div class="modal-header">
     <a class="close" data-dismiss="modal"></a>
@@ -829,6 +827,7 @@
   </div>
 </div>
 <div class="hide fade modal" id="modal-set-course">
+<!--div class="modal" id="modal-set-course"-->
   <div class="modal-header">
 	<a class="close" data-dismiss="modal"></a>
 	<h3>创建课程</h3>
@@ -840,47 +839,144 @@
 	  <button class="btn">教学大纲</button>
 	</div>
 	<form action="#" id="form-set-course" class="form-horizontal">
-	  <div class="step-info">
-		<div class="control-group">
-		  <input type="text" class="input-xlarge" id="course-name" placeholder="输入课程名">
-		</div>
-		<div class="control-group">
-		  <textarea class="input-xlarge" id="textarea" placeholder="课程简介"></textarea>
-		</div>
-		<div class="control-group">
-		  <label class="control-label fL" for="select-auth-task">年级</label>
-		  <div class="controls fL">
-			<select id="select-grade">
-			  <option value="0">全部</option>
-			  <option value="1">高一</option>
-			</select>
+	  <div class="form-inner clearfix">
+		<div class="step-info">
+		  <div class="control-group">
+			<input type="text" class="input-xlarge" id="course-name" placeholder="输入课程名">
 		  </div>
-		  <label class="control-label fL" for="select-auth-task">科目</label>
-		  <div class="controls fL">
-			<select id="select-course">
-			  <option value="0">全部</option>
-			  <option value="1">数学</option>
-			</select>
+		  <div class="control-group">
+			<textarea class="input-xlarge" id="textarea" placeholder="课程简介"></textarea>
+		  </div>
+		  <div class="control-group">
+			<label class="control-label fL" for="select-auth-task">年级</label>
+			<div class="controls fL">
+			  <select id="select-grade">
+				<option value="1">高一</option>
+				<option value="2">高二</option>
+			  </select>
+			</div>
+			<label class="control-label fL" for="select-auth-task">科目</label>
+			<div class="controls fL">
+			  <select id="select-course">
+				<option value="1">数学</option>
+				<option value="2">语文</option>
+			  </select>
+			</div>
 		  </div>
 		</div>
-	  </div>
-	  <div class="step-auth">
-	 	这里是权限设置 
-	  </div>
-	  <div class="control-group">
-		<a href="javascript:;" class="btn-next-first btn-darkblue btn" id="btn-next-first">下一步</a>
+		<div class="step-auth">
+		  <div class="control-group" id="choose-class">
+			<label class="control-label" for="select-class">关联班级</label>
+			<div class="controls">
+			  <select id="select-class">
+				<option value="1">高一</option>
+			  </select>
+			  <label class="checkbox inline"><input type="checkbox" id="" value="1">1班</label>
+			  <label class="checkbox inline"><input type="checkbox" id="" value="2">2班</label>
+			  <label class="checkbox inline"><input type="checkbox" id="" value="3">3班</label>
+			</div>
+		  </div>
+		  <div class="control-group">
+			<label class="control-label" for="select-cost">定价</label>
+			<div class="controls">
+			  <select id="select-cost">
+				<option value="0">免费</option>
+			  </select>
+			  <!--div class="input-prepend input-append">
+				<span class="add-on">定价</span><input class="span2" id="appendedPrependedInput" size="16" type="text"><span class="add-on">元</span>
+			  </div-->
+			</div>
+		  </div>
+		  <div class="cg-auth control-group">
+			<label class="control-label" for="select-auth">权限</label>
+			<div class="controls">
+			  <select id="select-auth">
+				<option value="0">公开</option>
+			  </select>
+			</div>
+			<!--div class="controls">
+			  <select id="select-auth-pw">
+				<option value="0">设置听课密码</option>
+				<option value="1">仅限我的邀请</option>
+			  </select>
+			  <div class="input-prepend">
+				<span class="add-on" style="width: 45px">设置密码</span><input class="span2" id="prependedInput" size="16" type="text" style="width: 145px;"/>
+			  </div>
+			</div-->
+		  </div>
+		</div>
+		<div class="step-outline">
+		  <ul class="step-outline-nav nav nav-tabs">
+			<li class="active"><a href="#import-outline" data-toggle="tab">智能导入大纲</a></li>
+			<li><a href="#edit-outline" data-toggle="tab">自己编辑大纲</a></li>
+		  </ul>
+		  <div class="tab-content">
+			<div class="tab-pane active" id="import-outline">
+			  <ul>
+				  <li>
+				  	<img src="images/temp/course_94_132.jpg" alt="" />
+					<p>人教社A版</p>
+					<i class="icon-mark"></i>
+				  </li>
+				  <li>
+				  	<img src="images/temp/course_94_132.jpg" alt="" />
+					<p>人教社A版</p>
+					<i class="icon-mark"></i>
+				  </li>
+				  <li>
+				  	<img src="images/temp/course_94_132.jpg" alt="" />
+					<p>人教社A版</p>
+					<i class="icon-mark"></i>
+				  </li>
+				  <li>
+				  	<img src="images/temp/course_94_132.jpg" alt="" />
+					<p>人教社A版</p>
+					<i class="icon-mark"></i>
+				  </li>
+				  <li>
+				  	<img src="images/temp/course_94_132.jpg" alt="" />
+					<p>人教社A版</p>
+					<i class="icon-mark"></i>
+				  </li>
+				  <li>
+				  	<img src="images/temp/course_94_132.jpg" alt="" />
+					<p>人教社A版</p>
+					<i class="icon-mark"></i>
+				  </li>
+				  <li>
+				  	<img src="images/temp/course_94_132.jpg" alt="" />
+					<p>人教社A版</p>
+					<i class="icon-mark"></i>
+				  </li>
+			  </ul>
+			</div> 
+		 	<div class="tab-pane" id="edit-outline" style="padding-top: 80px; text-align: center; font-size: 16px; ">编辑大纲功能暂未开放:)</div>
+		  </div>
+		</div>
 	  </div>
 	</form>
+	<div class="btn-step-info-ft set-course-ft control-group">
+	  <a href="javascript:;" class="btn-step-info btn-darkblue btn" id="btn-step-info">下一步</a>
+	</div>
+	<div class="btn-step-auth-ft set-course-ft hide control-group">
+	  <a href="javascript:;" class="btn-step-auth btn-darkblue btn" id="btn-step-auth-prev">上一步</a>
+	  <a href="javascript:;" class="btn-step-auth btn-darkblue btn" id="btn-step-auth-next">下一步</a>
+	</div>
+	<div class="btn-step-outline-ft set-course-ft hide control-group">
+	  <a href="javascript:;" class="btn-step-outline btn-darkblue btn" id="btn-step-outline-prev">上一步</a>
+	  <a href="javascript:;" class="btn-step-outline btn-green btn" id="btn-set-course-submit">完成</a>
+	</div>
 	<script type="text/javascript">
-	  $(function(){
-		  $('#btn-next-first').live('click',function(){
-			$(this).parents('form').find('.step-info').animate({'left':-760+'px'},500);
-		  });
 		  $("#select-grade").sSelect();		
 		  $("#select-course").sSelect();		
-	  });
+		  $("#select-class").sSelect();		
+		  $("#select-cost").sSelect();		
+		  $("#select-auth").sSelect();		
+		  $("#select-auth-pw").sSelect();		
 	</script>
   </div>
 </div>
+</section>
+<footer id="footer"></footer>
 </body>
 </html>

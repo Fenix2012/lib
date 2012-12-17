@@ -3,16 +3,19 @@
 $('.cdetail-data-list li').live('click',function(){ $('#modal-preview-data').modal(); });
 $('#modal-preview-data').on('shown', function () { PreviewData(); })
 
+
+
 //课程查看资料预览
-$('#view-course .btn-preview').live('click',function(){
+$('#cview-resource .btn-preview').live('click',function(){
   $(this).next('.popover').css('left','2px');
   $(this).next('.popover').find('.arrow').css('margin-left','-15%');
 });
-$('.btn-preview').popover({
+$('#cview-resource .btn-preview.btn').popover({
 	placement : 'bottom',
   	html : true,
   	content : PreviewData
 });
+
 //资料&笔记等的删除
 $('.cdetail-data-list li span').live('click',function(e){ e.stopPropagation(); Delete(); });
 function Delete(){
@@ -104,11 +107,43 @@ $('progress').change(function(){
 $('progress').each(function(){
   Progress($(this));
 });
+//创建课程
+SetCourseScroll($('#btn-step-info'),-750,1);
+SetCourseScroll($('#btn-step-auth-prev'),0,2,'prev');
+SetCourseScroll($('#btn-step-auth-next'),-1500,2);
+SetCourseScroll($('#btn-step-outline-prev'),-750,3,'prev');
+
+$('#import-outline li').live('click',function(){
+  if($(this).hasClass('cur')){ $(this).removeClass('cur'); }
+  else { $(this).addClass('cur').siblings().removeClass('cur'); }
+})
+
+$('#modal-set-course .btn-group .btn').click(function(e){ e.stopPropagation(); });
+
+$('#select-grade').change(function(){
+  /*ajax获取选中年级下的班级list
+	   
+   
+   */
+  $('#choose-class .controls').append('xxx');
+});
 //----------------------------------------
 });
 function PreviewData(){
 	//alert('ajax加载资料预览数据');
-
-    //return '<object width="100%" height="100%"><param name="movie" value="http://www.tudou.com/v/qCQKhudHLMo"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"> <param name="wmode" value="opaque"><embed src="http://www.tudou.com/v/qCQKhudHLMo" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" wmode="opaque" width="100%" height="85%"></object>';
-   return '<div class="sidebar-preview-data-text"><p>原因很清楚，当我们的调控都是以短期行为为目标的时候，通常会发生后遗症，一定是错的。中国最重要的是政府任届期，他会要求在短期市场中出现一个符合他心中要求的结果，他不会去管后期或者我们叫做长效机制而产生的结果。如果用市场经济的办法调控市场的话，可能对长远来说会让市场机制更加健全，让这只看不见的手发挥巨大作用。而我们的调控基本上是破坏市场经济机理，就是把市场经济的机制破坏的越严重越好，这样就可以按照他们的要求，今天这样，明天那样。就是我想让这个猪肉价格高点就高点，想让猪肉价格低点就低点。计划经济时代，毛主席有一个“论十大关系”，其中讲了一个总供给和总需求之间的关系。但是，到了市场经济，我突然发现没有这个概念了，不管总需求和总供给之间有什么差别，反正就是我说了算，我想让它高它就高点，我想让它低就是低点。从从从从从从从从从从从从从从从2003年以后大部分是打压的2003年以后大部分是打压的2003年以后大部分是打压的2003年以后大部分是打压的2003年以后大部分是打压的2003年以后大部分是打压的2003年以后大部分是打压的2003年以后大部分是打压的2003年以后大部分是打压的2003年以后大部分是打压的2003年以后大部分是打压的2003年以后大部分是打压的2003年以后大部分是打压的2003年以后大部分是打压的2003年以后大部分是打压的。结果2008年经济危机之后我们出现了鼓励或者是振兴，弄把它弄上来了。从往下调到往上调，这几次都可以看到，2007年是往下调，是“两防”。</p></div>';
+}
+function SetCourseScroll(obj,offset,curStep,pos){
+  obj.live('click',function(){
+	  var _mb = obj.parents('.modal-body');
+	  _mb.find('.form-inner').animate({'left':offset+'px'},300,function(){
+	  _mb.find('.set-course-ft:eq('+(curStep-1)+')').addClass('hide');
+		  if(pos == 'prev'){
+			_mb.find('.btn-group button:eq('+(curStep-1)+')').removeClass('active');
+			_mb.find('.set-course-ft:eq('+(curStep-2)+')').removeClass('hide');
+		  } else {
+			_mb.find('.btn-group button:eq('+curStep+')').addClass('active');
+			_mb.find('.set-course-ft:eq('+curStep+')').removeClass('hide');
+		  }
+	  });
+  });
 }

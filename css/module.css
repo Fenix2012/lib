@@ -44,16 +44,49 @@
 .modal .input-xlarge { width: 100%; }/*文本框&文本域*/
 
 #modal-set-course .modal-body { overflow: hidden; }
-#modal-set-course form { width: 9999em; }
-#modal-set-course .step-info, #form-set-course .step-auth { position: relative; float: left; margin-left: 20px; width: 728px; }
+#modal-set-course .btn-group { }
+#modal-set-course form { height: 424px; }
+#modal-set-course .form-inner { position: relative; width: 9999em; height: 100%; }
+#modal-set-course .step-info, #modal-set-course .step-auth, #modal-set-course .step-outline { float: left; margin-left: 20px; width: 730px; height: 100%;  }
 #modal-set-course .step-info { margin-left: 0; }
 #modal-set-course .control-label { width: 30px; }
 #modal-set-course .controls { margin: 0 10px 0 15px; }
-#modal-set-course .btn-next-first { width: 100%; }
 #modal-set-course textarea.input-xlarge { height: 260px; }
 
+#modal-set-course .btn-step-info { width: 100%; }
+#modal-set-course .btn-step-auth { width: 49%; }
+#modal-set-course #btn-step-auth-next { float: right; }
+#modal-set-course .btn-step-outline { width: 49%; }
+#modal-set-course #btn-step-outline-next { float: right; }
 
+.step-outline-nav { margin: 0; height: 42px; border-bottom: none;}
+.step-outline-nav li { margin-left: 1px; width: 114px; height: 42px; line-height: 42px; text-align: center;}
+.step-outline-nav li:first-child { margin-left: 0; }
+.step-outline-nav li a { margin: 0; padding: 0; line-height: 41px; border: none; color: #6D7A96; border-top-left-radius: 6px; border-top-right-radius: 6px; background-color: #f1f2f6; border-bottom: 1px solid #D7DBE3;}
+.step-outline-nav li.active a, .step-outline-nav li.active a:hover { border: none; box-shadow: none; line-height: 42px;}
 
+#modal-set-course .tab-content { border-radius: 0 4px 4px 4px; height: 370px; background: #fff; }
+#modal-set-course #import-outline img { padding: 3px; width: 94px; height: 132px; border: 2px solid #fff; }
+#modal-set-course #import-outline ul { margin: 0; }
+#modal-set-course #import-outline li { float: left; margin: 16px 20px 0 20px; text-align: center; cursor: pointer; position: relative; }
+#modal-set-course #import-outline li { float: left; text-align: center; cursor: pointer; }
+#modal-set-course #import-outline li:hover img, #modal-set-course #import-outline li.cur img { border: 2px solid #a9b2c1; border-radius: 2px; }
+#modal-set-course #import-outline li p { margin: 0; }
+#modal-set-course #import-outline li .icon-mark { display: none; position: absolute; right: -16px; top: -10px; width: 28px; height: 28px; background: url(../images/icon.png) -73px -429px;}
+#modal-set-course #import-outline li.cur .icon-mark { display: block; }
+
+#modal-set-course .step-auth .control-group { border-bottom: 1px solid #bbc2d2; margin: 0; padding: 20px 0 30px; }
+#modal-set-course .step-auth .control-group:first-child { padding-top: 0; }
+#modal-set-course .step-auth .control-group:last-child { border: none; }
+#modal-set-course .step-auth .control-label { float: none; /*margin-top: -10px;*/ padding: 0; width: 50px; text-align: left; }
+#modal-set-course .step-auth .controls { margin-left: 0; }
+#modal-set-course .step-auth .controls .dropdown { /*display: block; */}
+#modal-set-course .step-auth .controls label { margin: 3px 0 10px 20px; cursor: pointer; }
+#modal-set-course .step-auth .input-prepend { margin-left: 20px; width: 220px; border-radius: 4px; background: #b5bbc9; }
+#modal-set-course .step-auth .input-prepend input { margin-top: 6px; margin-bottom: 6px; width: 130px; height: 8px; border-radius: 4px; }
+#modal-set-course .step-auth .add-on { margin: 0 8px; padding: 0; line-height: 40px; font-size: 12px; width: 30px; height: auto; border: none; background: none; color: #fff; text-shadow: none; }
+
+#modal-set-course .step-auth .cg-auth .controls { margin-top: 15px; }
 
 
 

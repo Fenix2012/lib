@@ -74,6 +74,9 @@ input.form-login-submit:hover { background-position: 0 0; color: #fff;}
 .btn-darkblue { height: 40px; line-height: 40px; border: 1px solid #747474; box-shadow: inset 0 1px 1px rgba(255,255,255,0.4); background: -webkit-linear-gradient(top, #75819D, #616E8B, #475574); color: #fff; font-size: 12px; text-shadow: 1px 1px 1px #333; }
 .btn-darkblue:hover { background-position: 0 0; color: #fff; }
 
+.btn-green { height: 40px; line-height: 40px; border: 1px solid #747474; box-shadow: inset 0 1px 1px rgba(255,255,255,0.4); color: #fff; font-size: 12px; text-shadow: 1px 1px 1px #333; background: -webkit-linear-gradient(top,#8EB03D,#779634,#5C782A); }
+.btn-green:hover { background-position: 0 0; color: #fff; }
+
 .btn-submod { position: relative; padding: 22px 0; width: 100%; border: 1px solid #b6b6b6; color: #fff; text-shadow: none; font-size: 15px; font-family: Microsoft YaHei; text-indent: 2em; color: #747474;}
 .btn-submod:hover { color: #fff; background-position: 0 0; color: #747474; }
 .btn-submod.active { background: -webkit-linear-gradient(top,#8eb03d,#779634,#5c782a); color: #fff; box-shadow: none;}
