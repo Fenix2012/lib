@@ -7,7 +7,10 @@
 .ucenter-cover dd { float: left; margin-top: 15px;}
 .ucenter-cover a { color: #fff; text-decoration: none;}
 .ucover-name a { font-size: 25px; font-family: Microsoft YaHei;}
-.ucover-info a { margin-right: 15px; }
+.ucover-info a { /*margin-right: 15px;*/ padding: 0 10px; }
+.ucover-info a:first-child { padding-left: 0; }
+.ucover-msg .btn { background: -webkit-linear-gradient(top, #75bbf6, #54a3dc, #2c87c0); font-size: 12px; text-shadow: none; border: none; border-radius:2px; }
+.ucover-msg .btn:hover { color: #fff; opacity: 0.9; }
 
 #ucenter { position: relative; top: -62px;}
 #ucenter .tab-pane { background-color: #fff; min-height: 500px; } 
@@ -52,6 +55,29 @@ dd.ucenter-course-tips span { display: block; height: 25px; background:url(../im
 .ucenter-course-nav .question a { background-position: -70px 5px;  }
 .ucenter-course-nav .task a { background-position: -140px 5px;  }
 .ucenter-course-nav .note a { background-position: -280px 5px;  }
+
+
+.ucenter-content-sch { padding: 0 2% 45px; }
+.ucenter-content-sch a { color: #747474; text-decoration: none; }
+.ucenter-content-sch dl:nth-child(2n) { float: right}
+.ucenter-content-sch dl { display: inline-block; position: relative; margin: 0; margin-top: 20px; width: 100%; min-width: 420px; border: 1px solid #a6a6a6; border-radius: 5px; background-color: #fafafa; }
+.ucenter-content-sch dl:hover { box-shadow: 1px 1px 2px #999; }
+.ucenter-content-sch dl:hover .ucenter-course-nav { box-shadow: 0 1px 2px #666; }
+.ucenter-content-sch dt { float: left; position: relative; padding: 10px; width: 80px; height: 80px; overflow: hidden; border-right: 1px solid #A6A6A6; }
+.ucenter-content-sch dt a { display: block;  background-color: #3b3b3b;}
+.ucenter-content-sch dt a img { width: 80px; height: 80px; }
+.ucenter-content-sch dd p { margin: 0; padding: 18px 0 0 100px; }
+.ucenter-content-sch dd p a { margin-right: 15px; }
+
+.ucenter-sch-info { margin: 0; margin-left: 100px; padding: 10px 10px 0; border-bottom: 1px solid #c8c8c8;}
+.ucenter-sch-info h4 { margin: 0; height: 30px; line-height: 20px; }
+.ucenter-sch-info h4 a { color: #575757; text-decoration: none; text-shadow: 1px 1px 1px #ccc; font: normal 14px Microsoft YaHei; }
+
+.ucenter-sch-nav { position: absolute; right: 10px; bottom: 7px; margin: 0; border: 1px solid #ccc; border-radius: 3px; background-image: -webkit-linear-gradient(top, #fff, #fafafa, #f4f4f4);  }
+.ucenter-sch-nav li { float: left; width: 72px; border-right: 1px solid #ccc; }
+.ucenter-sch-nav li:last-child { border: none;}
+.ucenter-sch-nav li:hover { background: #fff; }
+.ucenter-sch-nav li a { display: block; padding-top: 12px; /*width: 72px;*/ height: 30px; text-align: center; font-family: Microsoft YaHei; color: #747474; }
 
 /*师生动态*/
 .ucenter-content-feeds { padding: 1%;}
