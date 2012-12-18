@@ -1,0 +1,409 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>行政管理_励博教育</title>
+<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+<link rel="stylesheet" href="css/common.css" type="text/css" />
+<link rel="stylesheet" href="css/admin.css" type="text/css" />
+<script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/jquery.select-1.3.6.js" type="text/javascript"></script>
+</head>
+<body>
+<header id="header">
+  <div class="container">
+	<div id="logo" class="fL"><img src="images/logo.png" alt="励博教育" />中国人民大学附属中学</div> 
+	<ul id="nav" class="fL">
+	  <li class="cur"><a href="#">个人中心</a></li><li><a href="#">课程广场</a></li>
+	</ul>
+	<form class="navbar-search fL">
+	  <input type="text" class="search-query" placeholder="Search">
+	  <button type="submit" class="btn"></button>
+	</form>
+	<div class="top-nav-profile btn-group fR">
+	  <a href="javascript:;" class="tnav-profile-a dropdown-toggle" data-toggle="dropdown"><span>夏小强</span><img src="images/top-nav-avatar.png" alt="userName" /></a>
+	  <ul class="dropdown-menu">
+		<li><a href="#" title="账号设置">账号设置</a></li>
+		<li class="divider"></li>
+		<li><a href="#" title="退出系统">退出系统</a></li>
+	  </ul>
+	</div>
+	<!-- 有消息时：加类名be-message -->
+	<!--div class="be-message message fL"-->
+	<div class="message btn-group fR">
+	  <!--span class="wrap-envelope"><a href="javascript:;" class="envelope dropdown-toggle" data-toggle="dropdown" ></a></span-->
+	  <a class="wrap-envelope dropdown-toggle" data-toggle="dropdown" href="javascript:;"><span class="envelope" ></span></a>
+	  <ul class="dropdown-menu">
+		<li><a href="#" title="查看私信">查看私信(<em>23</em>)</a></li>
+		<li class="divider"></li>
+		<li><a href="#" title="查看通知">查看通知</a></li>
+	  </ul>
+	  <div class="message-box">
+		<span class="message-arrow"></span>
+		<ul>
+		  <li><a href="#"><em>1</em>条私信</a><span title="关闭"></span></li> 
+		  <li><a href="#"><em>2</em>条通知</a><span title="关闭"></span></li> 
+		</ul>
+	  </div>
+	</div>
+</header>
+<section class="lib-main">
+<div class="container" id="mod-admin">
+  <div class="admin-menu clearfix">
+	<div class="lib-wide-hd">
+	  <h5>学校管理</h5>
+	</div>
+	<dl class="admin-menu-sch dl-horizontal">
+	  <dt><a href="#"><!--img src="images/temp/course.jpg" alt="中国人民大学附属中学" /--></a></dt>	
+	  <dd class="admin-schname"><a href="#">中国人民大学附属中学</a></dd>
+	  <dd class="admin-schmember"><a href="#">教师<em>192</em></a><a href="#">学生<em>4345</em></a></dd>
+	</dl>
+	<ul class="admin-subnav clearfix">
+	  <li class="class"><a class="cur" href="#"><i></i>班级</a></li>
+	  <li class="student"><a href="#"><i></i>学生</a></li>
+	  <li class="teacher"><a href="#"><i></i>教师</a></li>
+	  <li class="course"><a href="#"><i></i>课程</a></li>
+	  <li class="statistics"><a href="#"><i></i>统计</a></li>
+	</ul>
+  </div>
+  <div class="lib-container">
+	<div class="tabbable tabs-right">
+	  <ul class="nav nav-tabs">
+		<li class="active"><a href="#class-name" data-toggle="tab">班级名称</a></li>
+		<li><a href="#class-teacher" data-toggle="tab">班级教师</a></li>
+		<li><a href="#class-student" data-toggle="tab">班级学生</a></li>
+	  </ul>
+	  <div class="tab-content">
+		<div class="tab-pane active" id="class-name">
+		  <div class="admin-toolbar">
+			<a href="#" class="btn-green btn-darkblue btn fR" id="btn-admin-syn">创建班级</a>
+			<form class="form-horizontal" action="#">
+			  <div class="control-group">
+				<label class="control-label" for="select-class-name">选择年级</label>
+				<div class="controls">
+				  <select id="select-class-name">
+					  <option value="1">高一</option>
+					  <option value="2">高二</option>
+				  </select>
+				</div>
+				<script type="text/javascript">
+				  $('#select-class-name').sSelect();
+				  $('#select-class-name').next('.dropselectbox').find('h4').css({'width':'125px','background-position':'108px center'});
+				  $('#select-class-name').next('.dropselectbox').find('ul').css({'width':'125px'});
+
+				  </script>
+				</div>
+			  </form>
+		  </div>
+		  <div class="admin-con">
+			<table class="table table-bordered">
+			  <thead>
+				<tr>
+				  <th>班号</th>
+				  <th>班级ID</th>
+				</tr>
+			  </thead>
+			  <tbody>
+				<tr>
+				  <td>0512</td>
+				  <td>0512125541
+				  <a href="javascript:;" class="btn" title="删除">X</a>
+				  </td>
+				</tr>
+				<tr>
+				  <td>0512</td>
+				  <td>0512125541
+				  <a href="javascript:;" class="btn" title="删除">X</a>
+				  </td>
+				</tr>
+				<tr>
+				  <td>0512</td>
+				  <td>0512125541
+				  <a href="javascript:;" class="btn" title="删除">X</a>
+				  </td>
+				</tr>
+				<tr>
+				  <td>0512</td>
+				  <td>0512125541
+				  <a href="javascript:;" class="btn" title="删除">X</a>
+				  </td>
+				</tr>
+				<tr>
+				  <td>0512</td>
+				  <td>0512125541
+				  <a href="javascript:;" class="btn" title="删除">X</a>
+				  </td>
+				</tr>
+				<tr>
+				  <td>0512</td>
+				  <td>0512125541
+				  <a href="javascript:;" class="btn" title="删除">X</a>
+				  </td>
+				</tr>
+				<tr>
+				  <td>0512</td>
+				  <td>0512125541
+				  <a href="javascript:;" class="btn" title="删除">X</a>
+				  </td>
+				</tr>
+				<tr>
+				  <td>0512</td>
+				  <td>0512125541
+				  <a href="javascript:;" class="btn" title="删除">X</a>
+				  </td>
+				</tr>
+				<tr>
+				  <td>0512</td>
+				  <td>0512125541
+				  <a href="javascript:;" class="btn" title="删除">X</a>
+				  </td>
+				</tr>
+				<tr>
+				  <td>0512</td>
+				  <td>0512125541
+				  <a href="javascript:;" class="btn" title="删除">X</a>
+				  </td>
+				</tr>
+			  </tbody>
+			</table>
+		  </div>
+		</div>
+		<div class="tab-pane" id="class-teacher">
+		  <div class="admin-toolbar">
+			<form class="form-horizontal" action="#">
+			  <div class="control-group">
+				<label class="control-label" for="select-class-teacher">选择年级</label>
+				<div class="controls">
+				  <select id="select-class-teacher">
+					<option value="1">高一</option>
+					<option value="2">高二</option>
+				  </select>
+				</div>
+				<script type="text/javascript">
+				  $('#select-class-teacher').sSelect();
+				  $('#select-class-teacher').next('.dropselectbox').find('h4').css({'width':'125px','background-position':'108px center'});
+				  $('#select-class-teacher').next('.dropselectbox').find('ul').css({'width':'125px'});
+
+				  </script>
+				</div>
+			  </form>
+			</div>
+			<div class="admin-con">
+			  <div class="accordion" id="accordion-admin-class-teacher">
+				<div class="accordion-group">
+				  <div class="accordion-heading">
+					<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion-admin-class-teacher" href="#collapse-admin-class-teacher1"><span class="admin-class-num">班号：<em>0512</em></span><span class="admin-class-id">ID：<em>DFSAHKC32145543</em></span><span class="admin-class-membersum">共<em>54</em>名老师</span><span class="arrow-gray-right"></span></a>
+				  </div>
+				  <div id="collapse-admin-class-teacher1" class="accordion-body collapse">
+					<div class="accordion-inner">
+					  <table class="table">
+						<tbody>
+						  <tr>
+							<td><img src="images/top-nav-avatar.png" alt="userName"></td>
+							<td>夏小强</td>
+							<td>高二语文</td>
+						  </tr>
+						  <tr>
+							<td><img src="images/top-nav-avatar.png" alt="userName"></td>
+							<td>夏小强</td>
+							<td>高二语文</td>
+						  </tr>
+						  <tr>
+							<td><img src="images/top-nav-avatar.png" alt="userName"></td>
+							<td>夏小强</td>
+							<td>高二语文</td>
+						  </tr>
+						  <tr>
+							<td><img src="images/top-nav-avatar.png" alt="userName"></td>
+							<td>夏小强</td>
+							<td>高二语文</td>
+						  </tr>
+						  <tr>
+							<td><img src="images/top-nav-avatar.png" alt="userName"></td>
+							<td>夏小强</td>
+							<td>高二语文</td>
+						  </tr>
+						</tbody>
+					  </table>
+
+					</div>
+				  </div>
+				</div>
+				<div class="accordion-group">
+				  <div class="accordion-heading">
+					<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion-admin-class-teacher" href="#collapse-admin-class-teacher2"><span class="admin-class-num">班号：<em>0512</em></span><span class="admin-class-id">ID：<em>DFSAHKC32145543</em></span><span class="admin-class-membersum">共<em>54</em>名老师</span><span class="arrow-gray-right"></span></a>
+				  </div>
+				  <div id="collapse-admin-class-teacher2" class="accordion-body collapse">
+					<div class="accordion-inner">
+					  <table class="table">
+						<tbody>
+						  <tr>
+							<td><img src="images/top-nav-avatar.png" alt="userName"></td>
+							<td>夏小强</td>
+							<td>高二语文</td>
+						  </tr>
+						  <tr>
+							<td><img src="images/top-nav-avatar.png" alt="userName"></td>
+							<td>夏小强</td>
+							<td>高二语文</td>
+						  </tr>
+						  <tr>
+							<td><img src="images/top-nav-avatar.png" alt="userName"></td>
+							<td>夏小强</td>
+							<td>高二语文</td>
+						  </tr>
+						  <tr>
+							<td><img src="images/top-nav-avatar.png" alt="userName"></td>
+							<td>夏小强</td>
+							<td>高二语文</td>
+						  </tr>
+						  <tr>
+							<td><img src="images/top-nav-avatar.png" alt="userName"></td>
+							<td>夏小强</td>
+							<td>高二语文</td>
+						  </tr>
+						</tbody>
+					  </table>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		<div class="tab-pane" id="class-student">
+		  <div class="admin-toolbar">
+			<a href="#" class="btn-darkblue btn fR" id="btn-admin-syn"><i class="icon-syn"></i>同步学生信息</a>
+			<!--去掉admin-syn-tips-show隐藏tips-->
+			<span class="admin-syn-tips-show admin-syn-tips">有未同步的学生，请点击同步<span class="arrow"></span></span>
+			<form class="form-horizontal" action="#">
+			  <div class="control-group">
+				<label class="control-label" for="select-class-student">选择年级</label>
+				<div class="controls">
+				  <select id="select-class-student">
+					  <option value="1">高一</option>
+					  <option value="2">高二</option>
+				  </select>
+				</div>
+				<script type="text/javascript">
+				  $('#select-class-student').sSelect();
+				  $('#select-class-student').next('.dropselectbox').find('h4').css({'width':'125px','background-position':'108px center'});
+				  $('#select-class-student').next('.dropselectbox').find('ul').css({'width':'125px'});
+
+				  </script>
+				</div>
+			  </form>
+		  </div>
+		  <div class="admin-con">
+			<div class="accordion" id="accordion-admin-class-student">
+			  <div class="accordion-group">
+				<div class="accordion-heading">
+				  <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion-admin-class-student" href="#collapse-admin-class-student1"><span class="admin-class-num">班号：<em>0512</em></span><span class="admin-class-id">ID：<em>DFSAHKC32145543</em></span><span class="admin-class-membersum">共<em>54</em>名学生</span><span class="arrow-gray-right"></span></a>
+				</div>
+				<div id="collapse-admin-class-student1" class="accordion-body collapse">
+				  <div class="accordion-inner">
+					<table class="table">
+					  <tbody>
+						<tr>
+						  <td><img src="images/top-nav-avatar.png" alt="userName"></td>
+						  <td>夏小强</td>
+						  <td><span>学号：<em>0511125587</em></span></td>
+						</tr>
+						<tr>
+						  <td><img src="images/top-nav-avatar.png" alt="userName"></td>
+						  <td>夏小强</td>
+						  <td><span>学号：<em>0511125587</em></span></td>
+						</tr>
+						<tr>
+						  <td><img src="images/top-nav-avatar.png" alt="userName"></td>
+						  <td>夏小强</td>
+						  <td><span>学号：<em>0511125587</em></span></td>
+						</tr>
+						<tr>
+						  <td><img src="images/top-nav-avatar.png" alt="userName"></td>
+						  <td>夏小强</td>
+						  <td><span>学号：<em>0511125587</em></span></td>
+						</tr>
+						<tr>
+						  <td><img src="images/top-nav-avatar.png" alt="userName"></td>
+						  <td>夏小强</td>
+						  <td><span>学号：<em>0511125587</em></span></td>
+						</tr>
+						<tr>
+						  <td><img src="images/top-nav-avatar.png" alt="userName"></td>
+						  <td>夏小强</td>
+						  <td><span>学号：<em>0511125587</em></span></td>
+						</tr>
+					  </tbody>
+					</table>
+
+				  </div>
+				</div>
+			  </div>
+			  <div class="accordion-group">
+				<div class="accordion-heading">
+				  <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion-admin-class-student" href="#collapse-admin-class-student2"><span class="admin-class-num">班号：<em>0512</em></span><span class="admin-class-id">ID：<em>DFSAHKC32145543</em></span><span class="admin-class-membersum">共<em>54</em>名学生</span><span class="arrow-gray-right"></span></a>
+				</div>
+				<div id="collapse-admin-class-student2" class="accordion-body collapse">
+				  <div class="accordion-inner">
+					<table class="table">
+					  <tbody>
+						<tr>
+						  <td><img src="images/top-nav-avatar.png" alt="userName"></td>
+						  <td>夏小强</td>
+						  <td><span>学号：<em>0511125587</em></span></td>
+						</tr>
+						<tr>
+						  <td><img src="images/top-nav-avatar.png" alt="userName"></td>
+						  <td>夏小强</td>
+						  <td><span>学号：<em>0511125587</em></span></td>
+						</tr>
+						<tr>
+						  <td><img src="images/top-nav-avatar.png" alt="userName"></td>
+						  <td>夏小强</td>
+						  <td><span>学号：<em>0511125587</em></span></td>
+						</tr>
+						<tr>
+						  <td><img src="images/top-nav-avatar.png" alt="userName"></td>
+						  <td>夏小强</td>
+						  <td><span>学号：<em>0511125587</em></span></td>
+						</tr>
+						<tr>
+						  <td><img src="images/top-nav-avatar.png" alt="userName"></td>
+						  <td>夏小强</td>
+						  <td><span>学号：<em>0511125587</em></span></td>
+						</tr>
+						<tr>
+						  <td><img src="images/top-nav-avatar.png" alt="userName"></td>
+						  <td>夏小强</td>
+						  <td><span>学号：<em>0511125587</em></span></td>
+						</tr>
+					  </tbody>
+					</table>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+
+	</div>
+	
+  </div>
+</div>
+</section>
+<footer id="footer">
+<div class="container">
+  <div class="footer-inner">
+	<a href="http://www.libedu.com"><img src="images/logo-footer.png" alt="" /></a>
+	<div class="reserved">
+	  <p>Copyright &copy; 2011–2012 Libeducation.com All Rights Reserved</p>
+	  <p>TEL:010-1234567   京ICP备05006794号</p>
+	</div>
+  </div>
+</div>
+</footer>
+</body>
+</html>
