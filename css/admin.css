@@ -1,5 +1,5 @@
 ﻿#mod-admin .lib-wide-hd { box-shadow: 0 1px 1px rgba(255,255,255,0.4);}
-.admin-menu { position: relative; margin: 75px 0 0; border-top-left-radius: 5px; border-top-right-radius: 5px; font-size: 12px; background: url(../images/admin-menu.png) 0 50px repeat;}
+.admin-menu { position: relative; margin: 52px 0 0; border-top-left-radius: 5px; border-top-right-radius: 5px; font-size: 12px; background: url(../images/admin-menu.png) 0 50px repeat;}
 .admin-menu .lib-wide-hd h5 { margin: 0;}
 .admin-menu a { color: #fff; text-decoration: none; text-shadow: 1px 1px 1px #333;}
 
@@ -42,4 +42,39 @@ span.cnav-stu-r { display: inline-block; background: #676767 url(../images/bg-co
 #mod-admin .tabs-right > .nav-tabs > li > a:hover { border: 1px solid #a0a0a0; border-left: none; background-color: #fff;}
 #mod-admin .tabs-right > .nav-tabs .active > a,
 #mod-admin .tabs-right > .nav-tabs .active > a:hover { border-color: #a0a0a0 #a0a0a0 #a0a0a0 transparent; background-color: #fff;}
-#mod-admin .tab-pane { border: 1px solid #a0a0a0; border-radius: 3px; border-top-right-radius: 0;}
+#mod-admin .tab-pane { padding: 15px 20px 20px; min-height: 350px; border: 1px solid #a0a0a0; border-radius: 3px; border-top-right-radius: 0;}
+#mod-admin .admin-toolbar { position: relative; }
+#mod-admin .admin-toolbar .btn-darkblue { padding: 0 24px; height: 36px; line-height: 36px; }
+#mod-admin .admin-toolbar .btn-green { border: none; height: 38px; line-height: 38px; }
+#mod-admin .admin-toolbar .icon-syn { background: url(../images/icon-small.png) -18px -87px;}
+#mod-admin .admin-toolbar .admin-syn-tips { display: none; position: absolute; right: 58px; bottom: -52px; width: 174px; height: 47px; line-height: 47px; text-align: center; border: 1px solid #a3a3a3; border-radius: 3px; background-color: #fffde5; text-shadow: none; color: #747474; z-index: 1; box-shadow: 1px 2px 3px #999;}
+#mod-admin .admin-toolbar .admin-syn-tips-show { display: block; }
+#mod-admin .admin-toolbar .admin-syn-tips .arrow { display: block; position: absolute; right: 15px; top: -13px; width: 15px; height: 15px; background: url(../images/icon-small.png) -36px -36px no-repeat;}
+#mod-admin .dropdown { margin-top: 2px; }
+#mod-admin .dropdown h4 { width: 50px; height: 34px; line-height: 34px;}
+
+#mod-admin .accordion-group { margin-left: 0; }
+#mod-admin .admin-class-num, #mod-admin .admin-class-id { margin-right: 20px; }
+
+#mod-admin .accordion-heading .accordion-toggle { padding: 4px 15px; border: 1px solid #a3a3a3; border-radius: 3px 3px 0 0px; }
+#mod-admin .accordion-inner { padding: 0; border: 1px solid #a3a3a3; border-top: none; border-radius: 0 0 3px 3px; }
+#mod-admin .accordion-inner table { margin: 0; }
+#mod-admin .accordion-inner table td { padding: 6px 8px; vertical-align: middle; border-top: 1px solid #e3e3e3; color: #000; }
+
+#mod-admin #class-name table { border: 1px solid #a3a3a3; border-radius: 3px 3px 0 0; }
+#mod-admin #class-name table tr { }
+#mod-admin #class-name table th { padding: 12px 8px; background: -webkit-linear-gradient(top,white,whiteSmoke,#ECECEC);  font-weight: normal; }
+#mod-admin #class-name table th:first-child { width: 15%; border: none; text-align: center;}
+#mod-admin #class-name table th:nth-child(2) { padding-left: 6%;}
+#mod-admin #class-name table td { padding: 12px 8px; vertical-align: middle; border-top: 1px solid #e3e3e3; color: #000;  color: #747474; }
+#mod-admin #class-name table td:first-child { border-left: none; text-align: center; }
+#mod-admin #class-name table td:nth-child(2) { padding-left: 4%; padding-right: 2%; }
+#mod-admin #class-name table .btn { float: right; padding: 0 8px; height: 18px; line-height: 18px; color: #6b6b6b; font-weight: bold; display: none; }
+#mod-admin #class-name tr:hover { background: #f5f5f5; }
+#mod-admin #class-name tr:hover .btn { display: block; }
+
+.accordion-toggle .arrow-gray-right { top: 19px;}
+
+#mod-admin .accordion-inner table tr td:first-child { width: 10%; }
+#mod-admin .accordion-inner table tr td:nth-child(2) { width: 8%; }
+#mod-admin .accordion-inner table tr:first-child td { border: none; }
