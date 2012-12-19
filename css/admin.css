@@ -43,6 +43,7 @@ span.cnav-stu-r { display: inline-block; background: #676767 url(../images/bg-co
 #mod-admin .tabs-right > .nav-tabs .active > a,
 #mod-admin .tabs-right > .nav-tabs .active > a:hover { border-color: #a0a0a0 #a0a0a0 #a0a0a0 transparent; background-color: #fff;}
 #mod-admin .tab-pane { padding: 15px 20px 20px; min-height: 350px; border: 1px solid #a0a0a0; border-radius: 3px; border-top-right-radius: 0;}
+/*toolbar*/
 #mod-admin .admin-toolbar { position: relative; }
 #mod-admin .admin-toolbar .btn-darkblue { padding: 0 24px; height: 36px; line-height: 36px; }
 #mod-admin .admin-toolbar .btn-green { padding: 0 34px; border: none; height: 38px; line-height: 38px; }
@@ -52,6 +53,9 @@ span.cnav-stu-r { display: inline-block; background: #676767 url(../images/bg-co
 #mod-admin .admin-toolbar .admin-syn-tips .arrow { display: block; position: absolute; right: 15px; top: -13px; width: 15px; height: 15px; background: url(../images/icon-small.png) -36px -36px no-repeat;}
 #mod-admin .dropdown { margin-top: 2px; }
 #mod-admin .dropdown h4 { width: 50px; height: 34px; line-height: 34px;}
+
+
+
 
 #mod-admin .accordion-group { margin-left: 0; }
 #mod-admin .admin-class-num, #mod-admin .admin-class-id { margin-right: 20px; }
@@ -78,3 +82,21 @@ span.cnav-stu-r { display: inline-block; background: #676767 url(../images/bg-co
 #mod-admin .accordion-inner table tr td:first-child { width: 10%; }
 #mod-admin .accordion-inner table tr td:nth-child(2) { width: 8%; }
 #mod-admin .accordion-inner table tr:first-child td { border: none; }
+
+
+/*行政学生*/
+#student .admin-toolbar { margin-bottom: 20px; height: 38px; line-height: 38px;}
+#student .admin-toolbar .btn-green { margin-left: 20px; }
+
+#student table { border: 1px solid #a3a3a3; border-radius: 3px 3px 0 0; }
+#student table tbody { /*height: 200px; overflow-y: scroll; */}
+#student table th { padding: 12px 8px; background: -webkit-linear-gradient(top,white,whiteSmoke,#ECECEC);  font-weight: normal; text-align: center; }
+#student table th:first-child { width: 14%; border: none; /*text-align: center;*/}
+#student table th:nth-child(2) { width: 18%;/*padding-left: 6%;*/}
+#student table th:nth-child(3) { width: 14%;/*padding-left: 6%;*/}
+#student table th:nth-child(5) { width: 18%;/*padding-left: 6%;*/}
+#student table td { padding: 12px 8px; vertical-align: middle; border-top: 1px solid #e3e3e3; color: #000;  color: #747474; text-align: center; }
+#student table td:first-child { border-left: none; text-align: center; }
+#student table .btn { float: right; padding: 0 8px; height: 18px; line-height: 18px; color: #6b6b6b; font-weight: bold; display: none; }
+#student tr:hover { background: #f5f5f5; }
+#student tr:hover .btn { display: block; }
