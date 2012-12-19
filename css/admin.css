@@ -45,7 +45,7 @@ span.cnav-stu-r { display: inline-block; background: #676767 url(../images/bg-co
 #mod-admin .tab-pane { padding: 15px 20px 20px; min-height: 350px; border: 1px solid #a0a0a0; border-radius: 3px; border-top-right-radius: 0;}
 #mod-admin .admin-toolbar { position: relative; }
 #mod-admin .admin-toolbar .btn-darkblue { padding: 0 24px; height: 36px; line-height: 36px; }
-#mod-admin .admin-toolbar .btn-green { border: none; height: 38px; line-height: 38px; }
+#mod-admin .admin-toolbar .btn-green { padding: 0 34px; border: none; height: 38px; line-height: 38px; }
 #mod-admin .admin-toolbar .icon-syn { background: url(../images/icon-small.png) -18px -87px;}
 #mod-admin .admin-toolbar .admin-syn-tips { display: none; position: absolute; right: 58px; bottom: -52px; width: 174px; height: 47px; line-height: 47px; text-align: center; border: 1px solid #a3a3a3; border-radius: 3px; background-color: #fffde5; text-shadow: none; color: #747474; z-index: 1; box-shadow: 1px 2px 3px #999;}
 #mod-admin .admin-toolbar .admin-syn-tips-show { display: block; }
