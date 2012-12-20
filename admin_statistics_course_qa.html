@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>行政统计管理_励博教育</title>
+<title>行政问答统计_励博教育</title>
 <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
 <link rel="stylesheet" href="css/common.css" type="text/css" />
 <link rel="stylesheet" href="css/admin.css" type="text/css" />
@@ -54,82 +54,46 @@
 <div class="container" id="mod-admin">
   <div class="admin-menu clearfix">
 	<div class="lib-wide-hd">
-	  <h5>学校管理</h5>
+	  <a class="go-back btn" href="#">返回课程统计</a>
+	  <h5>高一语文的统计</h5>
 	</div>
-	<dl class="admin-menu-sch dl-horizontal">
-	  <dt><a href="#"><!--img src="images/temp/course.jpg" alt="中国人民大学附属中学" /--></a></dt>	
-	  <dd class="admin-schname"><a href="#">中国人民大学附属中学</a></dd>
-	  <dd class="admin-schmember"><a href="#">教师<em>192</em></a><a href="#">学生<em>4345</em></a></dd>
-	</dl>
-	<ul class="admin-subnav clearfix">
-	  <li class="class"><a href="#"><i></i>班级</a></li>
-	  <li class="student"><a href="#"><i></i>学生</a></li>
-	  <li class="teacher"><a href="#"><i></i>教师</a></li>
-	  <li class="course"><a href="#"><i></i>课程</a></li>
-	  <li class="statistics"><a class="cur" href="#"><i></i>统计</a></li>
-	</ul>
   </div>
-  <div class="lib-container" id="statistics">
-	<div class="admin-toolbar">
-	  <form class="form-horizontal" action="#">
-		<div class="control-group">
-		  <label class="control-label fL" for="select-statistics-grade">选择年级</label>
-		  <div class="controls fL">
-			<select id="select-statistics-grade" class="select-small">
-			  <option value="1">高一</option>
-			  <option value="2">高二</option>
-			</select>
+  <div class="lib-container row-fluid" id="statistics-course">
+	<div class="lib-con span8">
+	  <div class="lib-hd-bar">
+		<ul class="nav nav-tabs">
+		  <li class="active"><a href="#qa-section" data-toggle="tab">章节统计</a></li>
+		  <li><a href="#qa-stu" data-toggle="tab">学生统计</a></li>
+		</ul>
+	  </div>	
+	  <div class="tab-content">
+		<div class="tab-pane active" id="qa-section">
+		  <div class="block">
+			<div class="block-hd">
+			  <select class="select-xsmall-right" id="select-section">
+				<option value="0">全部</option>
+				<option value="1">第一章</option>
+				<option value="2">第二章</option>
+				<option value="3">第三章</option>
+			  </select>
 		  </div>
-
-		  <label class="control-label fL" for="select-statistics-subject" style="margin-left: 30px;">选择科目</label>
-		  <div class="controls fL">
-			<select id="select-statistics-subject" class="select-small">
-			  <option value="1">数学</option>
-			  <option value="2">语文</option>
-			</select>
-		  </div>
+		  <div class="block-bd">这里是章节统计图表</div>
 		</div>
-	  </form>
-	</div>
-	<div class="admin-con">
-	  <table class="table table-bordered">
-		<thead>
-		  <tr>
-			<th>课程名</th>
-			<th>任课老师</th>
-			<th></th>
-		  </tr>
-		</thead>
-		<tbody>
-		  <tr>
-			<td>高八思想政治</td>
-			<td>夏小强</td>
-			<td><a href="javascript:;">查看</a></td>
-		  </tr>
-		  <tr>
-			<td>高八思想政治</td>
-			<td>夏小强</td>
-			<td><a href="javascript:;">查看</a></td>
-		  </tr>
-		  <tr>
-			<td>高八思想政治</td>
-			<td>夏小强</td>
-			<td><a href="javascript:;">查看</a></td>
-		  </tr>
-		  <tr>
-			<td>高八思想政治</td>
-			<td>夏小强</td>
-			<td><a href="javascript:;">查看</a></td>
-		  </tr>
-		  <tr>
-			<td>高八思想政治</td>
-			<td>夏小强</td>
-			<td><a href="javascript:;">查看</a></td>
-		  </tr>
-		</tbody>
-	  </table>
+	  </div>
+	  <div class="tab-pane" id="qa-stu">
+		<div class="block">
+		  <div class="block-hd">这里是头部</div>
+		  <div class="block-bd">这里是学生共建资料统计</div>
+		</div>
+	  </div>
 	</div>
   </div>
+
+  <div class="lib-sidebar span4">
+	<a class="btn-submod btn" href="admin_statistics_course.html">课程统计</a>
+	<a class="btn-submod btn active" href="admin_statistics_course_qa.html">问答统计</a>
+  </div>
+</div>
 </div>
 </section>
 <footer id="footer">

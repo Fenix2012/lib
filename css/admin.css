@@ -84,6 +84,8 @@ span.cnav-stu-r { display: inline-block; background: #676767 url(../images/bg-co
 #mod-admin .accordion-inner table tr td:first-child { width: 10%; }
 #mod-admin .accordion-inner table tr td:nth-child(2) { width: 8%; }
 #mod-admin .accordion-inner table tr:first-child td { border: none; }
+/*行政班级*/
+#class-teacher img, #class-student img { width: 40px; height: 40px; }
 /*行政教师*/
 #teacher .admin-toolbar { height: 38px; line-height: 38px;}
 #teacher .admin-toolbar .btn-green { margin-left: 20px; }
@@ -99,6 +101,7 @@ span.cnav-stu-r { display: inline-block; background: #676767 url(../images/bg-co
 #teacher .tab-pane > ul { margin: 0; }
 #teacher .tab-pane > ul li { float: left; margin: 0 15px 25px 20px; width: 240px; }
 #teacher .admin-stu-avatar { float: left; margin-right: 12px; }
+#teacher .admin-stu-avatar img { width: 40px; height: 40px; }
 #teacher .admin-stu-info { display: table-cell; position: relative; top: -4px; }
 #teacher .admin-stu-info p { margin: 0; }
 #teacher .admin-stu-name { font-size: 14px; color: #000; }
@@ -161,3 +164,10 @@ span.cnav-stu-r { display: inline-block; background: #676767 url(../images/bg-co
 #statistics table tr th:last-child { width: 50%; }
 #statistics table tr td:last-child { text-align: right; padding-right: 5%; }
 #statistics table tr td:last-child a { color: #44567C; }
+
+
+#mod-admin #statistics-course { padding: 0; }
+#statistics-course .tab-pane { border: none; padding: 18px 0 8px; }
+#statistics-course .block-bd { min-height: 400px; }
+#statistics-course .lib-sidebar { padding-top: 20px; padding-left: 20px; }
+#statistics-course .btn-submod { margin-bottom: 20px; text-indent: 0; }
