@@ -132,6 +132,11 @@ $('#select-grade').change(function(){
 $('select').sSelect();
 $('select.select-small').next('.dropselectbox').find('h4').css({'width':'125px','background-position':'108px center'});
 $('select.select-small').next('.dropselectbox').find('ul').css({'width':'125px'});
+
+
+$('select.select-xsmall-right').parent('.dropdown').css({'float':'right'});
+$('select.select-xsmall-right').parent('.dropdown').find('h4').css({'width':'125px','height':'28px','line-height':'28px','background-position':'108px center','margin-top':'2px'});
+$('select.select-xsmall-right').parent('.dropdown').find('ul').css({'width':'125px'});
 //----------------------------------------
 });
 function PreviewData(){
