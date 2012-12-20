@@ -53,6 +53,23 @@
 </header>
 <section class="lib-main">
   <div class="container" id="mod-course">
+	<span class="btn-alert">点击</span>
+	<script type="text/javascript">
+	  var ALERT_SETTING = {
+	 	alert_con_msg : '这里是提示内容',//设置alert内容 
+		is_moment : true,//是否2S提示
+		is_confirm: true,//是否有确认按钮
+		is_cancel : true,//是否有取消按钮
+		is_aside: '继续添加课程资料'//是否有aside,没有留空
+	  }
+	  $(function(){
+		  $('.btn-alert').click(function(){
+			insetAlert(ALERT_SETTING);
+			$('#alert').modal('show');
+			setTimeout(closeAlert,1500);
+		  });
+	  })
+	</script>
 	<div class="lib-menu clearfix">
 	  <dl class="lib-menu-course dl-horizontal">
 		<dt><a href="#"><img src="images/temp/course.jpg" alt="高二数学" /></a></dt>	
@@ -77,7 +94,7 @@
 			<li><a href="#cedit-stu" data-toggle="tab">课程学生</a></li>
 		  </ul>
 		  <!--a class="right" href="javascript:;" title="编辑课程">编辑课程</a-->
-		  <a class="btn right" href="javascript:;">返回</a>
+		  <a class="right" href="javascript:;">返回</a>
 		</div>	
 		<!--div class="course-outline-bd tab-content"-->
 		<div class="tab-content">
@@ -102,49 +119,18 @@
 								<div class="accordion-heading">
 								  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-section11" href="#collapse-section111">1.1.1 三角函数1</a>
 								</div>
-								<div id="collapse-section111" class="accordion-body collapse" style="height: 0px;">
+								<div id="collapse-section111" class="accordion-body collapse">
 								  <div class="accordion-inner">
 									<div class="cdetail-data-list-wrap">
 									  <ul class="cdetail-data-list clearfix">
 										<li class="cview-res-video">
-										<p>aaaVIDEO1.rm</p>	
-										<p>111夏小强</p>	
+										<p>cccVIDEO1.rm</p>	
+										<p>333夏小强</p>	
 										<span>删除</span>
 										</li>
 										<li class="cview-res-text">
 										<p>TEXT.docx</p>	
 										<p>夏小强</p>	
-										<span>删除</span>
-										</li>
-										<li class="cview-res-ppt">
-										<p>PPT.pptx</p>	
-										<p>夏小强</p>	
-										<span>删除</span>
-										</li>
-										<li class="cview-res-pdf">
-										<p>PDF.pdf</p>	
-										<p>夏小强</p>	
-										<span>删除</span>
-										</li>
-										<li class="cview-res-ppt">
-										<p>PPT.pptx</p>	
-										<p>夏小强</p>	
-										<span>删除</span>
-										</li>
-										<li class="cview-res-pdf">
-										<p>PDF.pdf</p>	
-										<p>夏小强</p>	
-										</li>
-									  </ul>
-
-									  <ul class="cdetail-data-list clearfix">
-										<li class="cview-res-video">
-										<p>bbbVIDEO1.rm</p>	
-										<p>222夏小强</p>	
-										</li>
-										<li class="cview-res-text">
-										<p>TEXT.docx</p>	
-										<p>夏小强</p>	
 										</li>
 										<li class="cview-res-ppt">
 										<p>PPT.pptx</p>	
@@ -162,9 +148,6 @@
 										<p>PDF.pdf</p>	
 										<p>夏小强</p>	
 										</li>
-									  </ul>
-
-									  <ul class="cdetail-data-list clearfix">
 										<li class="cview-res-video">
 										<p>cccVIDEO1.rm</p>	
 										<p>333夏小强</p>	
@@ -189,71 +172,43 @@
 										<p>PDF.pdf</p>	
 										<p>夏小强</p>	
 										</li>
-									  </ul>
 
-									  <ul class="cdetail-data-list clearfix">
-										<li class="cview-res-video">
-										<p>dddVIDEO1.rm</p>	
-										<p>444夏小强</p>	
-										</li>
-										<li class="cview-res-text">
-										<p>TEXT.docx</p>	
-										<p>夏小强</p>	
-										</li>
-										<li class="cview-res-ppt">
-										<p>PPT.pptx</p>	
-										<p>夏小强</p>	
-										</li>
-										<li class="cview-res-pdf">
-										<p>PDF.pdf</p>	
-										<p>夏小强</p>	
-										</li>
-										<li class="cview-res-ppt">
-										<p>PPT.pptx</p>	
-										<p>夏小强</p>	
-										</li>
-										<li class="cview-res-pdf">
-										<p>PDF.pdf</p>	
-										<p>夏小强</p>	
-										</li>
-									  </ul>
-
-									  <ul class="cdetail-data-list clearfix">
-										<li class="cview-res-video">
-										<p>eeeVIDEO1.rm</p>	
-										<p>555夏小强</p>	
-										</li>
-										<li class="cview-res-text">
-										<p>TEXT.docx</p>	
-										<p>夏小强</p>	
-										</li>
-										<li class="cview-res-ppt">
-										<p>PPT.pptx</p>	
-										<p>夏小强</p>	
-										</li>
-										<li class="cview-res-pdf">
-										<p>PDF.pdf</p>	
-										<p>夏小强</p>	
-										</li>
-										<li class="cview-res-ppt">
-										<p>PPT.pptx</p>	
-										<p>夏小强</p>	
-										</li>
-										<li class="cview-res-pdf">
-										<p>PDF.pdf</p>	
-										<p>夏小强</p>	
-										</li>
 									  </ul>
 									</div>
 									<div class="dthumb">
-									  <ul>
+									  <em class="unfold"><i class="icon-unfold-arrow"></i>展开所有资料</em>
+									  <!--ul>
 										<li><span class="cur"></span></li
 										><li><span></span></li
 										><li><span></span></li
 										><li><span></span></li
 										><li><span></span></li>
-									  </ul>
+									  </ul-->
 									  <a href="#modal-add-data" data-toggle="modal" class="btn-add-data btn">继续添加</a>
+									  <script type="text/javascript">
+										$(function(){
+											  var _height = $('.have-data .cdetail-data-list-wrap').height();
+											  $('.have-data .cdetail-data-list-wrap').hide();
+
+											  $('.have-data').live('click',function(){
+												$(this).find('.cdetail-data-list-wrap').css({'height':'104px'});
+												$(this).find('.cdetail-data-list').css({'height':'104px','overflow':'hidden'});
+											  $('.have-data .cdetail-data-list-wrap').fadeIn();
+											  });
+											$('.unfold').live('click',function(e){
+											  e.stopPropagation();
+											  if(!$(this).hasClass('fold')){
+												$(this).parent('.dthumb').siblings('.cdetail-data-list-wrap').css({'height':_height});
+												$(this).parent('.dthumb').siblings('.cdetail-data-list-wrap').find('.cdetail-data-list').css({'overflow':'visible','height':_height});
+												$(this).addClass('fold').html('<i class="icon-unfold-arrow"></i>收起资料');
+											  } else {
+												$(this).parent('.dthumb').siblings('.cdetail-data-list-wrap').css({'height':'104px'});
+												$(this).parent('.dthumb').siblings('.cdetail-data-list-wrap').find('.cdetail-data-list').css({'overflow':'hidden','height':'104px'});
+												$(this).removeClass('fold').html('<i class="icon-unfold-arrow"></i>展开所有资料');
+												}
+											});
+										});
+									  </script>
 									</div>
 									
 								  </div>

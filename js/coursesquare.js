@@ -40,6 +40,6 @@ function PicScroll(page){
   });
 }
 //初始化焦点图高度
-$('.pic_list img').eq(0).load(function(){ imgHeight = this.height; $('.recommend').height(imgHeight).show(); });
+$('.pic_list img').eq(0).load(function(){ imgHeight = this.height; $('.recommend').height(imgHeight).show(); $('.recommend .thumb').show();});
 //-------------------------------
 });
