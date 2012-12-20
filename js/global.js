@@ -127,6 +127,11 @@ $('#select-grade').change(function(){
    */
   $('#choose-class .controls').append('xxx');
 });
+
+//select美化
+$('select').sSelect();
+$('select.select-small').next('.dropselectbox').find('h4').css({'width':'125px','background-position':'108px center'});
+$('select.select-small').next('.dropselectbox').find('ul').css({'width':'125px'});
 //----------------------------------------
 });
 function PreviewData(){
@@ -147,3 +152,4 @@ function SetCourseScroll(obj,offset,curStep,pos){
 	  });
   });
 }
+
