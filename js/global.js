@@ -120,13 +120,13 @@ $('#import-outline li').live('click',function(){
 
 $('#modal-set-course .btn-group .btn').click(function(e){ e.stopPropagation(); });
 
-$('#select-grade').change(function(){
+/*$('#select-grade').change(function(){
   /*ajax获取选中年级下的班级list
 	   
    
    */
   $('#choose-class .controls').append('xxx');
-});
+});*/
 
 //select美化
 $('select').sSelect();
