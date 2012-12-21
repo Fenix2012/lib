@@ -57,7 +57,7 @@
 	<script type="text/javascript">
 	  var ALERT_SETTING = {
 	 	alert_con_msg : '这里是提示内容',//设置alert内容 
-		is_moment : true,//是否2S提示
+		is_moment : false,//是否2S提示
 		is_confirm: true,//是否有确认按钮
 		is_cancel : true,//是否有取消按钮
 		is_aside: '继续添加课程资料'//是否有aside,没有留空
@@ -66,7 +66,7 @@
 		  $('.btn-alert').click(function(){
 			insetAlert(ALERT_SETTING);
 			$('#alert').modal('show');
-			setTimeout(closeAlert,1500);
+			if(ALERT_SETTING.is_moment){ setTimeout(closeAlert,1500); }
 		  });
 	  })
 	</script>
