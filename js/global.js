@@ -124,7 +124,7 @@ $('#modal-set-course .btn-group .btn').click(function(e){ e.stopPropagation(); }
   /*ajax获取选中年级下的班级list
 	   
    
-   */
+   
   $('#choose-class .controls').append('xxx');
 });*/
 
