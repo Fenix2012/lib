@@ -43,7 +43,7 @@ input.form-login-submit:hover { background-position: 0 0; color: #fff;}
 .lib-menu-course { position: relative; /*float: left;*/ padding-left: 22px; float: left; margin: 0; padding-top: 15px; padding-bottom: 42px; }
 .lib-subnav { float: right; position: relative; top: -15px; right: 15px; border-bottom: 1px solid #d8d8d8; border-right: 1px solid #d8d8d8; border-radius: 4px; /*-webkit-background-clip:content-box; -webkit-background-origin: border;*/ box-shadow: 0 1px 1px #fff; }
 .lib-container { margin-bottom: 60px; border-radius: 5px; box-shadow: 1px 1px 5px #999; background-color: #fff;}
-.lib-container.row-fluid [class*="span"] { margin-left: 0; }
+.lib-container.row-fluid [class*="span"] { margin-left: 0; min-height: 400px; }
 .lib-con { padding: 20px; border-right: 1px solid #adb2bd;}
 .lib-sidebar { position: relative; padding: 35px 0 20px;}
 .lib-sidebar .lib-hd-bar { margin: 0 20px; /*border-top: 1px solid #adb2bd;*/ }
