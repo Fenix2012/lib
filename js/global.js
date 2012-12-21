@@ -1,30 +1,31 @@
 ﻿$(function(){
-//课程大纲资料预览
-$('.cdetail-data-list li').live('click',function(){ $('#modal-preview-data').modal(); });
 $('#modal-preview-data').on('shown', function () { PreviewData(); })
-
-
-
-//课程查看资料预览
-$('#cview-resource .btn-preview').live('click',function(){
-  $(this).next('.popover').css('left','2px');
-  $(this).next('.popover').find('.arrow').css('margin-left','-15%');
-});
-$('#cview-resource .btn-preview.btn').popover({
-	placement : 'bottom',
-  	html : true,
-  	content : PreviewData
-});
-
 //资料&笔记等的删除
-$('.cdetail-data-list li span').live('click',function(e){ e.stopPropagation(); Delete(); });
-function Delete(){
-  /*
-  $.ajax({
+$('#mod-course').find('.cdetail-data-list li span').live('click',function(event){  
+  event.stopPropagation();
+  if ( confirm('是否确认删除此课程资料?') )
+  {
+      var pid = $(event.target).attr('data-pid');
+      $.ajax({
+        'url' : libSchoolBaseUrl + 'teach/coursepost/delete&post_id=' + pid ,
+        'type' : 'post',
+        'success' : function(data){
+           try {
+               var json = eval( '(' + data + ')' );
+               if ( json.result == 'success' )
+              {
+                alert('删除成功');
+                $('#mod-course').find('.cdetail-data-list li[data-pid=' + json.pid + ']').remove();
+              }
+            }catch(e) {
+              alert('删除失败，请稍后重试');
+            }
+      }
 
-  });
-  */
-}
+    });
+    }
+ });
+
 //回答追问
 $('.ufeeds-answer').live('click',function(){
   questionAction($(this));
@@ -128,19 +129,55 @@ $('#modal-set-course .btn-group .btn').click(function(e){ e.stopPropagation(); }
   $('#choose-class .controls').append('xxx');
 });*/
 
+
 //select美化
 $('select').sSelect();
 $('select.select-small').next('.dropselectbox').find('h4').css({'width':'125px','background-position':'108px center'});
 $('select.select-small').next('.dropselectbox').find('ul').css({'width':'125px'});
-
-
-$('select.select-xsmall-right').parent('.dropdown').css({'float':'right'});
-$('select.select-xsmall-right').parent('.dropdown').find('h4').css({'width':'125px','height':'28px','line-height':'28px','background-position':'108px center','margin-top':'2px'});
-$('select.select-xsmall-right').parent('.dropdown').find('ul').css({'width':'125px'});
+//课程打分
+doGrade($('.course-rating-ul'));
 //----------------------------------------
 });
+var libedu_resource_manager = 
+{
+	play_pdf : function(json , area_element) {
+		if ( json.convert_complete == 0 ) {	
+			area_element.html( json.post_content );
+		}	
+		else
+		{
+			area_element.attr('id' , 'play-post-con');
+			area_element.FlexPaperViewer(
+					{ config : {
+		                SWFFile : json.post_content,
+		                Scale : 0.6,
+		                ZoomTransition : 'easeOut',
+		                ZoomTime : 0.5,
+		                ZoomInterval : 0.2,
+		                FitPageOnLoad : true,
+		                FitWidthOnLoad : false,
+		                FullScreenAsMaxWindow : false,
+		                ProgressiveLoading : false,
+		                MinZoomSize : 0.2,
+		                MaxZoomSize : 5,
+		                SearchMatchAll : false,
+		                InitViewMode : 'Portrait',
+		                RenderingOrder : 'flash,html',
+		                StartAtPage : '',
+		                ViewModeToolsVisible : true,
+		                ZoomToolsVisible : true,
+		                NavToolsVisible : true,
+		                CursorToolsVisible : true,
+		                SearchToolsVisible : true,
+		                WMode : 'window',
+		                localeChain: 'en_US'
+		            }}
+			);
+		}
+	},
+}
 function PreviewData(){
-	//alert('ajax加载资料预览数据');
+
 }
 function SetCourseScroll(obj,offset,curStep,pos){
   obj.live('click',function(){
@@ -180,4 +217,35 @@ function insetAlert(ALERT_SETTING){
   }
   alertHtml += '</p> </div> </div>';
   $('body').append(alertHtml);
+}
+function doGrade(obj){
+  	var index,
+		differ,
+		score;
+	obj.each(function(){
+		obj.find('li').on({
+			mouseenter : function (){
+				$(this).prevAll().addClass('rating-one');
+				index = $(this).index()+1;
+			},
+			mouseleave: function (){
+				$(this).removeClass('rating-half');
+			},
+			mousemove: function (e){
+				differ = parseFloat(e.pageX - $(e.target).offset().left);
+				if(differ < 9){
+					$(this).removeClass().addClass('rating-half');
+					score = (index-1)*2+1;
+				} else {
+					$(this).removeClass().addClass('rating-one');
+		  			score = index*2;
+				}
+				$(this).attr({'title' : score+'分' , 'data-score' : score});
+			},
+			click : function(){
+				//这里是打分ajax请求
+				alert($(this).attr('data-score'));	
+			}
+		});
+	});
 }
