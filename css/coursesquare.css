@@ -41,10 +41,10 @@
 .csquare-free { position: absolute; right:-8px; top:27px; width: 59px; height: 32px; background: url(../images/bg-csquare.png) 0 -106px no-repeat;}
 .csquare-pic { display: block; margin: 0 auto 10px; padding-top: 35px; width: 174px; width: 65%; height: 265px; height: auto; /*background: url(../images/bg-common.png) -825px -170px;*/ text-align: center;}
 .csquare-pic:after { content: ''; display: block; width: 60px; height: 35px; background-color: #000; /*position: absolute; bottom: -10px; left: 2px; */ margin: 0 auto; min-width: 100%; background: url(../images/bg-csquare-shadow.png) center top no-repeat; position:relative; top: -12px; z-index: 1; }
-.csquare-pic img { max-width: 100%; position: relative; z-index: 2;}
+.csquare-pic img { width: 174px; max-width: 100%; position: relative; z-index: 2;}
 .csquare-info { padding: 3px 15px 9px; border-width: 1px 0 1px; border-style: solid; border-color: #c2c2c2; position: relative; }
 .csquare-info h4 { }
-.csquare-info h4 a { font-size: 20px; color: #747474; text-decoration: none; }
+.csquare-info h4 a { font-size: 18px; color: #747474; text-decoration: none; }
 .csquare-info h4 span { font-size: 12px; position: absolute; right: 10px; top:15px; }
 .csquare-info h4 em { color: #327b00;}
 .csquare-info span a { color: #396ba4;}
@@ -86,7 +86,7 @@
 .pic_list img { max-width: 100%; display: block;}
 
 
-.thumb { position: absolute; left: 50%; bottom: 1%; width: 150px; margin-left: -75px; text-align: center; z-index: 9;}
+.thumb { position: absolute; left: 50%; bottom: 1%; width: 150px; margin-left: -75px; text-align: center; z-index: 9; display: none; }
 .thumb li { display: inline-block; margin: 0 3px; width: 15px; height: 15px;}
 .thumb span { cursor: pointer; display: block; width: 13px; height: 13px; background-color: #adadad; -webkit-border-radius: 40px; border-radius: 40px; background: -webkit-linear-gradient(#a9a9a9, #adadad); box-shadow: inset 0 1px 1px #666;}
 .thumb span:hover, .thumb span.cur{ background: #567ba5; background: -webkit-linear-gradient(#6182ae, #436e94); box-shadow: inset 0 1px 1px #666; }

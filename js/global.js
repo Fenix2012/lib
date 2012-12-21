@@ -157,4 +157,27 @@ function SetCourseScroll(obj,offset,curStep,pos){
 	  });
   });
 }
-
+function closeAlert(){
+  $('#alert').modal('hide');
+}
+function insetAlert(ALERT_SETTING){
+  var alertHtml = '';
+  alertHtml += '<div class="hide fade modal" id="alert"> <div class="modal-body">';
+  if(ALERT_SETTING.is_moment){
+	  alertHtml += '<p class="alert-con-moment alert-con"><span class="alert-con-msg"><i class="icon-mark"></i>'+ALERT_SETTING.alert_con_msg+'</span>';	
+  } else {
+	  alertHtml += '<p class="alert-con"> <span class="alert-con-msg"><i class="icon-mark"></i>'+ALERT_SETTING.alert_con_msg+'</span>';	
+	  if(ALERT_SETTING.is_aside){
+		alertHtml += '<span class="alert-con-aside" data-dismiss="modal">'+ALERT_SETTING.is_aside+'</span>';
+	  } 
+	  alertHtml += '</p> <p class="alert-operate">';
+	  if(ALERT_SETTING.is_confirm){
+		  alertHtml += '<a href="javascript:;" class="btn-darkblue btn btn-double" id="btn-confirm" data-dismiss="modal">确定</a>';	
+	  }
+	  if(ALERT_SETTING.is_cancel){
+		alertHtml += ' <a href="javascript:;" class="btn-darkblue btn btn-double" id="btn-cancel" data-dismiss="modal">取消</a>';  
+	  } 
+  }
+  alertHtml += '</p> </div> </div>';
+  $('body').append(alertHtml);
+}

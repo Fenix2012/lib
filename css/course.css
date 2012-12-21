@@ -47,6 +47,9 @@
 .course-visited img { width: 60px; height: 60px; }
 
 .dthumb { position: relative;}
+.dthumb .unfold { cursor: pointer; }
+.dthumb .unfold .icon-unfold-arrow { background: url(../images/icon.png) -10px -455px no-repeat; }
+.dthumb .fold .icon-unfold-arrow { background: url(../images/icon.png) -10px -455px no-repeat; -webkit-transform: rotateX(180deg);  }
 .no-data .accordion-heading { position: relative; }
 .lib-con .btn.btn-add-data { position: absolute; right:10px; top: 10px; color: #fff; font-size: 12px; text-shadow: none; background: -webkit-linear-gradient(top,#2ea4cb,#45a1c4,#619dbb); }
 .no-data .accordion-heading .btn.btn-add-data { top: 10px; }
