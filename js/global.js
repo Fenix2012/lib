@@ -216,12 +216,9 @@ function doGrade(obj){
 		score;
 	obj.each(function(){
 		obj.find('li').on({
-			mouseenter : function (){
-				$(this).prevAll().addClass('rating-one');
+			mouseover: function (){
+				$(this).prevAll().removeClass().addClass('rating-one');
 				index = $(this).index()+1;
-			},
-			mouseleave: function (){
-				$(this).removeClass('rating-half');
 			},
 			mousemove: function (e){
 				differ = parseFloat(e.pageX - $(e.target).offset().left);
@@ -236,8 +233,15 @@ function doGrade(obj){
 			},
 			click : function(){
 				//这里是打分ajax请求
+				//打分成功后解绑所有的事件并且移除course-rating-ul
+				$(this).unbind();
+				$(this).siblings().unbind();
+				$(this).parent('ul').unbind();
+				$(this).parent('ul').removeClass('course-rating-ul');
+
 				alert($(this).attr('data-score'));	
 			}
 		});
+		obj.on('mouseout',function(){ $(this).find('li').removeClass(); });
 	});
 }
