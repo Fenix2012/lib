@@ -16,6 +16,116 @@ $('.sidebar-switch').toggle(function(){
 Resize();
 $(window).resize(function(){ Resize();	});
 
+// 加载课程资料
+$('#post_view_res .cview-res ul li').live('click' , function(e){
+	var post_id   = $(this).attr('data-pid');
+	var post_type = $(this).attr('data-type');
+	$.ajax(
+			{
+				'url' : libSchoolBaseUrl + 'teach/coursepost/loadpost&pid=' + post_id,
+				'success' : function(data) {
+					var json = eval( '(' + data + ')' );
+					$('#cview-resource').html( CVIEW._get_single_post_code( json.post_type , json.post_title , json.post_desc , json.author_name , 
+							                              json.like_post_users  ) );
+					$('#cview-resource .btn-play').on( 'click' , function(){
+						CVIEW.GetPostContentToPlay( post_id );
+					});
+					if ( json.is_my_favorite > 0 )
+					{
+						$('.mark-like').addClass('cview-like');
+					}
+					else 
+					{
+						$('.mark-like').removeClass('cview-like');
+					}
+					$('.mark-like').attr('data-rid' , post_id );
+					$('.mark-like').attr('data-type' , json.post_type );
+					$('.mark-like').children('em').text( json.like_post_users.length );
+
+				}
+			}
+		);
+	
+} );
+//笔记Tab
+$('.cview-sidebar-nav .note').live('click',function(){ CVIEW.GetNote(); });
+
+//作业Tab
+$('.cview-sidebar-nav .task').live('click' , function(){ CVIEW.GetTaskList();} );
+//课程资料Tab
+$('.cview-sidebar-nav .resource').live( 'click' , function(){ CVIEW.GetPostList(); } );
+//问答Tab 
+$('.cview-sidebar-nav .question').live( 'click'  , function(){ CVIEW.GetQuestion(); } );
+
+//查看作业
+$('#cview-task .task li').live('click' , function(){ CVIEW.ViewTask( $(this).attr('data-tid') ); } );
+//添加笔记
+$('#btn-addnote').live('click',function(){ CVIEW.AddNote($(this)); });
+//添加提问
+$('#btn-add-question').live( 'click' , function(){ CVIEW.AddQuestion( $(this) ); } );
+//查看笔记
+$('#cview-note .note li').live('click',function(){ CVIEW.ViewNote($(this)); });
+//删除笔记
+$('#btn-delnote').live('click',function(){ CVIEW.DelNote( $(this) ); });
+//编辑笔记
+$('#btn-editnote').live('click',function(){ CVIEW.EditNote( $(this) ); });
+$('#cview-note .go-back').live('click' , function(){ CVIEW.GetNote(); } );
+$('#cview-resource .go-back').live( 'click' , function(){ CVIEW.GetPostList(); } );
+$('#cview-question .go-back').live( 'click' , function() { CVIEW.GetQuestion(); } );
+//绑定点击完成本节的功能。
+$('.mark-complete').live('click' , function(){
+	complete_item();	
+} );
+$('.mark-like').live('click' , function(){
+	var rid = $(this).attr('data-rid');
+	var type = $(this).attr('data-type');
+	var dolike = true;
+	if ( $(this).hasClass('cview-like') ) {
+		dolike = false;
+	}
+	if ( rid )
+	{
+		var url = '';
+		if ( dolike ) {
+			url = libSchoolBaseUrl + 'user/libuser/dofavor';
+		}else {
+			url = libSchoolBaseUrl + 'user/libuser/unfavor';
+		}
+		$.ajax( {
+			'url' : url ,
+			'type' : 'post',
+			'data' : { 'rsc_id' : rid , 'type' : type },
+			'success' : function(data) {
+				var json = eval('(' + data + ')');
+				if ( dolike ) {
+					$('.mark-like').addClass('cview-like');
+				}else {
+					$('.mark-like').removeClass('cview-like');
+				}
+				$('.mark-like').children('em').text( json.like_cnt );
+				if ( dolike )  {
+						alert('喜欢成功');
+				}else {
+					alert('取消喜欢');
+				}
+			},
+		} );
+	}
+});
+//前后章节切换
+$('.cview-list li').delegate('.lec-prev-next','click',function(){
+  var lectureHeight = $('.cview-list').height()+100;
+  if($(this).attr('id') == 'prev-lecture'){
+  	lecturePrevNext($('#prev-lecture'),lectureHeight);
+  } else {
+	lecturePrevNext($('#next-lecture'),-lectureHeight);
+  }
+});
+//----------------------------------------
+});
+function lecturePrevNext(obj,lectureHeight){
+	obj.parents('li').animate({'margin-top':lectureHeight+'px'},800);
+}
 function Resize(){
   var pageHeight = document.documentElement.clientHeight;
   //var videoGalleryHeight = $('.video-gallery').height()+78;
@@ -40,10 +150,10 @@ function Resize(){
   $('.cview-sidebar-list .note').height(pageHeight-160);
   $('#cview-note .loading-box').height(pageHeight-160);
 
-  	bind_text_submit_process();
-	bind_video_link_process();
-	bind_pdf_upload_process();
-	bind_ppt_upload_process();
+  	//bind_text_submit_process();
+	//bind_video_link_process();
+	//bind_pdf_upload_process();
+	//bind_ppt_upload_process();
 }
 
 function complete_item(){
@@ -152,25 +262,25 @@ function bind_video_link_process()
 	};
 	resource_uploader.bind_video_link_process();
 }
-function bind_text_submit_process()
-{
-	resource_uploader.text_submit_callback = function(data) {
-		var json = eval( '(' + data + ')' );
-			if ( json.result == "success" ) {
-				alert( '保存文本成功' );
-				$('#modal-add-data').modal('hide');
-				CVIEW.GetPostList();
-			}
-			else {
-				alert('保存文本失败了，请重试');
-				$('#modal-add-data').modal('hide');
-				CVIEW.GetPostList();
-			}
-			return false;
-
-	};
-	resource_uploader.bind_text_submit_process();
-}
+//function bind_text_submit_process()
+//{
+//	resource_uploader.text_submit_callback = function(data) {
+//		var json = eval( '(' + data + ')' );
+//			if ( json.result == "success" ) {
+//				alert( '保存文本成功' );
+//				$('#modal-add-data').modal('hide');
+//				CVIEW.GetPostList();
+//			}
+//			else {
+//				alert('保存文本失败了，请重试');
+//				$('#modal-add-data').modal('hide');
+//				CVIEW.GetPostList();
+//			}
+//			return false;
+//
+//	};
+//	resource_uploader.bind_text_submit_process();
+//}
 var CVIEW = {
 	_loadNoteEditFormCode : function() {
 		var url = libSchoolBaseUrl + 'teach/note/getaddnoteformcode';
@@ -861,102 +971,5 @@ var CVIEW = {
 
 	}
 }
-// 加载课程资料
-$('#post_view_res .cview-res ul li').live('click' , function(e){
-	var post_id   = $(this).attr('data-pid');
-	var post_type = $(this).attr('data-type');
-	$.ajax(
-			{
-				'url' : libSchoolBaseUrl + 'teach/coursepost/loadpost&pid=' + post_id,
-				'success' : function(data) {
-					var json = eval( '(' + data + ')' );
-					$('#cview-resource').html( CVIEW._get_single_post_code( json.post_type , json.post_title , json.post_desc , json.author_name , 
-							                              json.like_post_users  ) );
-					$('#cview-resource .btn-play').on( 'click' , function(){
-						CVIEW.GetPostContentToPlay( post_id );
-					});
-					if ( json.is_my_favorite > 0 )
-					{
-						$('.mark-like').addClass('cview-like');
-					}
-					else 
-					{
-						$('.mark-like').removeClass('cview-like');
-					}
-					$('.mark-like').attr('data-rid' , post_id );
-					$('.mark-like').attr('data-type' , json.post_type );
-					$('.mark-like').children('em').text( json.like_post_users.length );
-
-				}
-			}
-		);
-	
-} );
-//笔记Tab
-$('.cview-sidebar-nav .note').live('click',function(){ CVIEW.GetNote(); });
-
-//作业Tab
-$('.cview-sidebar-nav .task').live('click' , function(){ CVIEW.GetTaskList();} );
-//课程资料Tab
-$('.cview-sidebar-nav .resource').live( 'click' , function(){ CVIEW.GetPostList(); } );
-//问答Tab 
-$('.cview-sidebar-nav .question').live( 'click'  , function(){ CVIEW.GetQuestion(); } );
-
-//查看作业
-$('#cview-task .task li').live('click' , function(){ CVIEW.ViewTask( $(this).attr('data-tid') ); } );
-//添加笔记
-$('#btn-addnote').live('click',function(){ CVIEW.AddNote($(this)); });
-//添加提问
-$('#btn-add-question').live( 'click' , function(){ CVIEW.AddQuestion( $(this) ); } );
-//查看笔记
-$('#cview-note .note li').live('click',function(){ CVIEW.ViewNote($(this)); });
-//删除笔记
-$('#btn-delnote').live('click',function(){ CVIEW.DelNote( $(this) ); });
-//编辑笔记
-$('#btn-editnote').live('click',function(){ CVIEW.EditNote( $(this) ); });
-$('#cview-note .go-back').live('click' , function(){ CVIEW.GetNote(); } );
-$('#cview-resource .go-back').live( 'click' , function(){ CVIEW.GetPostList(); } );
-$('#cview-question .go-back').live( 'click' , function() { CVIEW.GetQuestion(); } );
-//绑定点击完成本节的功能。
-$('.mark-complete').live('click' , function(){
-	complete_item();	
-} );
-$('.mark-like').live('click' , function(){
-	var rid = $(this).attr('data-rid');
-	var type = $(this).attr('data-type');
-	var dolike = true;
-	if ( $(this).hasClass('cview-like') ) {
-		dolike = false;
-	}
-	if ( rid )
-	{
-		var url = '';
-		if ( dolike ) {
-			url = libSchoolBaseUrl + 'user/libuser/dofavor';
-		}else {
-			url = libSchoolBaseUrl + 'user/libuser/unfavor';
-		}
-		$.ajax( {
-			'url' : url ,
-			'type' : 'post',
-			'data' : { 'rsc_id' : rid , 'type' : type },
-			'success' : function(data) {
-				var json = eval('(' + data + ')');
-				if ( dolike ) {
-					$('.mark-like').addClass('cview-like');
-				}else {
-					$('.mark-like').removeClass('cview-like');
-				}
-				$('.mark-like').children('em').text( json.like_cnt );
-				if ( dolike )  {
-						alert('喜欢成功');
-				}else {
-					alert('取消喜欢');
-				}
-			},
-		} );
-	}
-});
-
-//----------------------------------------
-});
+//bind_text_submit_process
+//bind_video_link_process();

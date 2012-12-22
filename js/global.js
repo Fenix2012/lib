@@ -123,9 +123,11 @@ $('#modal-set-course .btn-group .btn').click(function(e){ e.stopPropagation(); }
 
 
 //select美化
-$('select').sSelect();
-$('select.select-small').next('.dropselectbox').find('h4').css({'width':'125px','background-position':'108px center'});
-$('select.select-small').next('.dropselectbox').find('ul').css({'width':'125px'});
+if($('select').length != 0){
+  $('select').sSelect();
+  $('select.select-small').next('.dropselectbox').find('h4').css({'width':'125px','background-position':'108px center'});
+  $('select.select-small').next('.dropselectbox').find('ul').css({'width':'125px'});
+}
 //课程打分
 doGrade($('.course-rating-ul'));
 //----------------------------------------
