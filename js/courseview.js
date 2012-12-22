@@ -113,18 +113,42 @@ $('.mark-like').live('click' , function(){
 	}
 });
 //前后章节切换
-$('.cview-list li').delegate('.lec-prev-next','click',function(){
-  var lectureHeight = $('.cview-list').height()+100;
-  if($(this).attr('id') == 'prev-lecture'){
-  	lecturePrevNext($('#prev-lecture'),lectureHeight);
+$('.cview-list').delegate('.lec-prev-next','click',function(event){
+  var lectureHeight = $('.cview-list').height();
+  var strLoading = '<div class="loading-box"><div class="loading-num">76%</div><div class="loading-text">课程正在加载中...</div></div>';
+  var e = event.target;
+
+  $('.cview-list').find('.loading-box').remove();
+  if($(this).hasClass('prev-lecture')){
+	$('.cview-list > li').prepend(strLoading);
+	$('.cview-list').find('.loading-box').css('margin-top','-530px');
+  	lecturePrevNext($('.prev-lecture'),lectureHeight,'prev');
   } else {
-	lecturePrevNext($('#next-lecture'),-lectureHeight);
+	$('.cview-list > li').append(strLoading);
+	$('.cview-list .loading-box').css('margin-top','405px');
+	lecturePrevNext($('.next-lecture'),-lectureHeight,'next',e);
   }
 });
+$('.lec-prev-next').undelegate('click');
 //----------------------------------------
 });
-function lecturePrevNext(obj,lectureHeight){
-	obj.parents('li').animate({'margin-top':lectureHeight+'px'},800);
+//top: 50%; margin-top: -80px; 
+function lecturePrevNext(obj,lectureHeight,pos,e){
+	obj.parents('.cview-list').children('li').animate({'margin-top':'+='+lectureHeight+'px'},800);
+
+	if( pos == 'next'){
+		$(e).parents('.cview-list').append(' <li> <a  class="prev-lecture lec-prev-next" href="#" title="上一章节"><span></span>交集并集</a> <div class="cview-top clearfix"> <span class="ch">第一章节</span> <span class="le">1.1.2</span> <span class="no">2</span> <h6>含绝对值的不等式解法</h6> <ul class="view-con-switch"> <li class="cur"></li> <li></li> <li></li> <li></li> </ul> </div> <div class="view-main"> <div class="view-main-text"> <p>111世行前行长佐利克在主题演讲中表示，如果中国不改变它的发展战略，可能会滑入中等收入陷阱，受到低收入以及低薪资经济体的挤压，同样也会来自技术和改革方面非常先进的经济体的挤压。他建议，首先中国应完成向市场经济的过渡。为了达到这个目标，中国需要重新定义政府的角色。同样，中国还需要进一步商业化其金融市场，并且要有独立的监管机构。中国的户籍制度也需要进一步的放开，并且农民的土地权益也应当得到保护，可以通过土地注册和租赁权益来得到保护。</p> <p>世行前行长佐利克在主题演讲中表示，如果中国不改变它的发展战略，可能会滑入中等收入陷阱，受到低收入以及低薪资经济体的挤压，同样也会来自技术和改革方面非常先进的经济体的挤压。他建议，首先中国应完成向市场经济的过渡。为了达到这个目标，中国需要重新定义政府的角色。同样，中国还需要进一步商业化其金融市场，并且要有独立的监管机构。中国的户籍制度也需要进一步的放开，并且农民的土地权益也应当得到保护，可以通过土地注册和租赁权益来得到保护。</p> <p>世行前行长佐利克在主题演讲中表示，如果中国不改变它的发展战略，可能会滑入中等收入陷阱，受到低收入以及低薪资经济体的挤压，同样也会来自技术和改革方面非常先进的经济体的挤压。他建议，首先中国应完成向市场经济的过渡。为了达到这个目标，中国需要重新定义政府的角色。同样，中国还需要进一步商业化其金融市场，并且要有独立的监管机构。中国的户籍制度也需要进一步的放开，并且农民的土地权益也应当得到保护，可以通过土地注册和租赁权益来得到保护。</p> <p>世行前行长佐利克在主题演讲中表示，如果中国不改变它的发展战略，可能会滑入中等收入陷阱，受到低收入以及低薪资经济体的挤压，同样也会来自技术和改革方面非常先进的经济体的挤压。他建议，首先中国应完成向市场经济的过渡。为了达到这个目标，中国需要重新定义政府的角色。同样，中国还需要进一步商业化其金融市场，并且要有独立的监管机构。中国的户籍制度也需要进一步的放开，并且农民的土地权益也应当得到保护，可以通过土地注册和租赁权益来得到保护。</p> <p>世行前行长佐利克在主题演讲中表示，如果中国不改变它的发展战略，可能会滑入中等收入陷阱，受到低收入以及低薪资经济体的挤压，同样也会来自技术和改革方面非常先进的经济体的挤压。他建议，首先中国应完成向市场经济的过渡。为了达到这个目标，中国需要重新定义政府的角色。同样，中国还需要进一步商业化其金融市场，并且要有独立的监管机构。中国的户籍制度也需要进一步的放开，并且农民的土地权益也应当得到保护，可以通过土地注册和租赁权益来得到保护。</p> <p>世行前行长佐利克在主题演讲中表示，如果中国不改变它的发展战略，可能会滑入中等收入陷阱，受到低收入以及低薪资经济体的挤压，同样也会来自技术和改革方面非常先进的经济体的挤压。他建议，首先中国应完成向市场经济的过渡。为了达到这个目标，中国需要重新定义政府的角色。同样，中国还需要进一步商业化其金融市场，并且要有独立的监管机构。中国的户籍制度也需要进一步的放开，并且农民的土地权益也应当得到保护，可以通过土地注册和租赁权益来得到保护。</p> <p>世行前行长佐利克在主题演讲中表示，如果中国不改变它的发展战略，可能会滑入中等收入陷阱，受到低收入以及低薪资经济体的挤压，同样也会来自技术和改革方面非常先进的经济体的挤压。他建议，首先中国应完成向市场经济的过渡。为了达到这个目标，中国需要重新定义政府的角色。同样，中国还需要进一步商业化其金融市场，并且要有独立的监管机构。中国的户籍制度也需要进一步的放开，并且农民的土地权益也应当得到保护，可以通过土地注册和租赁权益来得到保护。</p> </div></div> <div class="cview-bottom clearfix"> <!--去掉or增加mark即为完成与否的状态切换--> <span class="cview-complete mark-complete">完成本节</span> <a class="next-lecture lec-prev-next" href="javascript:;">下一章节</a> <h6>交集并集</h6> <span class="cview-like mark-like" title="点击喜欢">12<i class="icon-like"></i></span> </div> </li> ');
+	}	
+	$.ajax({
+		type : 'get',
+	  	url : '',
+		//beforeSend : function(){
+		//	 $('.cview-list').append('<li><div class="loading-box"><div class="loading-num">76%</div><div class="loading-text">课程正在加载中...</div></div></li>');
+		//},
+	  	//success : function(){
+
+		//}
+	});
 }
 function Resize(){
   var pageHeight = document.documentElement.clientHeight;
