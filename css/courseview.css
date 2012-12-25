@@ -51,8 +51,8 @@ a.next-lecture { float: left; position: relative; top: -5px; margin-right: 15px;
 .cview-sidebar-hd { position: relative; /*margin-top: 10px;*/ padding: 0 10px; height: 32px; line-height: 32px; border-top-left-radius: 2px; border-top-right-radius: 2px; background: url(../images/bg-course-view.jpg);}
 .cview-sidebar-hd span { color: #fff;}
 .cview-sidebar-hd i.icon-arrowdown { display: inline-block; position: relative; top: 5px; margin-right: 5px; width: 0; height: 0; border: 4px solid transparent; border-top: 4px solid #fff;}
-.cview-sidebar-hd a { float: right; display: block; width: 65px; height: 22px; line-height: 22px;  color: #373737; text-decoration: none; text-align: center; border-radius: 2px; background: -webkit-linear-gradient(top, #dfdeac, #ebe8ba, #dfdeac); }
-.cview-sidebar-hd .btn { position: absolute; right: 10px; top: 5px; padding: 0 8px; border-radius: 2px; font-size: 12px; }
+.cview-sidebar-hd a { float: right; display: block; width: 65px; height: 22px; line-height: 22px;  color: #373737; text-decoration: none; text-align: center; border-radius: 2px; /*background: -webkit-linear-gradient(top, #dfdeac, #ebe8ba, #dfdeac);*/ }
+.cview-sidebar-hd .btn { position: absolute; right: 10px; top: 5px; padding: 0 8px; border-radius: 2px; font-size: 12px; width: auto; }
 .cview-res-bd { margin: 0; padding: 0 0 10px; background-color: #f7f7f7; border: 1px solid #c1c1c1; border-top: none; border-bottom-left-radius: 2px; border-bottom-right-radius: 2px;}
 .cview-res-bd.all { border-radius: 0;}
 .cview-res-bd li { float: left; margin: 10px 10px 0; padding-left: 52px; width: 52px;/*min-width: 60px;*/  height: 42px; background: url(../images/icon.png) no-repeat; cursor: pointer;}
@@ -104,6 +104,7 @@ li.cview-res-pdf:hover { background-position: -454px -479px; }
 .cres-liked-bd a { color: #000; text-decoration: none;}
 
 .icon-plus { background: url(../images/icon.png) -53px -312px;}
+.cview-sidebar-hd .icon-plus { background-position: -53px -311px; margin-right: 0; }
 .cview-sidebar-list { margin-top: 10px; }
 .cview-sidebar-list ul { margin: 0; border: 1px solid #b1b1b1; border-radius: 4px; box-shadow: inset 1px 1px 2px #ccc, inset -1px -1px 2px #ccc;}
 .cview-sidebar-list > ul li { padding: 12px 20px 8px; border-bottom: 1px solid #b1b1b1; cursor: pointer;}

@@ -43,7 +43,7 @@ input.form-login-submit:hover { background-position: 0 0; color: #fff;}
 .lib-menu-course { position: relative; /*float: left;*/ padding-left: 22px; float: left; margin: 0; padding-top: 15px; padding-bottom: 42px; }
 .lib-subnav { float: right; position: relative; top: -15px; right: 15px; border-bottom: 1px solid #d8d8d8; border-right: 1px solid #d8d8d8; border-radius: 4px; /*-webkit-background-clip:content-box; -webkit-background-origin: border;*/ box-shadow: 0 1px 1px #fff; }
 .lib-container { margin-bottom: 60px; border-radius: 5px; box-shadow: 1px 1px 5px #999; background-color: #fff;}
-.lib-container.row-fluid [class*="span"] { margin-left: 0; min-height: 400px; }
+.lib-container.row-fluid [class*="span"] { margin-left: 0; min-height: 500px; }
 .lib-con { padding: 20px; border-right: 1px solid #adb2bd;}
 .lib-sidebar { position: relative; padding: 35px 0 20px;}
 .lib-sidebar .lib-hd-bar { margin: 0 20px; /*border-top: 1px solid #adb2bd;*/ }
@@ -82,15 +82,11 @@ input.form-login-submit:hover { background-position: 0 0; color: #fff;}
 .btn-submod.active { border: 1px solid #747474; box-shadow: inset 0 1px 1px rgba(255,255,255,0.4); background: -webkit-linear-gradient(top, #75819D, #616E8B, #475574); color: #fff; text-shadow: 1px 1px 1px #333; }
 i.icon-btn-submod { background: url(../images/icon.png) -138px -308px no-repeat; width: 20px; height: 20px; position: absolute; top: 30px; left: 30%; top: 50%; margin-top: -10px;}
 
-
 i.btn-icon { display: inline-block; position: relative; top: 8px; width: 20px; margin-right: 15px; height: 20px; background: url(../images/icon-small.png) no-repeat; cursor: pointer;}
 i.btn-icon:hover { opacity: 0.7;}
-
 /*icon*/
 [class^="icon-"], [class*=" icon-"] { width: 18px; height: 18px; line-height: 18px; margin: -1px 8px 0 0; }
 .icon-duration { background: url(../images/icon-small.png) 0 -36px;}
-
-
 /*顶部*/
 #header { padding-top: 53px; /*height: 51px;*/ background: url(../images/bg-header.png) repeat; /*overflow: hidden;*/}
 #logo { /*width: 250px;*/ height: 30px; padding-top: 10px; padding-right: 10px; font: italic bold 20px Microsoft YaHei; color: #fff; overflow: hidden; }
@@ -398,12 +394,35 @@ input.type-file-file{ position: absolute; top: 10px; left: 35px; opacity: 1; wid
 #alert { width: 440px; height: 118px; margin-top: -75px; margin-left: -240px; padding: 0 8px; background: #fff; }
 #alert p { margin: 0; }
 #alert .icon-mark { margin-top: -6px; width: 28px; height: 28px; background: url(../images/icon.png) -73px -449px; }
+#alert i { margin-top: -6px; width: 28px; height: 28px; background: url(../images/icon-alert.png); }
+#alert .icon-alert-notice { background-position: 0 0;}
+#alert .icon-alert-error { background-position: 0 -35px; }
+#alert .icon-alert-warning { background-position: 0 -70px; }
+#alert .icon-alert-confirmation { background-position: 0 -106px; }
 #alert .modal-body { padding: 0; height: 100%; background: #fff; }
 #alert .alert-con { margin: 0; margin: 20px 5px; height: 30px; line-height: 30px; font-size: 14px;  }
 #alert .alert-operate { text-align: center; }
-#alert .alert-operate .btn { width: 99%; }
+#alert .alert-operate .btn { width: 99%; padding: 0; }
 #alert .alert-operate .btn-double { width: 49%; }
 #alert .alert-con-aside { float: right; color: #6D7A96; cursor: pointer; }
 
 #alert .alert-con-moment { margin: 42px 5px; text-align: center; }
-#alert .alert-con-moment .icon-mark { margin-right: 25px; 
+#alert .alert-con-moment .icon-mark { margin-right: 25px; }
+
+
+/*mydata*/
+#ucenter-mydata .lib-wide-hd { margin-top: 50px; }
+#ucenter-mydata .lib-con { padding: 0; }
+#ucenter-mydata .lib-hd-bar { padding: 0; height: 40px; line-height: 40px; background: #6C829B; border-radius: 0; }
+#ucenter-mydata .lib-con .nav-tabs li { top: 0; }
+#ucenter-mydata .lib-con .nav-tabs a { position: relative; display: block; padding: 0; line-height: 40px; padding: 0 30px; }
+#ucenter-mydata .lib-con .nav-tabs a:hover { background: none; border-color: transparent; } 
+#ucenter-mydata .lib-con .nav-tabs li.active a { background: none; border-color: transparent; color: #fff; }
+#ucenter-mydata .lib-con .nav-tabs li.active a:after, #ucenter-mydata .lib-con .nav-tabs a:hover:after { position: absolute; left: 50%; bottom: 1px; margin-left: -8px; content: ''; display:block; width: 0; height: 0; border-bottom: 8px solid #fff; border-left: 8px solid transparent; border-right: 8px solid transparent; }
+
+
+
+#ucenter-mydata .lib-sidebar { padding-top: 20px; padding-left: 20px; }
+#ucenter-mydata .btn-submod { margin-bottom: 20px; text-indent: 0; }
+/*loading-box*/
+.loading-box { text-align: center; }

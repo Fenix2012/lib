@@ -1,30 +1,36 @@
 ﻿$(function(){
 $('#modal-preview-data').on('shown', function () { PreviewData(); })
 //资料&笔记等的删除
-$('#mod-course').find('.cdetail-data-list li span').live('click',function(event){  
-  event.stopPropagation();
-  if ( confirm('是否确认删除此课程资料?') )
-  {
-      var pid = $(event.target).attr('data-pid');
-      $.ajax({
-        'url' : libSchoolBaseUrl + 'teach/coursepost/delete&post_id=' + pid ,
-        'type' : 'post',
-        'success' : function(data){
-           try {
-               var json = eval( '(' + data + ')' );
-               if ( json.result == 'success' )
-              {
-                alert('删除成功');
-                $('#mod-course').find('.cdetail-data-list li[data-pid=' + json.pid + ']').remove();
-              }
-            }catch(e) {
-              alert('删除失败，请稍后重试');
-            }
-      }
-
-    });
-    }
- });
+/*ALERT参数说明
+  alert_con_msg : '是否确认删除该课程资料',//设置alert内容 
+  alert_type : 'confirmation',//notice(√),error(x),warning(!),confirmation(?)
+  is_aside: ''//是否有aside,没有留空
+*/
+$('#mod-course').find('.cdetail-data-list li span').live('click',function(event){
+	event.stopPropagation();
+	insetAlert('confirmation','是否确认删除此课程资料');
+	$('#alert').delegate('#btn-confirm','click',function(){ 
+		var pid = $(event.target).attr('data-pid');
+		$.ajax({
+		  'url' : libSchoolBaseUrl + 'teach/coursepost/delete&post_id=' + pid ,
+		  'type' : 'post',
+		  'success' : function(data){
+			 try {
+				 var json = eval( '(' + data + ')' );
+				 if ( json.result == 'success' )
+				{
+				  //alert('删除成功');
+				  insetAlert('notice','删除成功');
+				  $('#mod-course').find('.cdetail-data-list li[data-pid=' + json.pid + ']').remove();
+				}
+			  }catch(e) {
+				//alert('删除失败，请稍后重试');
+				insetAlert('notice','删除失败，请稍后重试');
+			  }
+		}
+		});
+	})
+});
 
 //回答追问
 $('.ufeeds-answer').live('click',function(){
@@ -196,29 +202,28 @@ function SetCourseScroll(obj,offset,curStep,pos){
 	  });
   });
 }
-function closeAlert(){
-  $('#alert').modal('hide');
-}
-function insetAlert(ALERT_SETTING){
+function closeAlert(){ $('#alert').modal('hide'); }
+function insetAlert(alert_type,alert_con_msg,is_aside){
+  $('body').find('#alert, .modal-backdrop').remove();
   var alertHtml = '';
   alertHtml += '<div class="hide fade modal" id="alert"> <div class="modal-body">';
-  if(ALERT_SETTING.is_moment){
-	  alertHtml += '<p class="alert-con-moment alert-con"><span class="alert-con-msg"><i class="icon-mark"></i>'+ALERT_SETTING.alert_con_msg+'</span>';	
+  if(alert_type == 'notice'){
+	alertHtml += '<p class="alert-con-moment alert-con"><span class="alert-con-msg"><i class="icon-alert-'+alert_type+'"></i>'+alert_con_msg+'</span>';	
+	setTimeout(closeAlert,1200); 
   } else {
-	  alertHtml += '<p class="alert-con"> <span class="alert-con-msg"><i class="icon-mark"></i>'+ALERT_SETTING.alert_con_msg+'</span>';	
-	  if(ALERT_SETTING.is_aside){
-		alertHtml += '<span class="alert-con-aside" data-dismiss="modal">'+ALERT_SETTING.is_aside+'</span>';
-	  } 
+	  alertHtml += '<p class="alert-con"> <span class="alert-con-msg"><i class="icon-alert-'+alert_type+'"></i>'+alert_con_msg+'</span>';	
+	  if(is_aside){ alertHtml += '<span class="alert-con-aside" data-dismiss="modal">'+is_aside+'</span>'; } 
 	  alertHtml += '</p> <p class="alert-operate">';
-	  if(ALERT_SETTING.is_confirm){
-		  alertHtml += '<a href="javascript:;" class="btn-darkblue btn btn-double" id="btn-confirm" data-dismiss="modal">确定</a>';	
-	  }
-	  if(ALERT_SETTING.is_cancel){
+	  if(alert_type == 'error' || alert_type == 'warning' ){
+		alertHtml += '<a href="javascript:;" class="btn-darkblue btn btn-double" id="btn-confirm-cancel" data-dismiss="modal" style="width:99%;">确定</a>';	
+	  } else {
+		alertHtml += '<a href="javascript:;" class="btn-darkblue btn btn-double" id="btn-confirm" data-dismiss="modal">确定</a>';	
 		alertHtml += ' <a href="javascript:;" class="btn-darkblue btn btn-double" id="btn-cancel" data-dismiss="modal">取消</a>';  
-	  } 
+	  }
   }
   alertHtml += '</p> </div> </div>';
   $('body').append(alertHtml);
+  $('#alert').modal('show');
 }
 function doGrade(obj){
   	var index,

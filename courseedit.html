@@ -64,8 +64,10 @@
 	  }
 	  $(function(){
 		  $('.btn-alert').click(function(){
+
 			insetAlert(ALERT_SETTING);
 			$('#alert').modal('show');
+
 			if(ALERT_SETTING.is_moment){ setTimeout(closeAlert,1500); }
 		  });
 	  })
