@@ -413,10 +413,10 @@ input.type-file-file{ position: absolute; top: 10px; left: 35px; opacity: 1; wid
 /*mydata*/
 #ucenter-mydata .lib-wide-hd { margin-top: 50px; }
 #ucenter-mydata .lib-con { padding: 0; }
-#ucenter-mydata .lib-hd-bar { padding: 0; height: 40px; line-height: 40px; background: #6C829B; border-radius: 0; }
+#ucenter-mydata .lib-hd-bar { padding: 0; height: 40px; line-height: 40px; background: #6C829B; border-radius: 0; overflow: hidden; }
 #ucenter-mydata .lib-con .nav-tabs li { top: 0; }
-#ucenter-mydata .lib-con .nav-tabs a { position: relative; display: block; padding: 0; line-height: 40px; padding: 0 30px; }
-#ucenter-mydata .lib-con .nav-tabs a:hover { background: none; border-color: transparent; } 
+#ucenter-mydata .lib-con .nav-tabs a { position: relative; display: block; padding: 0; line-height: 40px; padding: 0 30px; color: #fff; text-shadow: 1px 1px 1px #666; }
+#ucenter-mydata .lib-con .nav-tabs a:hover { background: none; border-color: transparent; color: #D5E0EC; } 
 #ucenter-mydata .lib-con .nav-tabs li.active a { background: none; border-color: transparent; color: #fff; }
 #ucenter-mydata .lib-con .nav-tabs li.active a:after, #ucenter-mydata .lib-con .nav-tabs a:hover:after { position: absolute; left: 50%; bottom: 1px; margin-left: -8px; content: ''; display:block; width: 0; height: 0; border-bottom: 8px solid #fff; border-left: 8px solid transparent; border-right: 8px solid transparent; }
 
@@ -424,5 +424,24 @@ input.type-file-file{ position: absolute; top: 10px; left: 35px; opacity: 1; wid
 
 #ucenter-mydata .lib-sidebar { padding-top: 20px; padding-left: 20px; }
 #ucenter-mydata .btn-submod { margin-bottom: 20px; text-indent: 0; }
+
+#ucenter-mydata .tab-pane { padding: 0; }
+#ucenter-mydata .tab-pane ul.mydata-list { margin: 0; padding: 40px 0; }
+#ucenter-mydata .tab-pane ul.mydata-list li { float: left; margin: 0 6% 20px; text-align: center; }
+#ucenter-mydata p { padding: 0; margin: 0 auto; width: 60px; height: 71px;  background: url(../images/icon-feeds.png);}
+#ucenter-mydata span { display: block; }
+#ucenter-mydata .video p { background-position: 0 0; }
+#ucenter-mydata .video:hover p { background-position: -71px 0; }
+#ucenter-mydata .text p { background-position: 0 -71px; }
+#ucenter-mydata .text:hover p { background-position: -71px -71px; }
+#ucenter-mydata .ppt p { background-position: 0 -142px; }
+#ucenter-mydata .ppt:hover p { background-position: -71px -142px; }
+#ucenter-mydata .pdf p { background-position: 0 -213px; }
+#ucenter-mydata .pdf:hover p { background-position: -71px -213px; }
+#ucenter-mydata .icon-likenum { margin-right: 5px; width: 20px; background: url(../images/icon.png) 0 -262px no-repeat;}
+#ucenter-mydata .pagination { text-align: center; }
+#ucenter-mydata .pagination ul { float: none; }
+	.pagination ul li a { color: #6D7A96;}
+#ucenter-mydata .pagination form { position: relative; top: -10px; }
 /*loading-box*/
 .loading-box { text-align: center; }
