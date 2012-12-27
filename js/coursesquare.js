@@ -3,7 +3,11 @@
 $("#select-course").sSelect();
 $("#select-grade").sSelect();
 //增加序号和FREE图标
-$('.csquare-clist>li').each(function(i){ if(i < 3){ $(this).append('<span class="csquare-rank"></span>'); } });
+$('.row-fluid .span3').each(function(i){
+  if(i < 3){
+ 	$(this).find('ul li:eq(0)').append('<span class="csquare-rank"></span>');
+  }
+});
 $('li.free').append('<span class="csquare-free"></span>');
 //大图轮播
 var len = $('.pic_list li').length;
@@ -41,5 +45,25 @@ function PicScroll(page){
 }
 //初始化焦点图高度
 $('.pic_list img').eq(0).load(function(){ imgHeight = this.height; $('.recommend').height(imgHeight).show(); $('.recommend .thumb').show();});
+$('.csquare-detail .cdetail-addbtn a.btn-large').live( 'click' , function() {
+	var cid = $(this).attr('data-cid');
+	$.ajax( {
+			'url' : libSchoolBaseUrl + 'teach/course/userapplycourse&course=' + cid,
+			'success' : function(data) {
+			try{
+					var json = eval('(' + data + ')' );
+					if ( json.result == 'success' ) {
+						alert('添加课程成功');
+						window.location.href = libSchoolBaseUrl + 'teach/course/coursehome&course_id=' + cid;
+					}else {
+						alert('添加课程错误，请稍后重试');
+					}
+			}catch(e) {
+				alert('数据有误');
+			}
+				
+			},
+		});
+});
 //-------------------------------
 });
