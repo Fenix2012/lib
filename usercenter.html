@@ -847,8 +847,8 @@
     <p>对话框内容</p>
   </div>
 </div>
-<div class="hide fade modal" id="modal-set-course">
-<!--div class="modal" id="modal-set-course"-->
+<!--div class="hide fade modal" id="modal-set-course"-->
+<div class="modal" id="modal-set-course">
   <div class="modal-header">
 	<a class="close" data-dismiss="modal"></a>
 	<h3>创建课程</h3>
@@ -971,10 +971,126 @@
 				  </li>
 			  </ul>
 			</div> 
-		 	<div class="tab-pane" id="edit-outline" style="padding-top: 80px; text-align: center; font-size: 16px; ">编辑大纲功能暂未开放:)</div>
+			<div class="tab-pane" id="edit-outline">
+				<style type="text/css">
+					#edit-outline { padding: 20px; color: #fff; }
+					#edit-outline .item { margin-bottom: 10px; }
+					#edit-outline input { margin-top: 8px; margin-left: 20px; padding: 0;  width: 70%; height: 30px; color: #ccc; border: none; border-radius: 0; -webkit-box-flex: 1; display: block; }
+					#edit-outline h6 { margin: 0 0 10px 0; display: -webkit-box; padding: 0 10px 0 20px; height: 46px; line-height: 46px;}
+					#edit-outline h6 p { display: inline-block; margin-left: 20px; }
+
+					.item h6 { background: #6a7589;}
+					.item .item h6{ background: #acb3c3; }
+					.item > .item { margin-left: 20px; }
+					.item > .create { margin-left: 20px; background: #acb3c3; }
+
+					.create	{ padding: 0 10px 0 20px; height: 46px; line-height: 46px; background: #6a7589;}	
+
+					.btn-update { margin-top: 10px; width: 55px; height: 26px; line-height: 26px; text-align: center; font-size: 12px; color: #fff; background: -webkit-linear-gradient(top,#44515F,#44515F); cursor: pointer; }
+					.create { cursor: pointer; }
+					.create:hover { color: #fafafa;}
+					.icon-setcourse-plus { display: inline-block; margin-right: 10px; width: 17px; height: 17px; background: url(images/icon.png) -423px -106px no-repeat; }
+
+				</style>
+				<div class="create" id="chapter-create" title="创建新的章"><i class="icon-setcourse-plus"></i>创建新的章</div>
+			</div>
 		  </div>
 		</div>
 	  </div>
+	  <script type="text/javascript">
+
+		  var outlineData = [];
+		  //章节id
+		  var cid = 1;
+		  var sid = 1;
+		  var ssid = 1;
+		  var chapter = 0;
+		  var section = 0;
+		  var subSection = 0;
+			var outline = {
+				chapterHtml : function(cid){
+					  return '<div class="item"><h6 data-cid="'+cid+'" data-level="1"><span class="item-num">第'+cid+'章</span><input class="item-input" id="" name="" type="text" placeholder="输入本章名" /></h6><div class="create" id="section-create" title="创建新的节"><i class="icon-setcourse-plus"></i>创建新的节</div></div>';
+				},
+				sectionHtml : function(sid){
+					return '<div class="item"><h6 data-sid="'+sid+'" data-level="2"><span class="item-num">第'+sid+'节</span><input class="item-input" id="" name="" type="text" placeholder="输入本节名" /></h6><div class="create" id="sub-section-create" title="创建新的小节"><i class="icon-setcourse-plus"></i>创建新的小节</div></div>';			  
+				},
+				subSectionHtml : function(ssid){
+					return '<div class="item"><h6 data-ssid="'+ssid+'" data-level="3"><span class="item-num">第'+ssid+'小节</span><input class="item-input" id="" name="" type="text" placeholder="输入本小节名" /></h6></div>';
+				},
+				createJson : function(chapter,section,subSection,itemContent){
+					//for(i=0;i==chapter;i++){
+
+				console.log(chapter+','+section+','+subSection);
+						outlineData[chapter] = {};
+						outlineData[chapter].chapterName = itemContent;
+						if(section != 0){
+							outlineData[chapter].section = [];
+							outlineData[chapter].section[section] = {};
+							outlineData[chapter].section[section].sectionName = itemContent;
+							if(subSection != 0){
+								outlineData[chapter].section[section].subSection = [];
+								outlineData[chapter].section[section].subSection[subSection]= itemContent;
+							}
+						}
+						//outlineData[chapter].section[section].subSection[subSection]= itemContent;
+					//}
+					console.log(outlineData);
+				},
+				save : function(itemContent){
+					$.ajax({
+						type : 'POST',
+						url : '',
+						success : function(){
+							console.log(itemContent);		
+						}
+					});	
+				}
+			}
+			$('#edit-outline').delegate('#chapter-create','click',function(){
+					$(this).before(outline.chapterHtml(cid));
+					cid++;
+					sid =1;
+					ssid =1;
+			});
+
+			$('#edit-outline').delegate('#section-create','click',function(){
+					$(this).before(outline.sectionHtml(sid));
+					sid++;
+					ssid =1;
+			});
+			$('#edit-outline').delegate('#sub-section-create','click',function(){
+					$(this).before(outline.subSectionHtml(ssid));
+					ssid++;
+			});
+			$('#edit-outline').delegate('.item-input','blur',function(){
+				//input值
+				var itemContent = $(this).val();
+				//层级
+				var level = $(this).parent('h6').attr('data-level');
+
+				chapter = $(this).parents('.item').find('h6[data-level="1"]').attr('data-cid');
+				if(level == '2'){
+					section = $(this).parent('h6').attr('data-sid');
+				}
+				if(level == '3'){
+					section = $(this).parents('.item').find('h6[data-level="2"]').attr('data-sid');
+					subSection = $(this).parent('h6').attr('data-ssid');
+				}
+				outline.createJson(chapter,section,subSection,itemContent);
+				$(this).replaceWith('<p>'+itemContent+'</p>');
+//var outlineData = [];
+//outlineData[0] = {};
+//outlineData[1] = {};
+//outlineData[0].chapterName = '1';
+//outlineData[0].section = [];
+//outlineData[0].section[0] = {};
+//outlineData[0].section[0].sectionName = '1.1';
+//outlineData[0].section[0].subSection = [];
+//outlineData[0].section[0].subSection[0]='1.1.1';
+//outlineData[0].section[0].subSection[1]='1.1.2';
+
+			});
+	  </script>
 	</form>
 	<div class="btn-step-info-ft set-course-ft control-group">
 	  <a href="javascript:;" class="btn-step-info btn-darkblue btn" id="btn-step-info">下一步</a>
