@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>大纲树_励博教育</title>
+<script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+var outline = {
+chapter : [
+	{
+		name : '这里是第1章标题',
+		section : [
+			{
+				name : '这里是第1.1节标题',
+				sub : [
+					'这里是第1.1.1节标题',
+					'这里是第1.1.2节标题'	
+				],
+			},
+			{
+				name : '这里是第1.2节标题',
+				sub : [
+					'这里是第1.2.1节标题',
+					'这里是第1.2.2节标题'	
+				],
+			}
+		],
+	},
+	{
+		name : '这里是第2章标题',
+		section : [
+			{
+				name : '这里是第2.1节标题',
+				sub : [
+					'这里是第2.1.1节标题',
+					'这里是第2.1.2节标题'	
+				],
+			},
+			{
+				name : '这里是第2.2节标题',
+				sub : [
+					'这里是第2.2.1节标题',
+					'这里是第2.2.2节标题'	
+				],
+			}
+		],
+	}
+]
+}
+
+var str = "大纲：{\n"; 
+//console.log(outline.chapter[0].section);
+for(var i = 0; i < outline.chapter.length; i++) { 
+	if(outline.chapter[i].section != null) { 
+		str += outline.chapter[i].name + "{"; 
+		for(var j = 0; j < outline.chapter[i].section.length; j++) 
+		{ 
+			if(outline.chapter[i].section[j] != null) { 
+				str += outline.chapter[i].section[j].name + "{"; 
+				for(var k = 0; k < outline.chapter[i].section[j].sub.length; k++) { 
+					str += outline.chapter[i].section[j].sub[k]; 
+					if(k != outline.chapter[i].section[j].sub.length - 1) { 
+						str += ","; 
+					} 
+				} 
+				str += "}"; 
+			} 
+		} 
+		str += "}\n"; 
+	} 
+} 
+str += "}"; 
+console.log(str); 
+</script>
+</head>
+<body>
+
+</body>
+</html>

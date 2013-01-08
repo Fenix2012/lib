@@ -848,7 +848,7 @@
   </div>
 </div>
 <!--div class="hide fade modal" id="modal-set-course"-->
-<div class="modal" id="modal-set-course">
+<div class="modal" id="modal-set-course" style="position: absolute; top:0; margin-top: 0;">
   <div class="modal-header">
 	<a class="close" data-dismiss="modal"></a>
 	<h3>创建课程</h3>
@@ -998,65 +998,68 @@
 		</div>
 	  </div>
 	  <script type="text/javascript">
-
-		  var outlineData = [];
-		  //章节id
-		  var cid = 1;
-		  var sid = 1;
-		  var ssid = 1;
-		  var chapter = 0;
-		  var section = 0;
-		  var subSection = 0;
 			var outline = {
 				chapterHtml : function(cid){
-					  return '<div class="item"><h6 data-cid="'+cid+'" data-level="1"><span class="item-num">第'+cid+'章</span><input class="item-input" id="" name="" type="text" placeholder="输入本章名" /></h6><div class="create" id="section-create" title="创建新的节"><i class="icon-setcourse-plus"></i>创建新的节</div></div>';
+					  return '<div class="item"><h6 data-cid="'+(cid+1)+'" data-level="1"><span class="item-num">第'+(cid+1)+'章</span><input class="item-input" id="" name="" type="text" placeholder="输入本章名" /></h6><div class="create" id="section-create" title="创建新的节"><i class="icon-setcourse-plus"></i>创建新的节</div></div>';
 				},
 				sectionHtml : function(sid){
-					return '<div class="item"><h6 data-sid="'+sid+'" data-level="2"><span class="item-num">第'+sid+'节</span><input class="item-input" id="" name="" type="text" placeholder="输入本节名" /></h6><div class="create" id="sub-section-create" title="创建新的小节"><i class="icon-setcourse-plus"></i>创建新的小节</div></div>';			  
+					return '<div class="item"><h6 data-sid="'+(sid+1)+'" data-level="2"><span class="item-num">第'+(sid+1)+'节</span><input class="item-input" id="" name="" type="text" placeholder="输入本节名" /></h6><div class="create" id="sub-section-create" title="创建新的小节"><i class="icon-setcourse-plus"></i>创建新的小节</div></div>';			  
 				},
 				subSectionHtml : function(ssid){
-					return '<div class="item"><h6 data-ssid="'+ssid+'" data-level="3"><span class="item-num">第'+ssid+'小节</span><input class="item-input" id="" name="" type="text" placeholder="输入本小节名" /></h6></div>';
+					return '<div class="item"><h6 data-ssid="'+(ssid+1)+'" data-level="3"><span class="item-num">第'+(ssid+1)+'小节</span><input class="item-input" id="" name="" type="text" placeholder="输入本小节名" /></h6></div>';
 				},
-				createJson : function(chapter,section,subSection,itemContent){
-					//for(i=0;i==chapter;i++){
-
-				console.log(chapter+','+section+','+subSection);
-						outlineData[chapter] = {};
-						outlineData[chapter].chapterName = itemContent;
-						if(section != 0){
-							outlineData[chapter].section = [];
-							outlineData[chapter].section[section] = {};
-							outlineData[chapter].section[section].sectionName = itemContent;
-							if(subSection != 0){
-								outlineData[chapter].section[section].subSection = [];
-								outlineData[chapter].section[section].subSection[subSection]= itemContent;
-							}
-						}
-						//outlineData[chapter].section[section].subSection[subSection]= itemContent;
-					//}
-					console.log(outlineData);
+				createJson : function(level,itemContent){
+					 switch(level){
+					     case '1' : 
+							 chapterObj.name = itemContent;
+							 outlineData.chapter.push(chapterObj);
+							 //console.log(outlineData);
+					     break;
+					     case '2' :
+							 sectionObj.name = itemContent;
+							 chapterObj.section.push(sectionObj);
+							 //console.log(outlineData);
+						 break;
+					     case '3' :
+							 sectionObj.sub.push(itemContent);
+							 console.log(outlineData);
+						 break;
+					 }
 				},
-				save : function(itemContent){
+				save : function(){
+					//完成按钮触发，ajax向后台发送数据outlineData
 					$.ajax({
 						type : 'POST',
 						url : '',
 						success : function(){
-							console.log(itemContent);		
+							//console.log(itemContent);		
 						}
 					});	
+			    },
+				init : function() {
+					outlineData = { chapter : [] };
+					chapterObj = { name : '', section : [] };
+					sectionObj = { name : '', sub : [] };
+					//章节id
+					cid = 0;
+					sid = 0;
+					ssid = 0;
 				}
 			}
+
+			outline.init();
+
 			$('#edit-outline').delegate('#chapter-create','click',function(){
 					$(this).before(outline.chapterHtml(cid));
 					cid++;
-					sid =1;
-					ssid =1;
+					sid =0;
+					ssid =0;
 			});
 
 			$('#edit-outline').delegate('#section-create','click',function(){
 					$(this).before(outline.sectionHtml(sid));
 					sid++;
-					ssid =1;
+					ssid =0;
 			});
 			$('#edit-outline').delegate('#sub-section-create','click',function(){
 					$(this).before(outline.subSectionHtml(ssid));
@@ -1067,29 +1070,10 @@
 				var itemContent = $(this).val();
 				//层级
 				var level = $(this).parent('h6').attr('data-level');
-
-				chapter = $(this).parents('.item').find('h6[data-level="1"]').attr('data-cid');
-				if(level == '2'){
-					section = $(this).parent('h6').attr('data-sid');
-				}
-				if(level == '3'){
-					section = $(this).parents('.item').find('h6[data-level="2"]').attr('data-sid');
-					subSection = $(this).parent('h6').attr('data-ssid');
-				}
-				outline.createJson(chapter,section,subSection,itemContent);
+				outline.createJson(level,itemContent);
 				$(this).replaceWith('<p>'+itemContent+'</p>');
-//var outlineData = [];
-//outlineData[0] = {};
-//outlineData[1] = {};
-//outlineData[0].chapterName = '1';
-//outlineData[0].section = [];
-//outlineData[0].section[0] = {};
-//outlineData[0].section[0].sectionName = '1.1';
-//outlineData[0].section[0].subSection = [];
-//outlineData[0].section[0].subSection[0]='1.1.1';
-//outlineData[0].section[0].subSection[1]='1.1.2';
-
 			});
+
 	  </script>
 	</form>
 	<div class="btn-step-info-ft set-course-ft control-group">
