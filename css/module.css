@@ -1,4 +1,5 @@
-﻿#mod-task .lib-con, 
+﻿#mod-course .lib-con, 
+#mod-task .lib-con, 
 #mod-statistics .lib-con, 
 #mod-video .lib-con { padding-top: 35px; padding-bottom: 0;}
 #mod-task [class*="span"], 
@@ -51,6 +52,7 @@
 #modal-set-course .step-info { margin-left: 0; }
 #modal-set-course .control-label { width: 30px; }
 #modal-set-course .controls { margin: 0 10px 0 15px; }
+
 #modal-set-course textarea.input-xlarge { height: 260px; }
 
 #modal-set-course .btn-step-info { width: 100%; }
@@ -71,9 +73,26 @@
 #modal-set-course #import-outline li { float: left; margin: 16px 20px 0 20px; text-align: center; cursor: pointer; position: relative; }
 #modal-set-course #import-outline li { float: left; text-align: center; cursor: pointer; }
 #modal-set-course #import-outline li:hover img, #modal-set-course #import-outline li.cur img { border: 2px solid #a9b2c1; border-radius: 2px; }
-#modal-set-course #import-outline li p { margin: 0; }
+#modal-set-course #import-outline li p { margin: 0; width: 105px; height: 20px; overflow: hidden; }
 #modal-set-course #import-outline li .icon-mark { display: none; position: absolute; right: -16px; top: -10px; width: 28px; height: 28px; background: url(../images/icon.png) -73px -449px;}
 #modal-set-course #import-outline li.cur .icon-mark { display: block; }
+
+#edit-outline { padding: 20px; color: #fff; }
+#edit-outline .item { margin-bottom: 10px; }
+#edit-outline input { margin-top: 8px; margin-left: 20px; padding: 0;  width: 70%; height: 30px; color: #ccc; border: none; border-radius: 0; -webkit-box-flex: 1; display: block; }
+#edit-outline h6 { margin: 0 0 10px 0; display: -webkit-box; padding: 0 10px 0 20px; height: 46px; line-height: 46px;}
+#edit-outline h6 p { display: inline-block; margin-left: 20px; }
+
+#edit-outline  .item h6 { background: #6a7589;}
+#edit-outline  .item .item h6{ background: #acb3c3; }
+#edit-outline  .item > .item { margin-left: 20px; }
+#edit-outline  .item > .create { margin-left: 20px; background: #acb3c3; }
+#edit-outline  .create	{ padding: 0 10px 0 20px; height: 46px; line-height: 46px; background: #6a7589;}	
+#edit-outline  .btn-update { margin-top: 10px; width: 55px; height: 26px; line-height: 26px; text-align: center; font-size: 12px; color: #fff; background: -webkit-linear-gradient(top,#44515F,#44515F); cursor: pointer; }
+#edit-outline  .create { cursor: pointer; }
+#edit-outline  .create:hover { color: #fafafa;}
+#edit-outline  .icon-setcourse-plus { display: inline-block; margin-right: 10px; width: 17px; height: 17px; background: url(../images/icon.png) -423px -106px no-repeat; }
+
 
 #modal-set-course .step-auth .control-group { border-bottom: 1px solid #bbc2d2; margin: 0; padding: 20px 0 30px; }
 #modal-set-course .step-auth .control-group:first-child { padding-top: 0; }
@@ -244,3 +263,78 @@ span.static { display: inline-block; margin: 0 13px; }
 .linkman-tree { width: 230px; background: #9aa3b6; }
 
 #modal-send-reply .modal-body { padding: 0; }
+
+/*course*/
+#mod-course .lib-hd-bar h6 { padding-left: 5px; }
+#mod-course .lib-con { padding-bottom: 30px; overflow: hidden; }
+#mod-course .lib-con .dl-horizontal { margin: 0; }
+#mod-course .lib-con .dl-horizontal dt { position: relative; width: auto; font-weight: normal; text-indent: 50px; overflow: visible; display: inline-block; }
+#mod-course .lib-con .dl-horizontal dt span { position: absolute; right:-39px; top: 14px; width: 12px; height: 12px; background: url(../images/icon.png) right top no-repeat;}
+#mod-course .lib-con .dl-horizontal dd { position: relative; margin-left: 130px; padding-left: 20px; }
+#mod-course .lib-con .dl-horizontal dd:hover { /*height: 28px; line-height: 28px; margin-top: 5px;*/ }
+#mod-course .lib-con .dl-horizontal dd a { display: block; margin-left: -15px; padding-left: 15px; width: 100%; color: #747474; text-decoration: none; }
+#mod-course .lib-con .dl-horizontal dd a:hover { background-color: #e2e6eb; border-radius:5px; }
+#mod-course .lib-con .dl-horizontal dd a em { position: relative;}
+#mod-course .lib-con .dl-horizontal dd span { position: absolute; right: -10px; top: 0; width: 7px; height: 7px; background: url(../images/icon.png) right -18px; }
+
+.chapter-wrap { position: relative; min-height: 560px; }
+.chapter-wrap:before { content: ' '; display: block; position: absolute; left:129px; top: 0; width: 1px; height: 2000px; background: #ADB2BD; z-index:1; }
+.chapter { margin: 0; padding: 0 0 0 20px; background: url(../images/bg-chapter.png) 5px -25px no-repeat; color: #747474; font-size: 12px; position: relative; z-index: 2; }
+.chapter:first-child { padding-top: 25px; background-position: 5px 0; }
+.chapter ul.unstyled { margin: 0; }
+.chapter-label { display: inline-block; width: 150px; font-size: 12px;}
+.chapter-label em { margin-right: 37px; color: #4f4f4f;}
+.section-name .chapter-label { position: relative; text-indent: 50px; }
+.section-name .chapter-label span { position: absolute; left:104px; top: 14px; width: 12px; height: 12px; background: url(../images/icon.png) right top no-repeat;}
+
+.chapter-name, .section-name, #mod-course .lib-con .dl-horizontal dt, #mod-course .lib-con .dl-horizontal dd {height: 37px; line-height: 37px;}
+.chapter-name { margin: 0; }
+.chapter-name .chapter-label { color: #fff;} 
+
+.section-name a { display: inline-block; margin-left: -15px; padding-left: 15px; width: 60%; color: #747474; text-decoration: none; width: -webkit-calc(100% - 150px);}
+.section-name a:hover { background-color: #e2e6eb; border-radius:5px; }
+.section-name a em { position: relative;}
+.section-name a em span { position: absolute; right: -10px; top: 0; width: 7px; height: 7px; background: url(../images/icon.png) right -18px; }
+/*.section-name a { display: inline-block; width: 70%;  color: #747474; }
+.section-name a:hover { background-color: #e2e6eb; border-radius:5px; }*/
+
+/*进度条*/
+.course-progress { margin: 0 20px;}
+.course-progress .btn-large { width: 44%; font-size: 12px; color: #747474; padding: 11px 10px;}
+.course-progress .btn-large .is-icon { padding: 5px 0 5px 20px; background: url(../images/icon.png) -52px -209px; color: #747474;}
+.course-progress .btn-info { /*margin-left: 20px;*/ float: right; width: 30%; background-color: #5aa294; background-image:-webkit-linear-gradient(top, #74d1bf, #60bbaa, #5aa294); font-family: Microsoft YaHei; color: #fff; text-indent: 0.5em; }
+.course-progress .btn-info .is-icon { padding: 5px 0 5px 20px; background: url(../images/icon.png) -70px -205px; color: #747474;}
+
+/*课程评分*/
+.course-rating { margin: 25px 0; background-color: #343434; box-shadow: inset 1px 1px 1px #252525; }
+.course-rating ul.right { background: none; margin: 10px 0 0; height: 20px; margin: 0; }
+.course-rating ul { background: none; margin: 10px 0 0; height: 20px; }
+/*最近来访*/
+.course-visited { padding-top: 25px; height: 310px; overflow: hidden; }
+.course-visited li { float: left; /*margin: 0 24px;*/ margin: 0 7%; width: 60px; text-align: center; overflow: hidden; }
+.course-visited li p { color: #a5a5a5; }
+.course-visited li span { display: block; padding: 2px 0; color: #747474; }
+.course-visited img { width: 60px; height: 60px; }
+
+.dthumb { position: relative;}
+.dthumb .unfold { cursor: pointer; }
+.dthumb .unfold .icon-unfold-arrow { background: url(../images/icon.png) -10px -455px no-repeat; }
+.dthumb .fold .icon-unfold-arrow { background: url(../images/icon.png) -10px -455px no-repeat; -webkit-transform: rotateX(180deg);  }
+.no-data .accordion-heading { position: relative; }
+.lib-con .btn.btn-add-data { position: absolute; right:10px; top: 10px; color: #fff; font-size: 12px; text-shadow: none; background: -webkit-linear-gradient(top,#2ea4cb,#45a1c4,#619dbb); }
+.no-data .accordion-heading .btn.btn-add-data { top: 10px; }
+/*课程学生*/
+#cedit-stu {}
+#cedit-stu .form-horizontal .controls { margin-left: 0; }
+.cedit-stu-num { height: 40px; line-height: 40px; margin-left: 20px; }
+.cedit-stu-num em { color: #275d79;}
+.cedit-stu-list { margin: 0; }
+.cedit-stu-list li { float: left; padding-top: 15px; width: 140px; height: 140px; text-align: center; border: 1px solid #fff; }
+.cedit-stu-list li a { color: #4f4f4f; text-decoration: none;}
+.cedit-stu-list li span { display: block; padding: 8px 0 0;}
+.cedit-stu-list li p { margin: 0 0 8px; }
+.cedit-stu-list .btn-cedit-sendmsg  { display: none; padding: 4px 36px; font-size: 12px; color: #fff; background: -webkit-linear-gradient(top,#85a0be,#7992ad,#6c839c); text-shadow: none;}
+.cedit-stu-list li:hover { background-color: #fefefe; border-radius: 4px; box-shadow: 1px 1px 5px #999;}
+.cedit-stu-list li:hover .btn-cedit-sendmsg { display: inline-block; }
+
+#form-cedit-setting .control-label { text-indent: 1em;}

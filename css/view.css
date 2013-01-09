@@ -11,9 +11,7 @@ a.view-back:hover { background-position: -120px -105px; }
 .view-heading h4 { display: inline-block; margin: 0 10px 0 0; color: #fff; font-family: Microsoft Yahei; text-shadow: 1px 1px 2px #000;}
 .view-heading .btn-icon { top: 6px; }
 
-.view-con-switch { float: right; margin-left: 0; }
-.view-con-switch li { float: left; margin: 10px 0 0 5px; padding: 0; width: 18px; height: 18px; background: url(../images/bg-cview.png) -71px -53px no-repeat; cursor: pointer;}
-.view-con-switch li.cur { background-position: -88px -53px;}
+
 #view-course .view-con-switch { margin-top: 8px; }
 #btn-video-info { background-position: -18px 0;}
 /*边栏*/

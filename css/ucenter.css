@@ -23,7 +23,7 @@
 .ucenter-content { /*width: 100%;position: relative;*/ /*padding: 0 3% 45px;*/ border-radius: 5px; border-top-right-radius: 0; box-shadow: 0 1px 5px #999, 0 -1px 5px #333; background-color: #fff; }
 
 .ucenter-content-course { padding: 0 3% 45px; }
-.ucenter-content-course a { color: #747474; text-decoration: none; }
+.ucenter-content-course a { color: #4b4b4b; text-decoration: none; }
 .ucenter-content-course dl:nth-child(2n) { float: right}
 .ucenter-content-course dl { display: inline-block; position: relative; margin: 0; margin-top: 45px; width: 48%; min-width: 420px; border: 1px solid #a6a6a6; border-radius: 5px; background-color: #fafafa; }
 .ucenter-content-course dl:hover { box-shadow: 1px 1px 2px #999; }
@@ -31,19 +31,20 @@
 .ucenter-content-course dt { float: left; position: relative; margin: 10px 0 10px 10px; width: 106px; height: 149px; border: 1px solid #fff; background-color: #3b3b3b; overflow: hidden; }
 .ucourse-hover { position: absolute; left: 0; top: 0; width: 106px; height: 149px; background-color: #000; opacity:0; cursor: pointer; }
 a.ucourse-hover-span { display: block; position: absolute; left: -106px; bottom: 0; margin: 0; width: 106px; height: 32px; line-height: 32px; background-color: rgba(0,0,0,0.3);  text-align: center; color: #fff; cursor: pointer;}
+a.ucourse-hover-span .icon-arrow-white { margin: 0; position: absolute; right: 14px; top:11px; display: block; width: 12px; height: 10px; background: url(../images/icon.png) 0 -479px no-repeat;}
 .ucenter-content-course dt img { height: 100%;}
-.ucenter-content-course dd { margin:0; padding-left: 125px; padding-right: 10px; }
-.ucenter-content-course .wrap-progress { margin: 0; margin-top: 10px; }
+.ucenter-content-course dd { margin:0; padding-left: 120px; padding-right: 10px; }
+.ucenter-content-course .wrap-progress { margin: 0; margin-left: 5px; margin-top: 10px; }
 
 dl.ucontent-add { display: inline-block; margin: 0; margin-top: 45px; width: 48%; min-width: 420px; height: 171px; border: 2px solid #fff; border-radius: 5px; background-color: #fff; }
 dl.ucontent-add:hover { border: 2px solid #e8eff4; border-radius: 5px; box-shadow: none;}
 .ucontent-add-btn { display: block; position: relative; top: 50%; margin: -55px auto 0; padding-top: 90px; width: 84px; /*height: 84px;*/ background: url(../images/bg-common.png) -5px -225px; text-align: center; font: bold 14px Microsoft YaHei; color: #9db2c7; cursor: pointer; }
 
 .ucenter-course-info { margin: 0; margin-left: 115px; padding: 10px 10px 0; border-bottom: 1px solid #c8c8c8; background: url(../images/bg-ucenter-course.png) left -116px no-repeat, url(../images/bg-ucenter-course.png) right top no-repeat;}
-.ucourse-info-wrap { background: url(../images/bg-ucenter-course.png) left -232px repeat-x;}
+.ucourse-info-wrap { padding-left: 5px; background: url(../images/bg-ucenter-course.png) left -232px repeat-x;}
 .ucenter-course-info h4 { margin: 0;}
 .ucenter-course-info h4 a { color: #5d7ca1; text-decoration: none; text-shadow: 1px 1px 1px #ccc; font-family: Microsoft YaHei;}
-.ucenter-course-info p { margin: 0; height: 30px; line-height: 30px;}
+.ucenter-course-info p { margin: 0; height: 30px; line-height: 30px; color: #4b4b4b; }
 dd.ucenter-course-tips { position: absolute; left: -14px; top: -12px; margin: 0; padding: 0; width: 26px; height: 25px; }
 dd.ucenter-course-tips span { display: block; height: 25px; background:url(../images/icon.png) 0 -213px; line-height: 25px; text-align: center; color: #fff;}
 
@@ -154,10 +155,14 @@ p.ucenter-feeds-img img { margin-right: 8px; }
 .ufeeds-answer, .ufeeds-addask { position: relative; margin: 0 20px; margin: 0 0 0 20px; padding: 0 20px; border-left: 1px solid #e8e8e8; cursor: pointer; }
 .ufeeds-addask { margin: 0;}
 .ufeeds-answer em, .ufeeds-addask em { margin-left: 5px; font-weight: bold; }
-.ufeeds-answer .question-arrow, .ufeeds-addask .question-arrow { display: block; width: 18px; height: 10px; position: absolute; left: 32px; bottom: -19px; background: url(../images/icon-feeds.png) -160px -36px no-repeat;}
+.ufeeds-answer .question-arrow, .ufeeds-addask .question-arrow { display: block; width: 18px; height: 10px; position: absolute; left: 32px; bottom: -22px; background: url(../images/icon-feeds.png) -160px -36px no-repeat;}
 
 .ucenter-feeds-unfold { cursor: pointer; color: #195695; /*background: url(../images/icon-feeds.png) no-repeat; */}
 .ucenter-feeds-fold{ cursor: pointer; color: #195695; }
+
+.ucenter-feeds-ask .ufeeds-answer { margin-left: 0; border: none; }
+
+.ucenter-feeds-extras-sub .question-arrow { bottom: -19px; }
 /*评论分页*/
 .ufeeds-pagination-wrap {display: -webkit-box; padding: 0 2% 2%; }
 .ufeeds-pagination-padding { width:40px; margin-right:20px; }
@@ -168,3 +173,4 @@ p.ucenter-feeds-img img { margin-right: 8px; }
 .ucenter-feeds-load { text-align: center; height: 60px; line-height: 60px; border: 1px solid #d5dde8; border-top: 1px solid #c8d0d8; background-image: -webkit-linear-gradient(top, #fff, #f8f9fb, #eff1f5); border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; box-shadow:inset 0 -1px 4px #ccc; }
 .ucenter-feeds-load a { display: block; color: #8999aa; text-decoration: none;}
 .ucenter-feeds-load .is-icon {padding: 5px 0 5px 20px; background: url(../images/icon-feeds.png) -138px -132px; color: #747474; }
+

@@ -1,4 +1,4 @@
-Ôªø/*bootstrap reset*/
+/*bootstrap reset*/
 h5,h6 { margin: 0; padding: 0; }
 .course-view { background-color: #242424; /*height: 1300px;*/ overflow: hidden;}
 .csquare-pic img { max-width: 100%; position: relative; z-index: 2;}
@@ -27,11 +27,11 @@ a.next-lecture { float: left; position: relative; top: -5px; margin-right: 15px;
 .cview-top .no{float:left; background: #216100 -webkit-linear-gradient(top, #438802, #317400, #216100); width:32px;height:32px;line-height:30px;text-align:center;border-radius:99em;box-shadow:0 1px rgba(255, 255, 255, 0.45) inset,0 0 0px 3px #000000,4px 0 rgba(255, 255, 255, 0.1);font-size:16px;font-weight:bold;color:#000;text-shadow:0 1px rgba(255, 255, 255, 0.4);margin:4px 0 0 -9px;position:relative;}
 .cview-top h6 { height: 36px; line-height: 36px;  color:#fff; margin:2px 0 0 9px; text-shadow:0 1px 1px rgba(0, 0, 0, 0.5); float: left;}
 
-#view-course .loading-box { position: absolute; left: 124px;height: 109px; line-height: 109px; text-align: center; }
+#view-course .loading-box { /*position: absolute; left: 124px;height: 109px; line-height: 109px; text-align: center; */}
 /*#view-course .loading-box { position: relative; padding-left: 105px; height: 109px; line-height: 109px;}*/
 #view-course .loading-num { display: inline-block; width: 109px; background: url(../images/cview-circle.png) no-repeat; color: #000; font-size: 20px; font-weight: bold; font-family: Microsoft Yahei; text-shadow: 1px 1px 1px rgba(255,255,255,0.5); text-align: center; }
 #view-course .loading-text { display: inline-block; margin-left: 18px; padding: 0 20px; width: 130px; height: 40px; line-height: 40px; color: #fff; border-radius: 25px; background: #181818; box-shadow: 1px 1px 1px rgba(255,255,255,0.2); }
-/*Âè≥ËæπÊ†è*/
+/*”“±ﬂ¿∏*/
 .sidebar-switch { position: absolute; right: 0px; top: 15px; width: 30px; height: 31px; background: url(../images/bg-cview.png) 0 -89px no-repeat; cursor: pointer; }
 .sidebar-switch-i { background-position: -36px -89px;}
 
@@ -65,16 +65,21 @@ li.cview-res-ppt{ background-position: -454px -319px; }
 li.cview-res-ppt:hover { background-position: -454px -372px; }
 li.cview-res-pdf{ background-position: -454px -426px; }
 li.cview-res-pdf:hover { background-position: -454px -479px; }
+li.cview-res-doc{ background-position: -283px -106px; }
+li.cview-res-doc:hover { background-position: -283px -159px; }
 
-.btn-cview-sidebar { display: block; /*position: absolute; bottom: 0; width: 80%;*/ margin: 10px 0; padding: 8px 19px; border-radius: 2px; font-size: 12px; color: #fff; background-image:-webkit-linear-gradient(top, #438802, #317400, #216100);}
-.btn-cview-sidebar:hover { background-position: 0 0;}
+
+/*.btn-cview-sidebar { display: block; margin: 10px 0; padding: 8px 19px; border-radius: 2px; font-size: 12px; color: #fff; background-image:-webkit-linear-gradient(top, #438802, #317400, #216100);}
+.btn-cview-sidebar:hover { background-position: 0 0;}*/
 .icon-add-res { display: inline-block; margin-right: 4px; width: 17px; height: 17px; background: url(../images/icon.png) -423px -106px no-repeat;}
 
 .cview-pagination { /*position: absolute; bottom: 10px; width: 90%;*/  margin: 0 auto; height: 40px; line-height: 40px; border-bottom-left-radius: 2px; border-bottom-right-radius: 2px; border:1px solid #C1C1C1; border-top: none; background:-webkit-linear-gradient(top, #fff, #f5f5f5, #ececec);text-align: center; }
 .cview-pagination li { display: inline-block; margin: 0 3px; width: 11px; height: 11px; background: url(../images/icon.png) -425px -184px no-repeat; cursor: pointer; }
 .cview-pagination li.cur { background-position: -425px -142px;}
 
-/*Êü•ÁúãËµÑÊñô*/
+.cview-sidebar-con .btn-green { margin: 10px 0; padding: 0; width: 100%; }
+
+/*≤Èø¥◊ ¡œ*/
 .cres-page { height: 100%; }
 .cres-page .popover{ left: 2px; width: 97%; height: 50%; }
 .cres-page .popover .popover-inner { height: 100%; }
@@ -178,7 +183,7 @@ li.cview-res-pdf:hover { background-position: -454px -479px; }
 #cview-question .alert { margin: 10px 0; border: 1px solid #b3bbca; background-color: #d7dbe3;}
 #cview-question .alert a { color: #4a5772;}
 
-#cview-note .cview-sidebar-form .btn { float: right; margin-left: 10px; width: 35%; display: inline-block;}
+#cview-note .cview-sidebar-form .btn { float: right; margin-left: 10px; width: 35%; display: inline-block; padding: 0;}
 #cview-note .cview-sidebar-form .btn-noteauth { }
 .cview-note-opt { margin: 10px 0 0; height: 40px; line-height: 40px;}
 .cview-note-opt .btn { margin: 0;}
@@ -189,3 +194,14 @@ li.cview-res-pdf:hover { background-position: -454px -479px; }
 #cview-note .loading-box { text-align: center; }
 #cview-note .loading-box img { margin-top: 100px; }
 
+.view-main ul { margin: 0; height: 100%; overflow: hidden; }
+.view-main li { height: 100%; }
+
+.view-con-switch { float: right; margin-left: 0; }
+.view-con-switch li { float: left; margin: 10px 0 0 5px; padding: 0; width: 16px; height: 16px; background: url(../images/bg-cview.png) -71px -53px no-repeat; cursor: pointer; border-radius: 8px; box-shadow: 1px 1px 3px #000; }
+.view-con-switch li:hover { opacity: 0.8; }
+.view-con-switch li.video { background: -webkit-linear-gradient(top, #14decd, #139691);}
+.view-con-switch li.text { background: -webkit-linear-gradient(top, #90d91e, #6baa00);}
+.view-con-switch li.doc { background: -webkit-linear-gradient(top, #3da0f9, #275dac);}
+.view-con-switch li.ppt { background: -webkit-linear-gradient(top, #ffc11f, #e59000);}
+.view-con-switch li.pdf { background: -webkit-linear-gradient(top, #e61e1e, #9f0000);}
