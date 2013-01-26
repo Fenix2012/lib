@@ -3,7 +3,8 @@
 
 .ucenter-cover { /*position: relative; top: 4px;*/ background: url(../images/user-cover.jpg) center top; box-shadow: inset 0 -1px 5px #333,0 1px 1px #fff,inset 0 1px 5px #333;}
 .ucenter-cover dl { float: left; width: 300px; }
-.ucenter-cover dt { float: left; padding: 15px 21px 106px; background: url(../images/bg-ucenter-avatar.png) no-repeat; }
+.ucenter-cover dt { float: left; padding: 15px 21px 106px; background: url(../images/bg-ucenter-avatar.png) no-repeat; width: 107px; height: 107px; }
+.ucenter-cover dt img { width: 107px; height: 107px; }
 .ucenter-cover dd { float: left; margin-top: 15px;}
 .ucenter-cover a { color: #fff; text-decoration: none;}
 .ucover-name a { font-size: 25px; font-family: Microsoft YaHei;}
@@ -116,7 +117,7 @@ dd.ucenter-course-tips span { display: block; height: 25px; background:url(../im
 
 
 .ucenter-feeds-icon { position: absolute; right: 10px; top:11px; display: block; width: 23px; height: 23px; background: url(../images/icon.png) no-repeat;}
-.ucenter-feeds-data-video .ucenter-feeds-icon, .ucenter-feeds-data-text .ucenter-feeds-icon, .ucenter-feeds-data-ppt .ucenter-feeds-icon ,.ucenter-feeds-data-pdf .ucenter-feeds-icon { background-position: -425px -8px;}
+.ucenter-feeds-data-video .ucenter-feeds-icon, .ucenter-feeds-data-text .ucenter-feeds-icon, .ucenter-feeds-data-ppt .ucenter-feeds-icon ,.ucenter-feeds-data-pdf .ucenter-feeds-icon,.ucenter-feeds-data-doc .ucenter-feeds-icon { background-position: -425px -8px;}
 
 
 .ucenter-feeds-data-text .ucenter-feeds-attach { background: url(../images/icon-feeds.png) 0 -71px no-repeat; }
@@ -127,6 +128,9 @@ dd.ucenter-course-tips span { display: block; height: 25px; background:url(../im
 
 .ucenter-feeds-data-pdf .ucenter-feeds-attach { background: url(../images/icon-feeds.png) 0 -213px no-repeat; }
 .ucenter-feeds-data-pdf .ucenter-feeds-attach:hover { background: url(../images/icon-feeds.png) -71px -213px no-repeat; }
+
+.ucenter-feeds-data-doc .ucenter-feeds-attach { background: url(../images/data-type.png) no-repeat 0 0; }
+.ucenter-feeds-data-doc .ucenter-feeds-attach:hover { background-position: 0 -71px; }
 
 .ucenter-feeds-video .ucenter-feeds-attach { background: url(../images/icon-feeds.png) 0 -284px no-repeat; }
 .ucenter-feeds-video-over .ucenter-feeds-attach { background: url(../images/icon-feeds.png) -71px -284px no-repeat; }
@@ -150,7 +154,12 @@ dd.ucenter-course-tips span { display: block; height: 25px; background:url(../im
 
 p.ucenter-feeds-img { margin: 15px 0 0; overflow: hidden; }
 p.ucenter-feeds-img img { margin-right: 8px; }
-.ufeeds-detail-foldarea { margin-bottom: 10px; height: 40px; overflow: hidden; }
+.ufeeds-detail-foldarea { margin-bottom: 10px; height: 74px; overflow: hidden; }
+
+.ufeeds-detail-foldarea img { max-height: 73px; }
+p.ufeeds-img-wrap { float: left; margin-right: 10px; margin-bottom: 5px;  }
+p.ufeeds-text { position: relative; top: -3px; display: block; }
+
 
 .ufeeds-answer, .ufeeds-addask { position: relative; margin: 0 20px; margin: 0 0 0 20px; padding: 0 20px; border-left: 1px solid #e8e8e8; cursor: pointer; }
 .ufeeds-addask { margin: 0;}
