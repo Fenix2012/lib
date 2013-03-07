@@ -4,10 +4,136 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>测试</title>
+<link rel="stylesheet" type="text/css" href="/libSchool/libedu/css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="/libSchool/libedu/css/common.css" />
+<link rel="stylesheet" type="text/css" href="/libSchool/libedu/css/module.css" />
+<link rel="stylesheet" type="text/css" href="/libSchool/libedu/css/ucenter.css" />
+<style type="text/css">
+	body { background: none; }
+</style>
 <script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
-<script src="test.js" type="text/javascript"></script>
+
 </head>
 <body>
-<div id="test">Click Here!</div>
+	<div class="tab-pane active" id="edit-outline">
+		<div class="create" id="chapter-create" title="创建新的章"><i class="icon-setcourse-plus"></i>创建新的章</div>
+	</div>
 </body>
+<script type="text/javascript">
+var outline = {
+	init : function() {
+		//outlineData = { chapter : [] };
+		chapter = [];
+		//chapterObj = { name : '', section : [] };
+		//sectionObj = { name : '', sub : [] };
+		//章节id
+		cid = 1;
+		//sid = 0;
+		//ssid = 0;
+	},
+	chapterHtml : function(cid){
+		  return '<div class="item"><h6 data-pos="'+cid+'" data-level="1"><span class="item-num">第'+cid+'章</span><input class="item-input" id="" name="" type="text" placeholder="输入本章名" /></h6><div class="create" id="section-create" title="创建新的节"><i class="icon-setcourse-plus"></i>创建新的节</div></div>';
+	},
+	sectionHtml : function(cid,sid){
+		
+		return '<div class="item"><h6 data-pos="'+cid+'_'+sid+'" data-level="2"><span class="item-num">第'+cid+'章第'+sid+'节</span><input class="item-input" id="" name="" type="text" placeholder="输入本节名" /></h6><div class="create" id="sub-section-create" title="创建新的小节"><i class="icon-setcourse-plus"></i>创建新的小节</div></div>';			  
+	},
+	subSectionHtml : function(cid,sid,ssid){
+		//return '<div class="item"><h6 data-pos="'+cid+'_'+sid+'_'+(ssid+1)+'" data-level="3"><span class="item-num">第'+cid+'章第'+sid+'节第'+(ssid+1)+'小节</span><input class="item-input" id="" name="" type="text" placeholder="输入本小节名" /></h6></div>';
+		return '<div class="item"><h6 data-pos="'+cid+'_'+sid+'_'+ssid+'" data-level="3"><span class="item-num">第'+ssid+'小节</span><input class="item-input" id="" name="" type="text" placeholder="输入本小节名" /></h6></div>';
+	},
+	//createJson : function(level,pos,itemContent){
+	createJson : function(level,cid,sid,ssid,itemContent){
+		 switch(level){
+			 case '1' : 
+				 chapterObj = {};
+				 chapterObj.name = itemContent;
+
+				 chapter.push(chapterObj);
+
+				 console.log(chapter);
+				 break;
+			 case '2' :
+				 sectionObj = {};
+				 sectionObj.name = itemContent;
+
+				 if(typeof(chapterObj.section) == 'undefined'){
+					 chapterObj.section = [];
+				 }	
+				 chapterObj.section.push(sectionObj);
+				 console.log(chapter);
+				 break;
+			 case '3' :
+				 if(typeof(subArray) == 'undefined'){
+					 subArray = [];
+				 }	
+				 subArray.push(itemContent);
+
+				 sectionObj.sub = subArray;
+				 console.log(chapter);
+				 break;
+		 }
+	},
+	save : function(){
+		//完成按钮触发，ajax向后台发送数据chapter
+		$.ajax({
+			type : 'POST',
+			url : '',
+			success : function(){
+				//console.log(itemContent);		
+			}
+		});	
+	}
+}
+
+outline.init();
+
+$('#edit-outline').delegate('#chapter-create','click',function(){
+		$(this).before(outline.chapterHtml(cid));
+		cid++;
+		sid =1;
+		ssid =1;
+});
+
+$('#edit-outline').delegate('#section-create','click',function(){
+		var cid = $(this).parent('.item').find('h6').attr('data-pos');
+
+		var istart = $(this).prev('.item');
+		if(istart.length == 0){
+			sid = 1;
+		} else {
+			sid = parseInt($(this).prev('.item').find('h6').attr('data-pos').split('_')[1]);
+			sid++;
+		}
+		//sid++;
+		//alert(cid+'_'+sid);
+		$(this).before(outline.sectionHtml(cid,sid));
+		ssid =1;
+});
+$('#edit-outline').delegate('#sub-section-create','click',function(){
+		var cid = $(this).parents('.item').find('h6[data-level="1"]').attr('data-pos');
+		var sid = $(this).parent('.item').find('h6').attr('data-pos').split('_')[1];
+
+		var istart = $(this).prev('.item');
+		if(istart.length == 0){
+			ssid = 1;
+		} else {
+			ssid = parseInt($(this).prev('.item').find('h6').attr('data-pos').split('_')[2]);
+			ssid++;
+		}
+
+		$(this).before(outline.subSectionHtml(cid,sid,ssid));
+});
+$('#edit-outline').delegate('.item-input','blur',function(){
+	//input值
+	var itemContent = $(this).val();
+	//层级
+	//var pos = $(this).parent('h6').attr('data-pos')
+	var level = $(this).parent('h6').attr('data-level');
+	//outline.createJson(level,pos,itemContent);
+	outline.createJson(level,cid,sid,ssid,itemContent);
+	if(itemContent.length != 0){ $(this).replaceWith('<p>'+itemContent+'</p>'); }
+});
+
+</script>
 </html>
