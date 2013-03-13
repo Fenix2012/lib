@@ -43,34 +43,55 @@ var outline = {
 		return '<div class="item"><h6 data-pos="'+cid+'_'+sid+'_'+ssid+'" data-level="3"><span class="item-num">第'+ssid+'小节</span><input class="item-input" id="" name="" type="text" placeholder="输入本小节名" /></h6></div>';
 	},
 	//createJson : function(level,pos,itemContent){
-	createJson : function(level,cid,sid,ssid,itemContent){
+	createJson : function(level,pos,itemContent){
 		 switch(level){
 			 case '1' : 
 				 chapterObj = {};
 				 chapterObj.name = itemContent;
-
-				 chapter.push(chapterObj);
+				 //chapter.push(chapterObj);
+				 chapter[pos-1] = chapterObj;
 
 				 console.log(chapter);
+				 console.log(JSON.stringify(chapter));
 				 break;
 			 case '2' :
+				 var posC = parseInt(pos.split('_')[0]);
+				 var posS = parseInt(pos.split('_')[1]);
+
 				 sectionObj = {};
 				 sectionObj.name = itemContent;
 
 				 if(typeof(chapterObj.section) == 'undefined'){
 					 chapterObj.section = [];
 				 }	
-				 chapterObj.section.push(sectionObj);
+
+
+				 //chapter[posC-1] = chapterObj;
+				 //chapterObj.section.push(sectionObj);
+				 chapter[posC-1].section[posS-1] = sectionObj;
+
 				 console.log(chapter);
+				 console.log(JSON.stringify(chapter));
 				 break;
 			 case '3' :
-				 if(typeof(subArray) == 'undefined'){
-					 subArray = [];
+				 var posC = parseInt(pos.split('_')[0]);
+				 var posS = parseInt(pos.split('_')[1]);
+				 var posSs = parseInt(pos.split('_')[2]);
+				 if(typeof(sectionObj.sub) == 'undefined'){
+					 sectionObj.sub = [];
 				 }	
-				 subArray.push(itemContent);
 
-				 sectionObj.sub = subArray;
+				 //chapter[posC-1] = chapterObj;
+
+				 //chapterObj.section[posS-1] = sectionObj;
+				 chapter[posC-1].section[posS-1] = sectionObj;
+				 //sectionObj.sub = subArray;
+
+				 //subArray.push(itemContent);
+				 sectionObj.sub[posSs-1] = itemContent;
+
 				 console.log(chapter);
+				 console.log(JSON.stringify(chapter));
 				 break;
 		 }
 	},
@@ -89,7 +110,10 @@ var outline = {
 outline.init();
 
 $('#edit-outline').delegate('#chapter-create','click',function(){
-		$(this).before(outline.chapterHtml(cid));
+		//if($(this).prev('.item').length == 0 || $(this).prev('.item').find('input').length == 0 ){
+		if( $(this).parents('#edit-outline').find('input').length == 0 ){
+			$(this).before(outline.chapterHtml(cid));
+		}
 		cid++;
 		sid =1;
 		ssid =1;
@@ -107,7 +131,11 @@ $('#edit-outline').delegate('#section-create','click',function(){
 		}
 		//sid++;
 		//alert(cid+'_'+sid);
-		$(this).before(outline.sectionHtml(cid,sid));
+
+		console.log($(this).parents('#edit-outline').find('input').length);
+		if( $(this).parents('#edit-outline').find('input').length == 0 ){
+			$(this).before(outline.sectionHtml(cid,sid));
+		}
 		ssid =1;
 });
 $('#edit-outline').delegate('#sub-section-create','click',function(){
@@ -122,17 +150,26 @@ $('#edit-outline').delegate('#sub-section-create','click',function(){
 			ssid++;
 		}
 
-		$(this).before(outline.subSectionHtml(cid,sid,ssid));
+		//if( $(this).prev('.item').length == 0 || $(this).prev('.item').find('h6').children('input').length == 0 ){
+		//if( $(this).prev('.item').find('input').length == 0 ){
+		if( $(this).parents('#edit-outline').find('input').length == 0 ){
+			$(this).before(outline.subSectionHtml(cid,sid,ssid));
+		}
 });
 $('#edit-outline').delegate('.item-input','blur',function(){
 	//input值
 	var itemContent = $(this).val();
 	//层级
-	//var pos = $(this).parent('h6').attr('data-pos')
+	var pos = $(this).parent('h6').attr('data-pos');
 	var level = $(this).parent('h6').attr('data-level');
 	//outline.createJson(level,pos,itemContent);
-	outline.createJson(level,cid,sid,ssid,itemContent);
-	if(itemContent.length != 0){ $(this).replaceWith('<p>'+itemContent+'</p>'); }
+	if(itemContent.length != 0){ 
+		console.log(pos);
+		//console.log(cid+'.'+sid+'.'+ssid);
+		$(this).replaceWith('<p>'+itemContent+'</p>'); 
+		//outline.createJson(level,cid,sid,ssid,itemContent);
+		outline.createJson(level,pos,itemContent);
+	}
 });
 
 </script>
